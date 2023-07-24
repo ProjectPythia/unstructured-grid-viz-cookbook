@@ -1,4 +1,4 @@
-name: cookbook-dev
+name: unstructured-grid-viz-cookbook-dev
 channels:
   - conda-forge
 dependencies:
@@ -6,5 +6,10 @@ dependencies:
   - jupyterlab
   - jupyter_server
   - pip
+  - uxarray
+  - matplotlib
+  - spatialpandas
+  - shapely
   - pip:
       - sphinx-pythia-theme
+      - antimeridian
