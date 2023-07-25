@@ -1,6 +1,7 @@
 name: unstructured-grid-viz-cookbook-dev
 channels:
   - conda-forge
+  - pyviz 
 dependencies:
   - jupyter-book
   - jupyterlab
@@ -10,6 +11,10 @@ dependencies:
   - matplotlib
   - spatialpandas
   - shapely
+  - cartopy
+  - holoviews
+  - hvplot
+  - geoviews
   - pip:
       - sphinx-pythia-theme
       - antimeridian
