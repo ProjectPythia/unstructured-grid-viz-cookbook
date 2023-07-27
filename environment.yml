@@ -7,7 +7,7 @@ dependencies:
   - jupyterlab
   - jupyter_server
   - pip
-  - uxarray
+  # - uxarray uncomment when PR 354 is merged
   - matplotlib
   - spatialpandas
   - shapely
@@ -17,4 +17,5 @@ dependencies:
   - geoviews
   - pip:
       - sphinx-pythia-theme
+      - git+https://github.com/UXARRAY/uxarray.git@philipc2/wrapped-polygons
       - antimeridian
