@@ -18,8 +18,8 @@ This Project Pythia Cookbook covers ... (replace `...` with the main subject of 
 
 ### Contributors
 
-<a href="https://github.com/ProjectPythia/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/cookbook-template" />
+<a href="https://github.com/UXARRAY/unstructured-grid-viz-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=UXARRAY/unstructured-grid-viz-cookbook" />
 </a>
 
 ## Structure
