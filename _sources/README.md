@@ -14,12 +14,12 @@ This Project Pythia Cookbook covers ... (replace `...` with the main subject of 
 
 ## Authors
 
-[First Author](@first-author), [Second Author](@second-author), etc. _Acknowledge primary content authors here_
+[Ian Franda](@ifranda), [Philip Chmielowiec](@philipc2)
 
 ### Contributors
 
-<a href="https://github.com/ProjectPythia/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/cookbook-template" />
+<a href="https://github.com/UXARRAY/unstructured-grid-viz-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=UXARRAY/unstructured-grid-viz-cookbook" />
 </a>
 
 ## Structure
