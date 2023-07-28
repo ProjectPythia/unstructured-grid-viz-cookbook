@@ -1,4 +1,9 @@
-<img src="thumbnail.png" alt="thumbnail" width="300"/>
+
+<p float="center">
+  <img src="thumbnail.png" width="300" />
+  <img src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="400" /> 
+</p>
+
 
 # Unstructured Grid Visualization Cookbook
 
