@@ -1,6 +1,6 @@
 
 <p float="center">
-  <img src="thumbnail.png" width="300" />
+  <img src="notebooks/images/logos/siparcs.png" width="250" />
   <img src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="400" /> 
 </p>
 
