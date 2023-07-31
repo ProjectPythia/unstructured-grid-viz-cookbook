@@ -11,7 +11,8 @@
 [![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 
-This Cookbook showcases how to visualuze Unstructured Grids using UXarray paired with community toolsets such as HoloViz and Matplotlib.
+This Cookbook showcases how to visualuze Unstructured Grids using UXarray paired with community toolsets such as HoloViz and Matplotlib. This notebook was put together as part of 
+Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project.  
 ## Motivation
 
 (Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
