@@ -1,25 +1,27 @@
 
 <p float="center">
-  <img src="thumbnail.png" width="300" />
-  <img src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="400" /> 
+  <img src="notebooks/images/logos/siparcs.png" width="150" />
+  <img src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="300" /> 
+  <img src="notebooks/images/logos/geocat.png" width="200" />
 </p>
 
 
 # Unstructured Grid Visualization Cookbook
 
-[![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
+[![nightly-build](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
-[![DOI](https://zenodo.org/badge/475509405.svg)](https://zenodo.org/badge/latestdoi/475509405)
 
-This Project Pythia Cookbook covers ....
-
+This Cookbook showcases how to visualuze Unstructured Grids using UXarray paired with community toolsets such as HoloViz and Matplotlib. It was put together as part of 
+Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, which is titled "Python Data Analysis and Visualization for Unstructured Grid Data."
 ## Motivation
 
 (Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
 
 ## Authors
 
-[Ian Franda](@ifranda), [Philip Chmielowiec](@philipc2)
+[Ian Franda (NCAR SIParCS 2023 Intern)](@ifranda)
+
+[Philip Chmielowiec (NCAR GeoCAT)](@philipc2)
 
 ### Contributors
 
