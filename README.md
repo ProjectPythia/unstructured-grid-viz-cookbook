@@ -13,9 +13,6 @@
 This Cookbook showcases how to visualize Unstructured Grids using UXarray paired with community tool sets such as HoloViz and Matplotlib. It was put together as part of 
 Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, which is titled "Python Data Analysis and Visualization for Unstructured Grid Data." This cookbook is currently being adapted from
 our Intern Ian's notebook which can be found [here](https://github.com/NCAR/geocat-scratch/blob/ifranda/viz-notebook/SIParCS2023/Visualization_Notebook.ipynb).
-## Motivation
-
-(Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
 
 ## Authors
 
