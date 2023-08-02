@@ -316,6 +316,19 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> On this page
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -326,6 +339,34 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="visualization-with-matplotlib">
 <h1>Visualization with Matplotlib<a class="headerlink" href="#visualization-with-matplotlib" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<hr class="docutils" />
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uxarray</span> <span class="k">as</span> <span class="nn">ux</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Create blue color theme</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s2">&quot;Color_Theme&quot;</span><span class="p">,</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_file_480</span> <span class="o">=</span> <span class="s2">&quot;../meshfiles/oQU480.230422.nc&quot;</span>
+<span class="n">ds_file_120</span> <span class="o">=</span> <span class="s2">&quot;../meshfiles/oQU120.230424.nc&quot;</span>
+
+<span class="n">uxds_480</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">ds_file_480</span><span class="p">,</span> <span class="n">ds_file_480</span><span class="p">)</span>
+<span class="n">uxds_120</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">ds_file_120</span><span class="p">,</span> <span class="n">ds_file_120</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
