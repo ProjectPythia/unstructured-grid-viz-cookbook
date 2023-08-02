@@ -9,3 +9,4 @@ parts:
       - file: notebooks/uxarray
       - file: notebooks/holoviz
       - file: notebooks/matplotlib
+      - file: notebooks/comparison
