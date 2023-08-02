@@ -10,7 +10,7 @@
 [![nightly-build](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 
-This Cookbook showcases how to visualuze Unstructured Grids using UXarray paired with community toolsets such as HoloViz and Matplotlib. It was put together as part of 
+This Cookbook showcases how to visualize Unstructured Grids using UXarray paired with community tool sets such as HoloViz and Matplotlib. It was put together as part of 
 Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, which is titled "Python Data Analysis and Visualization for Unstructured Grid Data."
 ## Motivation
 
@@ -30,15 +30,19 @@ Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIPa
 
 ## Structure
 
-(State one or more sections that will comprise the notebook. E.g., _This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."_ Then, describe each section below.)
+This notebook is broken down into four individual notebooks which outline the necessary workflows to visualize unstructured grids. 
 
-### Section 1 ( Replace with the title of this section, e.g. "Foundations" )
+### Using UXarray to Work with Unstructured Grid Datasets
 
 (Add content for this section, e.g., "The foundational content includes ... ")
 
-### Section 2 ( Replace with the title of this section, e.g. "Example workflows" )
+### Plotting with HoloViz
 
 (Add content for this section, e.g., "Example workflows include ... ")
+
+### Plotting with Matplotlib
+
+### Comparison Between Methods
 
 ## Running the Notebooks
 
@@ -87,3 +91,5 @@ If you are interested in running this material locally on your computer, you wil
    cd notebooks/
    jupyter lab
    ```
+
+
