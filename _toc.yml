@@ -4,6 +4,8 @@ parts:
   - caption: Preamble
     chapters:
       - file: notebooks/how-to-cite
-  - caption: Introduction
+  - caption: Notebooks
     chapters:
-      - file: notebooks/notebook-template
+      - file: notebooks/uxarray
+      - file: notebooks/holoviz
+      - file: notebooks/matplotlib
