@@ -11,7 +11,8 @@
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 
 This Cookbook showcases how to visualize Unstructured Grids using UXarray paired with community tool sets such as HoloViz and Matplotlib. It was put together as part of 
-Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, which is titled "Python Data Analysis and Visualization for Unstructured Grid Data."
+Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, which is titled "Python Data Analysis and Visualization for Unstructured Grid Data." This cookbook is currently being adapted from
+Ian's notebook which can be found [here](https://github.com/NCAR/geocat-scratch/blob/ifranda/viz-notebook/SIParCS2023/Visualization_Notebook.ipynb).
 ## Motivation
 
 (Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
@@ -34,11 +35,7 @@ This notebook is broken down into four individual notebooks which outline the ne
 
 ### Using UXarray to Work with Unstructured Grid Datasets
 
-(Add content for this section, e.g., "The foundational content includes ... ")
-
 ### Plotting with HoloViz
-
-(Add content for this section, e.g., "Example workflows include ... ")
 
 ### Plotting with Matplotlib
 
