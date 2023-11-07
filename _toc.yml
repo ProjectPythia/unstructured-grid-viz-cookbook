@@ -4,9 +4,22 @@ parts:
   - caption: Preamble
     chapters:
       - file: notebooks/how-to-cite
-  - caption: Notebooks
+  - caption: Introduction to UXarray & Unstructured Grids
     chapters:
       - file: notebooks/uxarray
-      - file: notebooks/holoviz
-      - file: notebooks/matplotlib
-      - file: notebooks/comparison
+  - caption: Methods for Unstructured Grid Visualization
+    chapters:
+      - file: notebooks/uxarray
+  - caption: Visualization Libraries & Rendering Techniques
+    chapters:
+      - file: notebooks/uxarray
+  - caption: Visualizing Grid Topology
+    chapters:
+      - file: notebooks/uxarray
+  - caption: Visualizing Data Variables
+    chapters:
+      - file: notebooks/uxarray
+  - caption: Performance & Data Fidelity Considerations
+    chapters:
+      - file: notebooks/uxarray
+
