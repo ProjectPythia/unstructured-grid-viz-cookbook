@@ -16,9 +16,14 @@ our 2023 intern Ian's notebook which can be found [here](https://github.com/NCAR
 
 ## Authors
 
-[Ian Franda (NCAR SIParCS 2023 Intern)](@ifranda)
 
 [Philip Chmielowiec (NCAR GeoCAT)](@philipc2)
+
+[Orhan Eroglu (NCAR GeoCAT)](@erogluorhan)
+
+[Orhan Eroglu (Argonne )](@rajeeja)
+
+[Ian Franda (NCAR SIParCS 2023 Intern)](@ifranda)
 
 ### Contributors
 
