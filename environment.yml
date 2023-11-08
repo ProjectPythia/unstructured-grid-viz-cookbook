@@ -7,15 +7,27 @@ dependencies:
   - jupyterlab
   - jupyter_server
   - pip
-  # - uxarray uncomment when PR 354 is merged
-  - matplotlib
-  - spatialpandas
-  - shapely
+  - uxarray
   - cartopy
+  - dask
+  - datashader
   - holoviews
-  - hvplot
-  - geoviews
+  - matplotlib-base
+  - netcdf4
+  - numba
+  - numpy
+  - pandas<2.1.0
+  - pathlib
+  - pre_commit
+  - pyarrow<13.0.0
+  - pytest
+  - pytest-cov
+  - requests
+  - scikit-learn
+  - scipy
+  - shapely
+  - spatialpandas
+  - xarray
   - pip:
       - sphinx-pythia-theme
-      - git+https://github.com/UXARRAY/uxarray.git@philipc2/wrapped-polygons
       - antimeridian
