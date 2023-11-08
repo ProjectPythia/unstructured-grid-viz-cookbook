@@ -1,7 +1,7 @@
 name: unstructured-grid-viz-cookbook-dev
 channels:
   - conda-forge
-  - pyviz 
+  - pyviz
 dependencies:
   - jupyter-book
   - jupyterlab
