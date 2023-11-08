@@ -12,6 +12,7 @@ dependencies:
   - dask
   - datashader
   - holoviews
+  - hvplot
   - matplotlib-base
   - netcdf4
   - numba
