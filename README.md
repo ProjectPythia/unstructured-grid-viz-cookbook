@@ -30,15 +30,20 @@ our 2023 intern Ian's notebook which can be found [here](https://github.com/NCAR
 
 ## Structure
 
-This notebook is broken down into four individual notebooks which outline the necessary workflows to visualize unstructured grids.
+This cookbook is split up into six chapters which provide a comprehensive overview of how to use UXarray to work with and visualuze unstructured grid datasets.
 
-### Using UXarray to Work with Unstructured Grid Datasets
+#### 1. Introduction to UXarray & Unstructured Grids
 
-### Plotting with HoloViz
+#### 2. Methods for Unstructured Grid Visualization
 
-### Plotting with Matplotlib
+#### 3. Visualization Libraries & Rendering Techniques
 
-### Comparison Between Methods
+#### 4. Grid Topology Visualization
+
+#### 5. Data Variable Visualization
+
+#### 6. Performance & Data Fidelity Considerations
+
 
 ## Running the Notebooks
 
