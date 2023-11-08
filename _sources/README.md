@@ -1,24 +1,26 @@
-
 <p align="center">
-  <img style="float: right;" src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="300" /> 
+  <img style="float: right;" src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="300" />
   <img style="float: right;" src="https://raw.githubusercontent.com/UXARRAY/unstructured-grid-viz-cookbook/main/notebooks/images/logos/siparcs.png" width="150" />
 </p>
-
 
 # Unstructured Grid Visualization Cookbook
 
 [![nightly-build](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 
-This Cookbook showcases how to visualize Unstructured Grids using UXarray paired with community tool sets such as HoloViz and Matplotlib. It was put together as part of 
+This Cookbook showcases how to visualize Unstructured Grids using UXarray paired with community tool sets such as HoloViz and Matplotlib. It was put together as part of
 Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, which is titled "Python Data Analysis and Visualization for Unstructured Grid Data." This cookbook is currently being adapted from
 our 2023 intern Ian's notebook which can be found [here](https://github.com/NCAR/geocat-scratch/blob/ifranda/viz-notebook/SIParCS2023/Visualization_Notebook.ipynb).
 
 ## Authors
 
-[Ian Franda (NCAR SIParCS 2023 Intern)](@ifranda)
-
 [Philip Chmielowiec (NCAR GeoCAT)](@philipc2)
+
+[Orhan Eroglu (NCAR GeoCAT)](@erogluorhan)
+
+[Orhan Eroglu (Argonne )](@rajeeja)
+
+[Ian Franda (NCAR SIParCS 2023 Intern)](@ifranda)
 
 ### Contributors
 
@@ -28,7 +30,7 @@ our 2023 intern Ian's notebook which can be found [here](https://github.com/NCAR
 
 ## Structure
 
-This notebook is broken down into four individual notebooks which outline the necessary workflows to visualize unstructured grids. 
+This notebook is broken down into four individual notebooks which outline the necessary workflows to visualize unstructured grids.
 
 ### Using UXarray to Work with Unstructured Grid Datasets
 
@@ -85,5 +87,3 @@ If you are interested in running this material locally on your computer, you wil
    cd notebooks/
    jupyter lab
    ```
-
-
