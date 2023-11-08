@@ -18,7 +18,7 @@ our 2023 intern Ian's notebook which can be found [here](https://github.com/NCAR
 
 [Orhan Eroglu (NCAR GeoCAT)](@erogluorhan)
 
-[Orhan Eroglu (Argonne )](@rajeeja)
+[Rajeev Jain (Argonne National Lab)](@rajeeja)
 
 [Ian Franda (NCAR SIParCS 2023 Intern)](@ifranda)
 
