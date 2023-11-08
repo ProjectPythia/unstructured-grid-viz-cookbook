@@ -6,20 +6,20 @@ parts:
       - file: notebooks/how-to-cite
   - caption: Introduction to UXarray & Unstructured Grids
     chapters:
-      - file: notebooks/uxarray
+      - file: notebooks/01-intro/template
   - caption: Methods for Unstructured Grid Visualization
     chapters:
-      - file: notebooks/uxarray
+      - file: notebooks/02-methods/template
   - caption: Visualization Libraries & Rendering Techniques
     chapters:
-      - file: notebooks/uxarray
+      - file: notebooks/03-libraries/template
   - caption: Visualizing Grid Topology
     chapters:
-      - file: notebooks/uxarray
+      - file: notebooks/04-topology/template
   - caption: Visualizing Data Variables
     chapters:
-      - file: notebooks/uxarray
+      - file: notebooks/05-data-vars/template
   - caption: Performance & Data Fidelity Considerations
     chapters:
-      - file: notebooks/uxarray
+      - file: notebooks/06-considerations/template
 
