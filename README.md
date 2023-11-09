@@ -34,15 +34,11 @@ This cookbook is split up into six chapters which provide a comprehensive overvi
 
 #### 1. Introduction to UXarray & Unstructured Grids
 
-#### 2. Methods for Unstructured Grid Visualization
+#### 2. Methods & Libraries for Unstructured Grid Visualization
 
-#### 3. Visualization Libraries & Rendering Techniques
+#### 3. UXarray Visualization
 
-#### 4. Grid Topology Visualization
-
-#### 5. Data Variable Visualization
-
-#### 6. Performance & Data Fidelity Considerations
+#### 4. Performance & Data Fidelity Considerations
 
 
 ## Running the Notebooks
