@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notebook Title &#8212; Project Pythia Cookbook Template</title>
+    <title>Plot API &#8212; Project Pythia Cookbook Template</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Mapping" href="../02-methods/01-data-mapping.html" />
+    <link rel="prev" title="Data Structures" href="02-data-structures.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -201,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
   Introduction to UXarray &amp; Unstructured Grids
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01-unstructured-grid-overview.html">
    Unstructured Grid Overview
@@ -212,8 +214,8 @@ const thebe_selector_output = ".output, .cell_output"
    Data Structures
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03-plot-api.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Plot API
   </a>
  </li>
@@ -321,7 +323,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/notebooks/01-intro/template.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/notebooks/01-intro/03-plot-api.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -341,10 +343,10 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/unstructured-grid-viz-cookbook//issues/new?title=Issue%20on%20page%20%2Fnotebooks/01-intro/template.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/unstructured-grid-viz-cookbook//issues/new?title=Issue%20on%20page%20%2Fnotebooks/01-intro/03-plot-api.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/edit/main/notebooks/01-intro/template.ipynb"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/edit/main/notebooks/01-intro/03-plot-api.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -364,7 +366,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/unstructured-grid-viz-cookbook/main?urlpath=lab/tree/notebooks/01-intro/template.ipynb"><button type="button"
+        <a class="binder-button" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/unstructured-grid-viz-cookbook/main?urlpath=lab/tree/notebooks/01-intro/03-plot-api.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -389,8 +391,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
               
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="notebook-title">
-<h1>Notebook Title<a class="headerlink" href="#notebook-title" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="plot-api">
+<h1>Plot API<a class="headerlink" href="#plot-api" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -423,7 +425,21 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 
               </div>
               <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="02-data-structures.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data Structures</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../02-methods/01-data-mapping.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Mapping</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </div>
           </div>
