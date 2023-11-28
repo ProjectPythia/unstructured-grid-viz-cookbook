@@ -6,7 +6,7 @@ dependencies:
   - jupyterlab
   - jupyter_server
   - pip
-  - uxarray
+  # - uxarray uncomment this and remove the below pip uxarray install if Grid.plot.mesh() etc get released
   - cartopy
   - dask
   - datashader
@@ -27,8 +27,10 @@ dependencies:
   - scikit-learn
   - scipy
   - shapely
-  - spatialpandas
+  # - spatialpandas   # uncomment this and remove below pip install if from_exterior_coords() gets released
   - xarray
   - pip:
       - sphinx-pythia-theme
       - antimeridian
+      - git+https://github.com/UXARRAY/uxarray.git
+      - git+https://github.com/holoviz/spatialpandas.git
