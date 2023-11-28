@@ -269,8 +269,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-uxarray-vis/05-point-raster.html">
-   Point Rasterization
+  <a class="reference internal" href="../03-uxarray-vis/05-points.html">
+   Points
   </a>
  </li>
 </ul>
@@ -383,6 +383,24 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> On this page
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grid-with-face-centered-data-variable">
+   Grid with Face-Centered Data Variable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grid-with-node-centered-data-variable">
+   Grid with Node-Centered Data Variable
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -396,8 +414,40 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code and content goes here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uxarray</span> <span class="k">as</span> <span class="nn">ux</span>
+
+<span class="n">file_dir</span> <span class="o">=</span> <span class="s2">&quot;../../meshfiles/&quot;</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/dask/dataframe/_pyarrow_compat.py:17: FutureWarning: Minimal version of pyarrow will soon be increased to 14.0.1. You are using 12.0.1. Please consider upgrading.
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="grid-with-face-centered-data-variable">
+<h2>Grid with Face-Centered Data Variable<a class="headerlink" href="#grid-with-face-centered-data-variable" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_filename_mpas</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;oQU120.grid.nc&quot;</span>
+<span class="n">data_filename_mpas</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;oQU120.data.nc&quot;</span>
+<span class="n">uxds_mpas</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">grid_filename_mpas</span><span class="p">,</span> <span class="n">data_filename_mpas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="grid-with-node-centered-data-variable">
+<h2>Grid with Node-Centered Data Variable<a class="headerlink" href="#grid-with-node-centered-data-variable" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_filename_geoflow</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;geoflow.grid.nc&quot;</span>
+<span class="n">data_filename_geoflow</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;geoflow.data.nc&quot;</span>
+<span class="n">uxds_geoflow</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">grid_filename_geoflow</span><span class="p">,</span> <span class="n">data_filename_geoflow</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
