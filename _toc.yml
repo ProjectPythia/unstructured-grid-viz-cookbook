@@ -22,7 +22,7 @@ parts:
       - file: notebooks/03-uxarray-vis/02-data-variable
       - file: notebooks/03-uxarray-vis/03-polygons
       - file: notebooks/03-uxarray-vis/04-triangles
-      - file: notebooks/03-uxarray-vis/05-point-raster
+      - file: notebooks/03-uxarray-vis/05-points
 
   - caption: Performance & Data Fidelity Considerations
     chapters:
