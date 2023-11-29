@@ -8,8 +8,7 @@
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 
 This Cookbook is a comprehensive showcase of workflows & techniques for visualuzing Unstructured Grids using UXarray. It orginiated as part of
-Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, titled "_Python Data Analysis and Visualization for Unstructured Grids_." 
-
+Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, titled "_Python Data Analysis and Visualization for Unstructured Grids_."
 
 ## Authors
 
@@ -38,7 +37,6 @@ This cookbook is split up into six chapters which provide a comprehensive overvi
 #### **3. UXarray Visualization**
 
 #### **4. Performance & Data Fidelity Considerations**
-
 
 ## Running the Notebooks
 
