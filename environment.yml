@@ -32,5 +32,5 @@ dependencies:
   - pip:
       - sphinx-pythia-theme
       - antimeridian
-      - git+https://github.com/UXARRAY/uxarray.git
+      - git+https://github.com/UXARRAY/uxarray.git@philipc2/point-viz
       - git+https://github.com/holoviz/spatialpandas.git
