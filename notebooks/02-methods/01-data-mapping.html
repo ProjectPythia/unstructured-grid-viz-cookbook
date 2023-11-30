@@ -389,13 +389,18 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#grid-with-face-centered-data-variable">
-   Grid with Face-Centered Data Variable
+  <a class="reference internal nav-link" href="#face-centered-data">
+   Face-Centered Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#grid-with-node-centered-data-variable">
-   Grid with Node-Centered Data Variable
+  <a class="reference internal nav-link" href="#node-centered-data">
+   Node-Centered Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#edge-centered-data">
+   Edge-Centered Data
   </a>
  </li>
 </ul>
@@ -412,44 +417,18 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <div class="tex2jax_ignore mathjax_ignore section" id="data-mapping">
 <h1>Data Mapping<a class="headerlink" href="#data-mapping" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uxarray</span> <span class="k">as</span> <span class="nn">ux</span>
-
-<span class="n">file_dir</span> <span class="o">=</span> <span class="s2">&quot;../../meshfiles/&quot;</span>
-</pre></div>
+<p>When attempting to visualize a data variable that resides on an unstructured grid, it’s important to identify what element it is mapped to, since that will dictate what visualization method is preferred</p>
+<div class="section" id="face-centered-data">
+<h2>Face-Centered Data<a class="headerlink" href="#face-centered-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>// add visual</p>
 </div>
+<div class="section" id="node-centered-data">
+<h2>Node-Centered Data<a class="headerlink" href="#node-centered-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>// add visual</p>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/dask/dataframe/_pyarrow_compat.py:17: FutureWarning: Minimal version of pyarrow will soon be increased to 14.0.1. You are using 12.0.1. Please consider upgrading.
-  warnings.warn(
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="grid-with-face-centered-data-variable">
-<h2>Grid with Face-Centered Data Variable<a class="headerlink" href="#grid-with-face-centered-data-variable" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_filename_mpas</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;oQU120.grid.nc&quot;</span>
-<span class="n">data_filename_mpas</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;oQU120.data.nc&quot;</span>
-<span class="n">uxds_mpas</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">grid_filename_mpas</span><span class="p">,</span> <span class="n">data_filename_mpas</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="grid-with-node-centered-data-variable">
-<h2>Grid with Node-Centered Data Variable<a class="headerlink" href="#grid-with-node-centered-data-variable" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_filename_geoflow</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;geoflow.grid.nc&quot;</span>
-<span class="n">data_filename_geoflow</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;geoflow.data.nc&quot;</span>
-<span class="n">uxds_geoflow</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">grid_filename_geoflow</span><span class="p">,</span> <span class="n">data_filename_geoflow</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="edge-centered-data">
+<h2>Edge-Centered Data<a class="headerlink" href="#edge-centered-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>// add visual</p>
 </div>
 </div>
 
@@ -535,7 +514,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 29 November 2023.
+          Last updated on 30 November 2023.
         </p>
       </div>
     </div>
