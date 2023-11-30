@@ -1,5 +1,7 @@
 <p align="center">
   <img style="float: right;" src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="300" />
+  <img style="float: right;" src="https://github.com/UXARRAY/unstructured-grid-viz-cookbook/blob/main/notebooks/images/logos/SEATSLogoTransparent.png" width="325" />
+  <img style="float: right;" src="https://geocat-comp.readthedocs.io/en/latest/_static/GeoCAT_nsf.svg" width="350" />
 </p>
 
 # Unstructured Grid Visualization Cookbook
