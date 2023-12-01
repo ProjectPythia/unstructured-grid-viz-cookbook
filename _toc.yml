@@ -22,7 +22,4 @@ parts:
       - file: notebooks/03-uxarray-vis/03-polygons
       - file: notebooks/03-uxarray-vis/04-points
       - file: notebooks/03-uxarray-vis/05-triangles
-
-  - caption: Performance & Data Fidelity Considerations
-    chapters:
-      - file: notebooks/04-considerations/template
+      - file: notebooks/03-uxarray-vis/06-performance
