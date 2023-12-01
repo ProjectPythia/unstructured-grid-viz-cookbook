@@ -2,23 +2,22 @@ name: unstructured-grid-viz-cookbook-dev
 channels:
   - conda-forge
 dependencies:
-  - jupyter-book
-  - jupyterlab
-  - jupyter_server
-  - pip
-  # - uxarray uncomment this and remove the below pip uxarray install if Grid.plot.mesh() etc get released
   - cartopy
   - dask
   - datashader
   - geoviews
   - holoviews
   - hvplot
+  - jupyter-book
+  - jupyterlab
+  - jupyter_server
   - matplotlib-base
   - netcdf4
   - numba
   - numpy
   - pandas<2.1.0
   - pathlib
+  - pip
   - pre_commit
   - pyarrow<13.0.0
   - pytest
@@ -28,9 +27,10 @@ dependencies:
   - scipy
   - shapely
   # - spatialpandas   # uncomment this and remove below pip install if from_exterior_coords() gets released
+  # - uxarray uncomment this and remove the below pip uxarray install if Grid.plot.mesh() etc get released
   - xarray
   - pip:
-      - sphinx-pythia-theme
       - antimeridian
       - git+https://github.com/UXARRAY/uxarray.git@philipc2/point-viz
       - git+https://github.com/holoviz/spatialpandas.git
+      - sphinx-pythia-theme
