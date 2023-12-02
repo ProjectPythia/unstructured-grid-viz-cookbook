@@ -611,14 +611,54 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 <div class="section" id="regional">
 <h3>Regional<a class="headerlink" href="#regional" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span> 
+                                        <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> 
+                                        <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
+                                        <span class="n">exclude_antimeridian</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                                        <span class="n">dynamic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+                                        <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">68</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">),</span> 
+                                        <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">71</span><span class="p">,</span> <span class="o">-</span><span class="mi">66</span><span class="p">),</span> 
+                                        <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span> 
+                                        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Regional Polygon Raster&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><img alt="Polygon Raster" src="../../_images/regional_polygon_raster.png" /></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> 
+                                        <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> 
+                                        <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
+                                        <span class="n">dynamic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+                                        <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">68</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">),</span> 
+                                        <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">71</span><span class="p">,</span> <span class="o">-</span><span class="mi">66</span><span class="p">),</span> 
+                                        <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span> 
+                                        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Regional Point Raster&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><img alt="Point Raster" src="../../_images/regional_point_raster.png" /></p>
 <p>Without specific and additional parameters, both the Polygon and Point raters look identical.</p>
 <p>However, once we set <code class="docutils literal notranslate"><span class="pre">dynamic=True</span></code>, which dynamically re-rasterizes as we zoom and pan across our plot, we can begin to see the differences in these methods</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">exclude_antimeridian</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Global Polygon Raster&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span> 
+                                        <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> 
+                                        <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
+                                        <span class="n">exclude_antimeridian</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                                        <span class="n">dynamic</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">68</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">),</span> 
+                                        <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">71</span><span class="p">,</span> <span class="o">-</span><span class="mi">66</span><span class="p">),</span> 
+                                        <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span> 
+                                        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Regional Polygon Raster (Dynamic)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><img alt="Polygon Raster" src="../../_images/regional_polygon_raster_dyn.png" /></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> 
+                                        <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> 
+                                        <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
+                                        <span class="n">dynamic</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">68</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">),</span> 
+                                        <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">71</span><span class="p">,</span> <span class="o">-</span><span class="mi">66</span><span class="p">),</span> 
+                                        <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span> 
+                                        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Regional Point Raster (Dynamic)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><img alt="Point Raster" src="../../_images/regional_point_raster_dyn.png" /></p>
 <p>The Polygon Raster can be zoomed in indefinitely, since our polygon mesh completely covers the screen. However, since our we are using shaded coordinate points for our Point Raster, once we zoom in, we no longer have completely filled cells, we are left with the individual points.</p>
 </div>
