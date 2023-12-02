@@ -384,6 +384,18 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <a class="reference internal nav-link" href="#timing-comparison">
    Timing Comparison
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-processing-initial-run">
+     Data Processing (Initial Run)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-processing-subsequent-runs">
+     Data Processing (Subsequent Runs)
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#polygon-plots">
@@ -409,11 +421,74 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <div class="tex2jax_ignore mathjax_ignore section" id="visualization-at-scale">
 <h1>Visualization at Scale<a class="headerlink" href="#visualization-at-scale" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <p>—|</p>
+<p>When working with large datasets, it’s crucial to consider the performance of each visualization method. This notebook investigates the performance and data fidelity of the previously covered methods using high-resolution grids.</p>
 <div class="section" id="benchmarked-dataset">
 <h2>Benchmarked Dataset<a class="headerlink" href="#benchmarked-dataset" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>The dataset used for timings and examples in this notebook were provided from the <a class="reference external" href="https://www.google.com/search?q=dyamond&amp;oq=dyamond&amp;gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQIxgnMgcIAhAuGIAEMgkIAxAuGAoYgAQyCQgEEAAYChiABDIHCAUQLhiABDIHCAYQLhiABDIJCAcQABgKGIAEMgcICBAAGIAEMg8ICRAAGAoYgwEYsQMYgATSAQc5NjRqMGo0qAIAsAIA&amp;sourceid=chrome&amp;ie=UTF-8">DYAMOND Initiative</a>.</p>
+<p>There are four datasets, each of the same grid, but with different resolutions. The table below summarizes the scale of these datasets.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Element / Resolution</p></th>
+<th class="head"><p>30km</p></th>
+<th class="head"><p>15km</p></th>
+<th class="head"><p>7.5km</p></th>
+<th class="head"><p>3.75km</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Faces</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nodes</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="timing-comparison">
 <h2>Timing Comparison<a class="headerlink" href="#timing-comparison" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>All timings were run on a single <a class="reference external" href="https://arc.ucar.edu/knowledge_base/74317833">NCAR Derecho Node</a></p>
+<div class="section" id="data-processing-initial-run">
+<h3>Data Processing (Initial Run)<a class="headerlink" href="#data-processing-initial-run" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Visualization Method / Grid Resolution</p></th>
+<th class="head"><p>30km</p></th>
+<th class="head"><p>15km</p></th>
+<th class="head"><p>7.5km</p></th>
+<th class="head"><p>3.75km</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Polygon Raster (Including Antimeridian)</p></td>
+<td><p>28.5 (1.26)</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Polygon Raster (Excluding Antimeridian)</p></td>
+<td><p>1.69 (0.23)</p></td>
+<td><p>5.96 (0.09)</p></td>
+<td><p>23.1 (0.52)</p></td>
+<td><p>93 (1.01)</p></td>
+</tr>
+<tr class="row-even"><td><p>Point Raster</p></td>
+<td><p>0.13 (0.03)</p></td>
+<td><p>0.16 (0.01)</p></td>
+<td><p>0.35 (0.00)</p></td>
+<td><p>1.08 (0.07)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="data-processing-subsequent-runs">
+<h3>Data Processing (Subsequent Runs)<a class="headerlink" href="#data-processing-subsequent-runs" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Visualization Method / Grid Resolution</p></th>
@@ -444,6 +519,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 <div class="section" id="polygon-plots">
 <h2>Polygon Plots<a class="headerlink" href="#polygon-plots" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -528,7 +604,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 1 December 2023.
+          Last updated on 2 December 2023.
         </p>
       </div>
     </div>
