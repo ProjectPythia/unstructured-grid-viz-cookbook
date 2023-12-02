@@ -23,3 +23,4 @@ parts:
       - file: notebooks/03-uxarray-vis/04-points
       - file: notebooks/03-uxarray-vis/05-triangles
       - file: notebooks/03-uxarray-vis/06-performance
+      - file: notebooks/03-uxarray-vis/07-animations
