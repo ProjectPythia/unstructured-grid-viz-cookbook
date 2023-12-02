@@ -9,8 +9,7 @@
 [![nightly-build](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 
-This Cookbook is a comprehensive showcase of workflows & techniques for visualuzing Unstructured Grids using UXarray. It orginiated as part of
-Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIParCS) project, titled "_Python Data Analysis and Visualization for Unstructured Grids_."
+This Cookbook is a comprehensive showcase of workflows & techniques for visualizing Unstructured Grids using [UXarray](https://uxarray.readthedocs.io/).
 
 ## Authors
 
@@ -30,15 +29,13 @@ Project Raijin's NCAR Summer Internships in Parallel Computational Science (SIPa
 
 ## Structure
 
-This cookbook is split up into six chapters which provide a comprehensive overview of how to use UXarray to work with and visualuze unstructured grid datasets.
+This cookbook is split up into three chapters that provide a comprehensive overview of how to use UXarray to work with and visualuze unstructured grid datasets.
 
 #### **1. Introduction to UXarray & Unstructured Grids**
 
 #### **2. Methods & Libraries for Unstructured Grid Visualization**
 
 #### **3. UXarray Visualization**
-
-#### **4. Performance & Data Fidelity Considerations**
 
 ## Running the Notebooks
 
