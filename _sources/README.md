@@ -29,13 +29,13 @@ This Cookbook is a comprehensive showcase of workflows & techniques for visualiz
 
 ## Structure
 
-This cookbook is split up into three chapters that provide a comprehensive overview of how to use UXarray to work with and visualuze unstructured grid datasets.
+This cookbook is split up into three chapters that provide a detailed overview of how to use UXarray to work with and visualuze unstructured grid datasets:
 
-#### **1. Introduction to UXarray & Unstructured Grids**
+**1. Introduction to UXarray & Unstructured Grids**
 
-#### **2. Methods & Libraries for Unstructured Grid Visualization**
+**2. Methods & Libraries for Unstructured Grid Visualization**
 
-#### **3. UXarray Visualization**
+**3. UXarray Visualization**
 
 ## Running the Notebooks
 

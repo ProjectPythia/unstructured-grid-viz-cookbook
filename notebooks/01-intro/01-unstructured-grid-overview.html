@@ -420,8 +420,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <div class="tex2jax_ignore mathjax_ignore section" id="unstructured-grids-overview">
 <h1>Unstructured Grids Overview<a class="headerlink" href="#unstructured-grids-overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
-<p>The goal of this notebook is to provide a brief overview of unstructured grids and provide a teaser of plotting with the UXarray package.
-Contents:</p>
+<p>The goal of this notebook is to provide a brief overview of unstructured grids and provide a teaser of plotting with the <a class="reference external" href="https://uxarray.readthedocs.io/">UXarray</a> package.</p>
+<p>Contents:</p>
 <ol class="arabic simple">
 <li><p>Structured vs. Unstructured Grids</p></li>
 <li><p>Structured Grids</p></li>
@@ -507,12 +507,13 @@ Contents:</p>
   warnings.warn(f&#39;Downloading: {url}&#39;, DownloadWarning)
 </pre></div>
 </div>
-<img alt="../../_images/5cd13cb8ab137178167fd3a4d1b09f6be7da61f83cfcfe42c582286b406aaf00.png" src="../../_images/5cd13cb8ab137178167fd3a4d1b09f6be7da61f83cfcfe42c582286b406aaf00.png" />
+<img alt="../../_images/98236b9fc864bedfea1924ff9ebb07d11d7f4671c32f74cba398a92262f2532c.png" src="../../_images/98236b9fc864bedfea1924ff9ebb07d11d7f4671c32f74cba398a92262f2532c.png" />
 </div>
 </div>
 </div>
 <div class="section" id="unstructured-grids">
 <h2>Unstructured Grids<a class="headerlink" href="#unstructured-grids" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Characteristic features of unstructured grids are:</p>
 <ul class="simple">
 <li><p>Adaptability to complex geometries: Fits intricate shapes and boundaries</p></li>
 <li><p>Often runs faster than structured grids: Requires fewer elements to achieve similar accuracy</p></li>
@@ -587,19 +588,27 @@ Contents:</p>
 <img alt="../../_images/a0b32e8061e5506c3f952573c9de9ae8e3f4430a24dc705e1db1359d49ecaba5.png" src="../../_images/a0b32e8061e5506c3f952573c9de9ae8e3f4430a24dc705e1db1359d49ecaba5.png" />
 </div>
 </div>
-<p>NOTE: This is a very basic example of an unstructured grid with triangles. There are very specialized libraries to create unstructured grids. Often the region of interest is meshed with a finer resolution. The mesh is then coarsened in areas where the resolution is not needed. This is done to reduce the number of elements and improve computational efficiency.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a very basic example of an unstructured grid with triangles. There are very specialized libraries to create unstructured grids. Often the region of interest is meshed with a finer resolution. The mesh is then coarsened in areas where the resolution is not needed. This is done to reduce the number of elements and improve computational efficiency.</p>
+</div>
 </div>
 <div class="section" id="why-uxarray-for-unstructured-grids">
 <h2>Why UXarray for Unstructured Grids?<a class="headerlink" href="#why-uxarray-for-unstructured-grids" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>UXarray, which stands for “Unstructured-Xarray”, is a Python package that provides Xarray-styled functionality for working with unstructured grids built around the UGRID conventions. UXarray can simplify working with unstructured grids because it:</p>
 <ul class="simple">
-<li><p>It inherits from Xarray, providing simplified data using familiar (Xarray like) data structures and operations.</p></li>
-<li><p>Bring standardization to unstructured mesh support for climate data analysis and visualization.</p></li>
-<li><p>Adherence to the UGRID specification for compatibility across a variety of mesh formats.</p></li>
-<li><p>Optimized data structures and algorithms for handling large and complex unstructured datasets.</p></li>
-<li><p>Enhanced Interoperability and Community Collaboration.</p></li>
-<li><p>One interface for a variety of unstructured grid formats.</p></li>
+<li><p>Enables significant data analysis and visualization functionality to be executed dircetly on unstructured grids</p></li>
+<li><p>Inherits from Xarray, providing simplified data using familiar (Xarray-like) data structures and operations</p></li>
+<li><p>Brings standardization to unstructured mesh support for climate data analysis and visualization</p></li>
+<li><p>Adheres to the UGRID specification for compatibility across a variety of mesh formats</p></li>
+<li><p>Builds on optimized data structures and algorithms for handling large and complex unstructured datasets</p></li>
+<li><p>Supports enhanced interoperability and community collaboration</p></li>
+<li><p>Provides a single interface for supporting a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus</p></li>
 </ul>
-<p>There are unstructured grid format such as Exodus, SCRIP, MPAS, UGRID etc. UXarray is a library that can read and write many such unstructured grid formats. The specific focus of UXarray is to provide a common interface to access and operate on unstructured grids in the climate science community.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This notebook serves as an introduction to unstructured grids and UXarray. For more information, please visit the UXarray documentation at https://uxarray.readthedocs.io/en/latest/ and specifically see the example section: https://uxarray.readthedocs.io/en/latest/examples.html</p>
+</div>
 </div>
 <div class="section" id="what-is-next">
 <h2>What is next?<a class="headerlink" href="#what-is-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
