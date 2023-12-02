@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unstructured Grid Overview &#8212; Project Pythia Cookbook Template</title>
+    <title>Unstructured Grids Overview &#8212; Project Pythia Cookbook Template</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -206,7 +206,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Unstructured Grid Overview
+   Unstructured Grids Overview
   </a>
  </li>
  <li class="toctree-l1">
@@ -381,31 +381,29 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Unstructured Grid Overview
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#structured-vs-unstructured-grids">
-     Structured vs Unstructured Grids
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#structured-grid">
-   Structured Grid
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structured-vs-unstructured-grids">
+   Structured vs Unstructured Grids
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structured-grids">
+   Structured Grids
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#unstructured-grids">
    Unstructured Grids
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-uxarray-for-unstructured-grids">
-   Why UXarray for unstructured grids?
+   Why UXarray for Unstructured Grids?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-next">
+   What is next?
   </a>
  </li>
 </ul>
@@ -419,8 +417,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
               
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="unstructured-grid-overview">
-<h1>Unstructured Grid Overview<a class="headerlink" href="#unstructured-grid-overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="unstructured-grids-overview">
+<h1>Unstructured Grids Overview<a class="headerlink" href="#unstructured-grids-overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
 <p>The goal of this notebook is to provide a brief overview of unstructured grids and provide a teaser of plotting with the UXarray package.
 Contents:</p>
@@ -436,9 +434,8 @@ Contents:</p>
 <p>A structured grid is well-ordered, with a simple scheme used to label elements and identify neighbors, while an unstructured grid allows elements to be joined in any manner, requiring special lists to identify neighboring elements.</p>
 <p>Note that the focus here is on two dimensional grids in the climate and weather context, but the same concepts apply to three dimensional grids.</p>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="structured-grid">
-<h1>Structured Grid<a class="headerlink" href="#structured-grid" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<div class="section" id="structured-grids">
+<h2>Structured Grids<a class="headerlink" href="#structured-grids" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>A few advantages of structured grids are:</p>
 <ul class="simple">
 <li><p>Uniform Representation: Simplifies numerical methods and enhances result interpretation.</p></li>
@@ -510,12 +507,12 @@ Contents:</p>
   warnings.warn(f&#39;Downloading: {url}&#39;, DownloadWarning)
 </pre></div>
 </div>
-<img alt="../../_images/81d2c43cddb9cf726948100b63f30178fcebe39f57af537ce9a1059acf38c4b4.png" src="../../_images/81d2c43cddb9cf726948100b63f30178fcebe39f57af537ce9a1059acf38c4b4.png" />
+<img alt="../../_images/5cd13cb8ab137178167fd3a4d1b09f6be7da61f83cfcfe42c582286b406aaf00.png" src="../../_images/5cd13cb8ab137178167fd3a4d1b09f6be7da61f83cfcfe42c582286b406aaf00.png" />
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="unstructured-grids">
-<h1>Unstructured Grids<a class="headerlink" href="#unstructured-grids" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<div class="section" id="unstructured-grids">
+<h2>Unstructured Grids<a class="headerlink" href="#unstructured-grids" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p>Adaptability to complex geometries: Fits intricate shapes and boundaries</p></li>
 <li><p>Often runs faster than structured grids: Requires fewer elements to achieve similar accuracy</p></li>
@@ -592,8 +589,8 @@ Contents:</p>
 </div>
 <p>NOTE: This is a very basic example of an unstructured grid with triangles. There are very specialized libraries to create unstructured grids. Often the region of interest is meshed with a finer resolution. The mesh is then coarsened in areas where the resolution is not needed. This is done to reduce the number of elements and improve computational efficiency.</p>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="why-uxarray-for-unstructured-grids">
-<h1>Why UXarray for unstructured grids?<a class="headerlink" href="#why-uxarray-for-unstructured-grids" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<div class="section" id="why-uxarray-for-unstructured-grids">
+<h2>Why UXarray for Unstructured Grids?<a class="headerlink" href="#why-uxarray-for-unstructured-grids" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p>It inherits from Xarray, providing simplified data using familiar (Xarray like) data structures and operations.</p></li>
 <li><p>Bring standardization to unstructured mesh support for climate data analysis and visualization.</p></li>
@@ -603,8 +600,11 @@ Contents:</p>
 <li><p>One interface for a variety of unstructured grid formats.</p></li>
 </ul>
 <p>There are unstructured grid format such as Exodus, SCRIP, MPAS, UGRID etc. UXarray is a library that can read and write many such unstructured grid formats. The specific focus of UXarray is to provide a common interface to access and operate on unstructured grids in the climate science community.</p>
-<p>This notebook serves as an introduction to unstructured grids and UXarray. For more information, please visit the UXarray documentation at https://uxarray.readthedocs.io/en/latest/ and specifically see the example section: https://uxarray.readthedocs.io/en/latest/examples.html</p>
+</div>
+<div class="section" id="what-is-next">
+<h2>What is next?<a class="headerlink" href="#what-is-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>The next sections will start with basic building blocks of UXarray and then slowly dive into more advanced features.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
