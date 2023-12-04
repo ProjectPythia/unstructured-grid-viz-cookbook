@@ -401,6 +401,11 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
    Edge-Centered Data
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identifying-data-mapping-with-uxarray">
+   Identifying Data Mapping with UXarray
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -415,6 +420,19 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <div class="tex2jax_ignore mathjax_ignore section" id="data-mapping">
 <h1>Data Mapping<a class="headerlink" href="#data-mapping" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uxarray</span> <span class="k">as</span> <span class="nn">ux</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/dask/dataframe/_pyarrow_compat.py:17: FutureWarning: Minimal version of pyarrow will soon be increased to 14.0.1. You are using 12.0.1. Please consider upgrading.
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
 <p>When attempting to visualize a data variable that resides on an unstructured grid, it’s important to identify what element it is mapped to, since that will dictate what visualization to chose.</p>
 <div class="section" id="sample-mesh">
 <h2>Sample Mesh<a class="headerlink" href="#sample-mesh" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -431,6 +449,48 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <div class="section" id="edge-centered-data">
 <h2>Edge-Centered Data<a class="headerlink" href="#edge-centered-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p><img alt="Edges" src="../../_images/edges.jpg" /></p>
+</div>
+<div class="section" id="identifying-data-mapping-with-uxarray">
+<h2>Identifying Data Mapping with UXarray<a class="headerlink" href="#identifying-data-mapping-with-uxarray" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_dir</span> <span class="o">=</span> <span class="s2">&quot;../../meshfiles/&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_filename_mpas</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;oQU480.grid.nc&quot;</span>
+<span class="n">data_filename_mpas</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;oQU480.data.nc&quot;</span>
+<span class="n">uxds_mpas</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">grid_filename_mpas</span><span class="p">,</span> <span class="n">data_filename_mpas</span><span class="p">)</span>
+
+<span class="n">uxds_mpas</span><span class="p">[</span><span class="s2">&quot;bottomDepth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;n_face&#39;,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_filename_geoflow</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;geoflow.grid.nc&quot;</span>
+<span class="n">data_filename_geoflow</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;geoflow.data.nc&quot;</span>
+<span class="n">uxds_geoflow</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">grid_filename_geoflow</span><span class="p">,</span> <span class="n">data_filename_geoflow</span><span class="p">)</span>
+
+<span class="n">uxds_geoflow</span><span class="p">[</span><span class="s2">&quot;v1&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;time&#39;, &#39;meshLayers&#39;, &#39;n_node&#39;)
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
