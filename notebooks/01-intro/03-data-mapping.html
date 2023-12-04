@@ -420,6 +420,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <div class="tex2jax_ignore mathjax_ignore section" id="data-mapping">
 <h1>Data Mapping<a class="headerlink" href="#data-mapping" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
+<p>When attempting to visualize a data variable that resides on an unstructured grid, it’s important to identify what element it is mapped to, since that will dictate what visualization to chose.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uxarray</span> <span class="k">as</span> <span class="nn">ux</span>
@@ -433,25 +434,30 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 </div>
-<p>When attempting to visualize a data variable that resides on an unstructured grid, it’s important to identify what element it is mapped to, since that will dictate what visualization to chose.</p>
 <div class="section" id="sample-mesh">
 <h2>Sample Mesh<a class="headerlink" href="#sample-mesh" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>As described in the previous sections, an Unstructured Grid is composed of Nodes, Edges, and Faces.</p>
+<p>Below is a basic example of an Unstructured Grid, containing 13 Nodes, 15 Edges, and 3 Faces.</p>
 <p><img alt="Sample Mesh" src="../../_images/sample_mesh.png" /></p>
 </div>
 <div class="section" id="face-centered-data">
 <h2>Face-Centered Data<a class="headerlink" href="#face-centered-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Face-Centered data is mapped to the area that each face covers.</p>
 <p><img alt="Faces" src="../../_images/faces.png" /></p>
 </div>
 <div class="section" id="node-centered-data">
 <h2>Node-Centered Data<a class="headerlink" href="#node-centered-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Node-Centered data is assigned to the corners of each face.</p>
 <p><img alt="Faces" src="../../_images/nodes.png" /></p>
 </div>
 <div class="section" id="edge-centered-data">
 <h2>Edge-Centered Data<a class="headerlink" href="#edge-centered-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Edge-Centered data is assigned to the edge that connects each pair of Nodes.</p>
 <p><img alt="Edges" src="../../_images/edges.jpg" /></p>
 </div>
 <div class="section" id="identifying-data-mapping-with-uxarray">
 <h2>Identifying Data Mapping with UXarray<a class="headerlink" href="#identifying-data-mapping-with-uxarray" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>We can identify what element a data variable is mapped to by looking at the dimensions of a <code class="docutils literal notranslate"><span class="pre">UxDataArray</span></code> or <code class="docutils literal notranslate"><span class="pre">UxDataset</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_dir</span> <span class="o">=</span> <span class="s2">&quot;../../meshfiles/&quot;</span>
