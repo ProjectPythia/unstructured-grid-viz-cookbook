@@ -431,8 +431,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <li><p>To use the vital information such as connectivity that comes with the grid,</p></li>
 <li><p>Not to require a lot of pre-processing as it happens in the majority of the Python visualization tools that are specialed for structured grids</p></li>
 </ul>
-<p>UXarray enables high-level, scalable visualization techniques to operate directly on unstructured grid data, providing Xarray-styled functionality to better read in and use unstructured grid datasets that follow standard conventions. UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus, and is extensable for other formats.</p>
-<p>This cookbook will first cover the overview of unstructured grids and introduce UXarray providing details about its architecture, then provide an overview of the visualization methods and libraries that could be utilized for unstructured grids, and finally showcase several UXarray visualizaition functionality.</p>
+<p>UXarray enables such visualization methods to operate directly on unstructured grid data, providing Xarray-styled functionality to better read in and use unstructured grid datasets that follow standard conventions. UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus, and is extensable for other formats.</p>
+<p>This cookbook covers the overview of unstructured grids and UXarray in particular, provides an overview of the visualization methods and libraries, and showcases several UXarray visualizaition functions.</p>
 </div>
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -449,10 +449,13 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 <div class="section" id="structure">
 <h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>This cookbook is split up into three chapters that provide a detailed overview of how to use UXarray to work with and visualuze unstructured grid datasets:</p>
+<p>This cookbook is split up into a few chapters that provide a detailed overview of how to use UXarray to work with and visualize unstructured grid datasets:</p>
 <p><strong>1. Introduction to UXarray &amp; Unstructured Grids</strong></p>
+<p>Here we cover what unstructured grids are and how they are different than structured grids as well as whay UXarray could play a significant role in unstructured grid visualization.</p>
 <p><strong>2. Methods &amp; Libraries for Unstructured Grid Visualization</strong></p>
+<p>In this chapter, we briefly introduce plotting libraries and their specific technologies as well as rendering techniques that could be used for unstructured grid plotting and are used as part of UXarray.</p>
 <p><strong>3. UXarray Visualization</strong></p>
+<p>Several visualization cases and examples that can be realized using UXarray are provided in this chapter; grid topology plots, polygons, points, to name a few. Also in this section, the usage of UXarray plotting API and a discussion of visualization at scale are also provided.</p>
 </div>
 <div class="section" id="running-the-notebooks">
 <h2>Running the Notebooks<a class="headerlink" href="#running-the-notebooks" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -477,21 +480,20 @@ Jupyter</a>.</p>
 <div class="section" id="running-on-your-own-machine">
 <h3>Running on Your Own Machine<a class="headerlink" href="#running-on-your-own-machine" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>If you are interested in running this material locally on your computer, you will need to follow this workflow:</p>
-<p>(Replace “cookbook-example” with the title of your cookbooks)</p>
 <ol class="arabic">
-<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/cookbook-example</span></code> repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/cookbook-example.git
+<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/unstructured-grid-viz-cookbook</span></code> repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/unstructured-grid-viz-cookbook.git
 </pre></div>
 </div>
 </li>
-<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">cookbook-example</span></code> directory</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>cookbook-example
+<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">unstructured-grid-viz-cookbook</span></code> directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>unstructured-grid-viz-cookbook
 </pre></div>
 </div>
 </li>
 <li><p>Create and activate your conda environment from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
-conda<span class="w"> </span>activate<span class="w"> </span>cookbook-example
+conda<span class="w"> </span>activate<span class="w"> </span>unstructured-grid-viz-cookbook-dev
 </pre></div>
 </div>
 </li>

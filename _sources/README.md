@@ -19,9 +19,9 @@ High-level, scalable visualization of the native unstructured grids is a much-ne
 - To use the vital information such as connectivity that comes with the grid,
 - Not to require a lot of pre-processing as it happens in the majority of the Python visualization tools that are specialed for structured grids
 
-UXarray enables high-level, scalable visualization techniques to operate directly on unstructured grid data, providing Xarray-styled functionality to better read in and use unstructured grid datasets that follow standard conventions. UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus, and is extensable for other formats.
+UXarray enables such visualization methods to operate directly on unstructured grid data, providing Xarray-styled functionality to better read in and use unstructured grid datasets that follow standard conventions. UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus, and is extensable for other formats.
 
-This cookbook will first cover the overview of unstructured grids and introduce UXarray providing details about its architecture, then provide an overview of the visualization methods and libraries that could be utilized for unstructured grids, and finally showcase several UXarray visualizaition functionality.
+This cookbook covers the overview of unstructured grids and UXarray in particular, provides an overview of the visualization methods and libraries, and showcases several UXarray visualizaition functions.
 
 ## Authors
 
@@ -41,13 +41,19 @@ This cookbook will first cover the overview of unstructured grids and introduce 
 
 ## Structure
 
-This cookbook is split up into three chapters that provide a detailed overview of how to use UXarray to work with and visualuze unstructured grid datasets:
+This cookbook is split up into a few chapters that provide a detailed overview of how to use UXarray to work with and visualize unstructured grid datasets:
 
 **1. Introduction to UXarray & Unstructured Grids**
 
+Here we cover what unstructured grids are and how they are different than structured grids as well as whay UXarray could play a significant role in unstructured grid visualization.
+
 **2. Methods & Libraries for Unstructured Grid Visualization**
 
+In this chapter, we briefly introduce plotting libraries and their specific technologies as well as rendering techniques that could be used for unstructured grid plotting and are used as part of UXarray.
+
 **3. UXarray Visualization**
+
+Several visualization cases and examples that can be realized using UXarray are provided in this chapter; grid topology plots, polygons, points, to name a few. Also in this section, the usage of UXarray plotting API and a discussion of visualization at scale are also provided.
 
 ## Running the Notebooks
 
@@ -74,22 +80,20 @@ Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyt
 
 If you are interested in running this material locally on your computer, you will need to follow this workflow:
 
-(Replace "cookbook-example" with the title of your cookbooks)
-
-1. Clone the `https://github.com/ProjectPythia/cookbook-example` repository:
+1. Clone the `https://github.com/ProjectPythia/unstructured-grid-viz-cookbook` repository:
 
    ```bash
-    git clone https://github.com/ProjectPythia/cookbook-example.git
+    git clone https://github.com/ProjectPythia/unstructured-grid-viz-cookbook.git
    ```
 
-1. Move into the `cookbook-example` directory
+1. Move into the `unstructured-grid-viz-cookbook` directory
    ```bash
-   cd cookbook-example
+   cd unstructured-grid-viz-cookbook
    ```
 1. Create and activate your conda environment from the `environment.yml` file
    ```bash
    conda env create -f environment.yml
-   conda activate cookbook-example
+   conda activate unstructured-grid-viz-cookbook-dev
    ```
 1. Move into the `notebooks` directory and start up Jupyterlab
    ```bash
