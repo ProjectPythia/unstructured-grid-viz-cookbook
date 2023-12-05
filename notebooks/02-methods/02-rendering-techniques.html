@@ -382,18 +382,13 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting-geometries">
-   Plotting Geometries
+  <a class="reference internal nav-link" href="#vector-geometries">
+   Vector Geometries
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rasterization">
    Rasterization
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#triangulation">
-   Triangulation
   </a>
  </li>
 </ul>
@@ -410,14 +405,19 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <div class="tex2jax_ignore mathjax_ignore section" id="rendering-techniques">
 <h1>Rendering Techniques<a class="headerlink" href="#rendering-techniques" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
-<div class="section" id="plotting-geometries">
-<h2>Plotting Geometries<a class="headerlink" href="#plotting-geometries" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Since Unstructured Grids are significantly more complex than Structured (a.k.a. Regular) Grids, the choice of rendering technique plays an important role in obtaining high-resolution, accurate, and scalable visualuzations.</p>
+<p>This notebook introduces relevant concepts and techniques that will be mentioned and used throughout this Cookbook.</p>
+<div class="section" id="vector-geometries">
+<h2>Vector Geometries<a class="headerlink" href="#vector-geometries" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>The nodes, edges, and faces that make up an Unstructured Grid can each be converted into a geometric representation for visualization.</p>
+<p>For example, in the UXarray Visualization section, we will showcase how we can convert the faces in our Unstructured Grid into Polygons.</p>
+<p>When constructing our visualization, we can render each face using directly onto the screen.</p>
+<p>One example of Vector Geometries is encountered when adding features to a visualization, such as Contents or Borders. The geometries of these features are drawn onto our screen.</p>
+<p><img alt="Rasterization Example" src="../../_images/contients.jpg" /></p>
 </div>
 <div class="section" id="rasterization">
 <h2>Rasterization<a class="headerlink" href="#rasterization" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-</div>
-<div class="section" id="triangulation">
-<h2>Triangulation<a class="headerlink" href="#triangulation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p><img alt="Rasterization Example" src="../../_images/raster_example.png" /></p>
 </div>
 </div>
 
