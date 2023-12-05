@@ -11,6 +11,18 @@
 
 This Cookbook is a comprehensive showcase of workflows & techniques for visualizing Unstructured Grids using [UXarray](https://uxarray.readthedocs.io/).
 
+## Motivation
+
+High-level, scalable visualization of the native unstructured grids is a much-needed ability in the scientific Python ecosystem. To achieve this, the process needs:
+
+- Not to regrid the unstructured grids into structured grids,
+- To use the vital information such as connectivity that comes with the grid,
+- Not to require a lot of pre-processing as it happens in the majority of the Python visualization tools that are specialed for structured grids
+
+UXarray enables high-level, scalable visualization techniques to operate directly on unstructured grid data, providing Xarray-styled functionality to better read in and use unstructured grid datasets that follow standard conventions. UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus, and is extensable for other formats.
+
+This cookbook will first cover the overview of unstructured grids and introduce UXarray providing details about its architecture, then provide an overview of the visualization methods and libraries that could be utilized for unstructured grids, and finally showcase several UXarray visualizaition functionality.
+
 ## Authors
 
 [Philip Chmielowiec (NCAR GeoCAT)](@philipc2)
