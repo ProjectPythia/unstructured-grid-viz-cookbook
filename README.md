@@ -1,6 +1,6 @@
 <p align="center">
   <img style="float: right;" src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="225" />
-  <img style="float: right;" src="https://github.com/UXARRAY/unstructured-grid-viz-cookbook/blob/main/notebooks/images/logos/SEATSLogoTransparent.png" width="250" />
+  <img style="float: right;" src="https://raw.githubusercontent.com/UXARRAY/unstructured-grid-viz-cookbook/main/notebooks/images/logos/SEATSLogoTransparent.png" width="250" />
   <img style="float: right;" src="https://geocat-comp.readthedocs.io/en/latest/_static/GeoCAT_nsf.svg" width="275" />
 </p>
 
