@@ -25,13 +25,13 @@ This cookbook covers the overview of unstructured grids and UXarray in particula
 
 ## Authors
 
-[Philip Chmielowiec (NCAR GeoCAT)](@philipc2)
+[Philip Chmielowiec (NSF NCAR)](@philipc2)
 
-[Orhan Eroglu (NCAR GeoCAT)](@erogluorhan)
+[Orhan Eroglu (NSF NCAR)](@erogluorhan)
 
-[Rajeev Jain (Argonne National Lab)](@rajeeja)
+[Rajeev Jain (Argonne National Laboratory)](@rajeeja)
 
-[Ian Franda (NCAR SIParCS 2023 Intern)](@ifranda)
+[Ian Franda (University of Wisconsin-Madison)](@ifranda)
 
 ### Contributors
 
