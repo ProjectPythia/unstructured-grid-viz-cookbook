@@ -1,12 +1,12 @@
 <p align="center">
   <img style="float: right;" src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="225" />
-  <img style="float: right;" src="https://raw.githubusercontent.com/UXARRAY/unstructured-grid-viz-cookbook/main/notebooks/images/logos/SEATSLogoTransparent.png" width="250" />
+  <img style="float: right;" src="https://raw.githubusercontent.com/ProjectPythia/unstructured-grid-viz-cookbook/main/notebooks/images/logos/SEATSLogoTransparent.png" width="250" />
   <img style="float: right;" src="https://geocat-comp.readthedocs.io/en/latest/_static/GeoCAT_nsf.svg" width="275" />
 </p>
 
 # Unstructured Grid Visualization Cookbook
 
-[![nightly-build](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/UXARRAY/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml)
+[![nightly-build](https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 
 This Cookbook is a comprehensive showcase of workflows & techniques for visualizing Unstructured Grids using [UXarray](https://uxarray.readthedocs.io/).
@@ -35,8 +35,8 @@ This cookbook covers the overview of unstructured grids and UXarray in particula
 
 ### Contributors
 
-<a href="https://github.com/UXARRAY/unstructured-grid-viz-cookbook/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=UXARRAY/unstructured-grid-viz-cookbook" />
+<a href="https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/unstructured-grid-viz-cookbook" />
 </a>
 
 ## Structure
