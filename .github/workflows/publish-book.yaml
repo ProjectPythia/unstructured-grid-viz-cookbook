@@ -12,7 +12,7 @@ jobs:
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
       use_cached_environment: false
-      environment_name: unstructured-grid-viz-cookbook
+      environment_name: unstructured-grid-viz-cookbook-dev
 
   deploy:
     needs: build
