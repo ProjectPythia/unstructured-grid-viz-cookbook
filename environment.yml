@@ -27,10 +27,9 @@ dependencies:
   - scipy
   - shapely
   # - spatialpandas   # uncomment this and remove below pip install if from_exterior_coords() gets released
-  # - uxarray uncomment this and remove the below pip uxarray install if Grid.plot.mesh() etc get released
+  - uxarray
   - xarray
   - pip:
       - antimeridian
-      - git+https://github.com/UXARRAY/uxarray.git@philipc2/point-viz
       - git+https://github.com/holoviz/spatialpandas.git
       - sphinx-pythia-theme
