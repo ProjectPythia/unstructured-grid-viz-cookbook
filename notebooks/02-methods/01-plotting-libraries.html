@@ -387,18 +387,18 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#todo-holoviews">
-     TODO: HoloViews
+    <a class="reference internal nav-link" href="#holoviews">
+     HoloViews
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#todo-datashader">
-     TODO: Datashader
+    <a class="reference internal nav-link" href="#datashader">
+     Datashader
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#todo-geoviews">
-     TODO: GeoViews
+    <a class="reference internal nav-link" href="#geoviews">
+     GeoViews
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -441,27 +441,55 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <hr class="docutils" />
 <div class="section" id="holoviz">
 <h2>HoloViz<a class="headerlink" href="#holoviz" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<div class="section" id="todo-holoviews">
-<h3>TODO: HoloViews<a class="headerlink" href="#todo-holoviews" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p><a class="reference external" href="https://holoviz.org/">HoloViz</a> is a stack of tools (such as Holoviews, Datashader, Geoviews, SpatialPandas, hvPlot etc.) that provide high-level functionality to visualize even the very large datasets efficiently in Python. HoloViz packages are well-suited for unstructured grid visualization because:</p>
+<ol class="arabic simple">
+<li><p>They provide rendering functionality for both vector geometries and rasterization, which will be detailed in the <a class="reference internal" href="02-rendering-techniques.html"><span class="doc std std-doc">next section</span></a>. Such functionality is much needed for UXarray’s grid topology and data visualization purposes.</p></li>
+<li><p>Unlike Matplotlib, they support using the connectivity information that comes from the unstructured grids</p></li>
+<li><p>They are designed to be scalable for even the largest datasets that’d be generated as result of kilometer-scale analyses</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>UXarray takes care of the vital tasks such as recognizing unstructured grids from various formats (such as UGRID, MPAS, Scrip, Exodus, etc.) and representing them in a unified UGRID-like format, providing the data structures and functionality necessary for convenient preprocessing of the grid, and wrapping up HoloViz packages’ functionality to enable unstructured grids-specialized, high-level visualization functions.</p>
 </div>
-<div class="section" id="todo-datashader">
-<h3>TODO: Datashader<a class="headerlink" href="#todo-datashader" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Let us look at the HoloViz packages that we utilize under the hood of UXarray to provide high-level, scalable visualization functions.</p>
+<div class="section" id="holoviews">
+<h3>HoloViews<a class="headerlink" href="#holoviews" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p><a class="reference external" href="https://holoviews.org/about.html">Holoviews</a> houses several elements (e.g. <code class="docutils literal notranslate"><span class="pre">Path()</span></code>, <code class="docutils literal notranslate"><span class="pre">Points()</span></code>) that we wrap up in the UXarray plotting accessors to enable visualization of grid geometries such as nodes and edges. Similarly, other elements of this package (e.g. <code class="docutils literal notranslate"><span class="pre">Polygons()</span></code>) are used by UXarray for various polygon vector visulization purposes.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>UXarray allows both Matplotlib and Bokeh backends to be chosen in visualization functions as they are provided by Holoviews (in addition to Plotly).</p>
 </div>
-<div class="section" id="todo-geoviews">
-<h3>TODO: GeoViews<a class="headerlink" href="#todo-geoviews" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+</div>
+<div class="section" id="datashader">
+<h3>Datashader<a class="headerlink" href="#datashader" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p><a class="reference external" href="https://datashader.org/about.html">Datashader</a> is the graphics pipeline system of the HoloViz tool stack for creating meaningful representations of large datasets quickly and flexibly. We utilize Datashader rasterization methods, transfer functions, and other shading operators in our polyon rasterization code.</p>
+</div>
+<div class="section" id="geoviews">
+<h3>GeoViews<a class="headerlink" href="#geoviews" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Actually, we do not wrap <a class="reference external" href="https://geoviews.org/index.html">GeoViews</a> functionality in UXarray. Instead, we leave it up to the user’s preferences to explore and visualize geographical, meteorological, and oceanographic datasets and features using the visulization outputs from our UXarray plotting functions. However, we love to enrich the plots in our documentation and examples with addition of a lot of Geoviews features such as ocean, land, coastlines, etc.</p>
 </div>
 <div class="section" id="todo-spatialpandas">
 <h3>TODO: SpatialPandas<a class="headerlink" href="#todo-spatialpandas" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Coming soon!</p>
 </div>
 </div>
 <div class="section" id="matplotlib">
 <h2>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Matplotlib is the workhorse of Python visualization needs, for both general and geoscientific purposes. However, when it
+comes to visualizing unstructured grids, Matplotlib’s:</p>
+<ol class="arabic simple">
+<li><p>Functionality is limited such that there is no way to use the connectivity information that comes with the unstructured grid</p></li>
+<li><p>Scalability especially for kilometer-scale (e.g. individual storm-reoslving) resolutions is limited.</p></li>
+</ol>
+<p>We still support Matplotlib as a backend option in our visualization functionality, which will be covered in the next chapter.</p>
+<p>We also provide conversion functions from UXarray to Matplotlib data structures such as collections, which can be utilized for visualization directly in Matplotlib after the conversion.</p>
 <div class="section" id="todo-collections">
 <h3>TODO: Collections<a class="headerlink" href="#todo-collections" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>https://matplotlib.org/stable/api/collections_api.html</p>
+<p>Coming soon! TODO: https://matplotlib.org/stable/api/collections_api.html</p>
 </div>
 <div class="section" id="todo-cartopy">
 <h3>TODO: Cartopy<a class="headerlink" href="#todo-cartopy" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Coming soon!</p>
 </div>
 </div>
 </div>
