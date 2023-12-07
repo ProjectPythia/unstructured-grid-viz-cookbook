@@ -13,15 +13,20 @@ This Cookbook is a comprehensive showcase of workflows & techniques for visualiz
 
 ## Motivation
 
-High-level, scalable visualization of the native unstructured grids is a much-needed ability in the scientific Python ecosystem. To achieve this, the process needs:
+High-level, scalable visualizations of native unstructured grids is a much-needed ability in the Scientific Python Ecosystem. To achieve this, the process needs to:
 
-- Not to regrid the unstructured grids into structured grids,
-- To use the vital information such as connectivity that comes with the grid,
-- Not to require a lot of pre-processing as it happens in the majority of the Python visualization tools that are specialed for structured grids
+- Not regrid the unstructured grids into structured grids
+- Use provided information such as connectivity variables that come with the grid
+- Limit the amount of pre-processing needed to prepare the data for Python visualization tools
 
-UXarray enables such visualization methods to operate directly on unstructured grid data, providing Xarray-styled functionality to better read in and use unstructured grid datasets that follow standard conventions. UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus, and is extensable for other formats.
+UXarray enables such visualization methods that operate directly on unstructured grid data,
+providing Xarray-styled functionality to better read in
+and use unstructured grid datasets that follow standard conventions.
+UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus,
+and is extendable for other formats.
 
-This cookbook covers the overview of unstructured grids and UXarray in particular, provides an overview of the visualization methods and libraries, and showcases several UXarray visualizaition functions.
+This cookbook covers an introduction to unstructured grids and UXarray,
+provides an overview of the visualization methods and libraries, and showcases several UXarray visualization functions.
 
 ## Authors
 
