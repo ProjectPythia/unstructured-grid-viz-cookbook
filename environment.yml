@@ -22,6 +22,7 @@ dependencies:
   - pyarrow<13.0.0
   - pytest
   - pytest-cov
+  - python>=3.9,<3.12
   - requests
   - scikit-learn
   - scipy
