@@ -401,11 +401,6 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
      Data Processing (Subsequent Runs)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#visualization">
-     Visualization
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -509,6 +504,9 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </tr>
 </tbody>
 </table>
+<p>We can see that Point Rasters are the best in terms of performance, about 86 times faster than Polygon Rasters (excluding AM).</p>
+<p>Both polygon plots scale linearly with an increase in resolution. A doubling in resolution leads to about a 4x increase in the number of polygons (a.k.a polygons), which is observed in the timings.</p>
+<p>Including antimeridian polygons leads to about a 20x slowdown across all resolutions, so it’s suggested to keep <code class="docutils literal notranslate"><span class="pre">exclude_antimeridian=True</span></code> when working with larger datasets.</p>
 </div>
 <div class="section" id="data-processing-subsequent-runs">
 <h3>Data Processing (Subsequent Runs)<a class="headerlink" href="#data-processing-subsequent-runs" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
@@ -523,10 +521,10 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Polygon Raster (Including Antimeridian)</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
+<td><p>0.31 (0.00)</p></td>
+<td><p>1.32 (0.31)</p></td>
+<td><p>3.85 (0.06)</p></td>
+<td><p>14.36 (0.13)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Polygon Raster (Excluding Antimeridian)</p></td>
 <td><p>0.30 (0.00)</p></td>
@@ -542,57 +540,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="visualization">
-<h3>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Visualization Method / Grid Resolution</p></th>
-<th class="head"><p>30km</p></th>
-<th class="head"><p>15km</p></th>
-<th class="head"><p>7.5km</p></th>
-<th class="head"><p>3.75km</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Polygon Raster (0.5 Pixel Ratio)</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>Polygon Raster (1.0 Pixel Ratio)</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>Polygon Raster (4.0 Pixel Ratio)</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>Point Raster (0.5 Pixel Ratio)</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>Point Raster (1.0 Pixel Ratio)</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>Point Raster (4.0 Pixel Ratio)</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
+<p>For subsequent runs (i.e. we have already run one plotting instance, which computes and caches the necessary data structures), performance for both Polygon methods is essentially identical.</p>
+<p>There is no caching currently implemented for Point Rasters, so the performance for each run is consistent with the initial run.</p>
 </div>
 </div>
 <div class="section" id="polygon-vs-point-rasters">
