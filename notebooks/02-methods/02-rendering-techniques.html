@@ -413,8 +413,10 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <p>For example, in the UXarray Visualization section, we will showcase how we can convert the faces in our Unstructured Grid into Polygons.</p>
 <p>When constructing our visualization, we can render each face using directly onto the screen.</p>
 <p>Rendering each face as a polygon will lead to visuals that look like this, which are extremely high-quality and represent the exact geometry of each face.</p>
+<p> </p>
 <a class="reference internal image-reference" href="../../_images/polygons.png"><img alt="Continents" src="../../_images/polygons.png" style="width: 400px;" /></a>
 <p>Another example of Vector Geometries is encountered when adding features to a visualization, such as Contents or Borders. The geometries of these features are drawn onto our screen.</p>
+<p> </p>
 <a class="reference internal image-reference" href="../../_images/contients.jpg"><img alt="Continents" src="../../_images/contients.jpg" style="width: 600px;" /></a>
 <p>The following code snippets show how we can represent each of the main unstructured grid geometries.</p>
 <div class="cell docutils container">
@@ -446,11 +448,15 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <div class="section" id="rasterization">
 <h2>Rasterization<a class="headerlink" href="#rasterization" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>While there is definitely merit in rendering each geometric shape directly, this operation is extremely computationally expensive for large datasets.</p>
-<p>Rasterization is a technique in computer graphics that converts vector (a.k.a geometric shapes) graphics into a raster image, which is simply a series of pixels.</p>
-<p>The figure below shows how rasterization approximates the geometry of geometries.</p>
+<p>Rasterization is a technique in computer graphics that converts vector (a.k.a geometric shapes) graphics into a raster image, which can be thought of as a regularly-sampled array of pixel values used for rendering.</p>
+<p>The figure below shows a simplified example of rasterization “approximates” the geometry of different elements.</p>
+<p> </p>
 <a class="reference internal image-reference" href="../../_images/raster_example.png"><img alt="Rasterization Example" src="../../_images/raster_example.png" style="width: 1000px;" /></a>
-<p>Below is an example of rasterized polygons plotted against the expected geometry.</p>
+<p>For unstructured grids, rasterization looks something like this:</p>
+<p> </p>
 <a class="reference internal image-reference" href="../../_images/raster-vs-vector.png"><img alt="raster and vector" src="../../_images/raster-vs-vector.png" style="width: 400px;" /></a>
+<p>The black edges outline the expected geometry of each face (a.k.a polygon).</p>
+<p>We can observe the jaggedness in the shading, which is the product of rasterization approximating each face.</p>
 </div>
 </div>
 
