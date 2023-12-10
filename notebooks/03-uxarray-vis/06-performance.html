@@ -387,18 +387,18 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#timing-comparison">
-   Timing Comparison
+  <a class="reference internal nav-link" href="#data-processing-timings">
+   Data Processing Timings
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-processing-initial-run">
-     Data Processing (Initial Run)
+    <a class="reference internal nav-link" href="#initial-run">
+     Initial Run
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-processing-subsequent-runs">
-     Data Processing (Subsequent Runs)
+    <a class="reference internal nav-link" href="#subsequent-runs">
+     Subsequent Runs
     </a>
    </li>
   </ul>
@@ -420,11 +420,6 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pixel-ratio-comparison">
-   Pixel Ratio Comparison
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -442,8 +437,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <p>When working with large datasets, it’s crucial to consider the performance of each visualization method. This notebook investigates the performance and data fidelity of the previously covered methods using high-resolution grids.</p>
 <div class="section" id="benchmarked-dataset">
 <h2>Benchmarked Dataset<a class="headerlink" href="#benchmarked-dataset" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>The dataset used for timings and examples in this notebook were provided from the <a class="reference external" href="https://www.google.com/search?q=dyamond&amp;oq=dyamond&amp;gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQIxgnMgcIAhAuGIAEMgkIAxAuGAoYgAQyCQgEEAAYChiABDIHCAUQLhiABDIHCAYQLhiABDIJCAcQABgKGIAEMgcICBAAGIAEMg8ICRAAGAoYgwEYsQMYgATSAQc5NjRqMGo0qAIAsAIA&amp;sourceid=chrome&amp;ie=UTF-8">DYAMOND Initiative</a>.</p>
-<p>There are four datasets, each of the same grid, but with different resolutions. The table below summarizes the scale of these datasets.</p>
+<p>The dataset used for the timings and examples in this notebook were provided curtesy of the <a class="reference external" href="https://www.google.com/search?q=dyamond&amp;oq=dyamond&amp;gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQIxgnMgcIAhAuGIAEMgkIAxAuGAoYgAQyCQgEEAAYChiABDIHCAUQLhiABDIHCAYQLhiABDIJCAcQABgKGIAEMgcICBAAGIAEMg8ICRAAGAoYgwEYsQMYgATSAQc5NjRqMGo0qAIAsAIA&amp;sourceid=chrome&amp;ie=UTF-8">DYAMOND Initiative</a>.</p>
+<p>There are four datasets, each from the same experiment, but with different grid resolutions. The table below summarizes the scale of these datasets:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Element / Resolution</p></th>
@@ -469,11 +464,11 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </tbody>
 </table>
 </div>
-<div class="section" id="timing-comparison">
-<h2>Timing Comparison<a class="headerlink" href="#timing-comparison" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="section" id="data-processing-timings">
+<h2>Data Processing Timings<a class="headerlink" href="#data-processing-timings" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>Timings were taken on a single <a class="reference external" href="https://arc.ucar.edu/knowledge_base/74317833">NCAR Derecho Node</a>. All results are in seconds.</p>
-<div class="section" id="data-processing-initial-run">
-<h3>Data Processing (Initial Run)<a class="headerlink" href="#data-processing-initial-run" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<div class="section" id="initial-run">
+<h3>Initial Run<a class="headerlink" href="#initial-run" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Visualization Method / Grid Resolution</p></th>
@@ -504,12 +499,12 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </tr>
 </tbody>
 </table>
-<p>We can see that Point Rasters are the best in terms of performance, about 86 times faster than Polygon Rasters (excluding AM).</p>
-<p>Both polygon plots scale linearly with an increase in resolution. A doubling in resolution leads to about a 4x increase in the number of polygons (a.k.a polygons), which is observed in the timings.</p>
+<p>We can see that Point Rasters are quickest, averaging about 86 times faster than Polygon Rasters (Excluding Antimeridian Polygons).</p>
+<p>Both polygon methods scale linearly with an increase in resolution. A doubling in resolution leads to about a 4x increase in the number of polygons (a.k.a polygons), which is also observed in the timings.</p>
 <p>Including antimeridian polygons leads to about a 20x slowdown across all resolutions, so it’s suggested to keep <code class="docutils literal notranslate"><span class="pre">exclude_antimeridian=True</span></code> when working with larger datasets.</p>
 </div>
-<div class="section" id="data-processing-subsequent-runs">
-<h3>Data Processing (Subsequent Runs)<a class="headerlink" href="#data-processing-subsequent-runs" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<div class="section" id="subsequent-runs">
+<h3>Subsequent Runs<a class="headerlink" href="#subsequent-runs" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Visualization Method / Grid Resolution</p></th>
@@ -542,12 +537,19 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </table>
 <p>For subsequent runs (i.e. we have already run one plotting instance, which computes and caches the necessary data structures), performance for both Polygon methods is essentially identical.</p>
 <p>There is no caching currently implemented for Point Rasters, so the performance for each run is consistent with the initial run.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The timings above benchmark the data processing time (i.e. total time needed to transform an unstructured grid into a format that is able to be rendered). Actual visualization times will vary depending on choices in parameters.</p>
+<p>A detailed benchmark of total visualization times (i.e. data processing and rendering to screen) will be added to this notebook in the future.</p>
+</div>
 </div>
 </div>
 <div class="section" id="polygon-vs-point-rasters">
 <h2>Polygon vs Point Rasters<a class="headerlink" href="#polygon-vs-point-rasters" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Both the Polygon and Point notebooks showed off how these elements could be rasterizer.</p>
 <div class="section" id="global">
 <h3>Global<a class="headerlink" href="#global" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>For certain visualization workflows, one may only be interested in observing the global trends of a data variable.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span> 
                                         <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">exclude_antimeridian</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
                                         <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span> 
@@ -563,9 +565,11 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </pre></div>
 </div>
 <p><img alt="Point Raster" src="../../_images/global_point_raster.png" /></p>
+<p>We can see that both the Polygon and Point Rasters capture the global trend of our data variable.</p>
 </div>
 <div class="section" id="regional">
 <h3>Regional<a class="headerlink" href="#regional" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>However, it’s also common to zoom into a region of interested (i.e. Continental United States, Europe, etc.) to observe how a data variable acts on these more refined regions.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span> 
                                         <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> 
                                         <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
@@ -589,8 +593,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </pre></div>
 </div>
 <p><img alt="Point Raster" src="../../_images/regional_point_raster.png" /></p>
-<p>Without specific and additional parameters, both the Polygon and Point raters look identical.</p>
-<p>However, once we set <code class="docutils literal notranslate"><span class="pre">dynamic=True</span></code>, which dynamically re-rasterizes as we zoom and pan across our plot, we can begin to see the differences in these methods</p>
+<p>Without specifying any additional parameters, both the Polygon and Point rasters look identical.</p>
+<p>However, setting the parameter <code class="docutils literal notranslate"><span class="pre">dynamic=True</span></code>, which dynamically performs the rasterization operations as we zoom and pan across a plot, we can start to see the differences between both types of plots.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">exclude_antimeridian</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Global Polygon Raster&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -615,13 +619,11 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </pre></div>
 </div>
 <p><img alt="Point Raster" src="../../_images/regional_point_raster_dyn.png" /></p>
-<p>The Polygon Raster can be zoomed in indefinitely, since our polygon mesh completely covers the screen. However, since our we are using shaded coordinate points for our Point Raster, once we zoom in, we no longer have completely filled cells, we are left with the individual points.</p>
-<p>Zooming in even further with the Polygon plot, we can start to see each cell clearly.</p>
+<p>The Polygon Raster can be zoomed in indefinite, which is due to each polygon covering a region of our screen.</p>
+<p>However, zooming in to our Point Rasters exposes how each point is still simply a pair of latitude and longitude coordinates, without any sense of area. After a certain point, there isn’t enough points to sample into a uniform looking raster image, and we are left with an approximation the individual points.</p>
+<p>Zooming in even further with the Polygon Raster, we can start to see each individual cell, even at such a high resolution.</p>
 <p><img alt="Polygon Raster" src="../../_images/polygon_raster_regional_dyn_zoomed.png" /></p>
 </div>
-</div>
-<div class="section" id="pixel-ratio-comparison">
-<h2>Pixel Ratio Comparison<a class="headerlink" href="#pixel-ratio-comparison" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 </div>
 </div>
 
