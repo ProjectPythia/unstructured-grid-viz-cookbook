@@ -595,9 +595,6 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <p><img alt="Point Raster" src="../../_images/regional_point_raster.png" /></p>
 <p>Without specifying any additional parameters, both the Polygon and Point rasters look identical.</p>
 <p>However, setting the parameter <code class="docutils literal notranslate"><span class="pre">dynamic=True</span></code>, which dynamically performs the rasterization operations as we zoom and pan across a plot, we can start to see the differences between both types of plots.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">exclude_antimeridian</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Global Polygon Raster&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">uxds</span><span class="p">[</span><span class="s1">&#39;relhum_200hPa&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">rasterize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span> 
                                         <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> 
                                         <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> 
@@ -619,7 +616,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </pre></div>
 </div>
 <p><img alt="Point Raster" src="../../_images/regional_point_raster_dyn.png" /></p>
-<p>The Polygon Raster can be zoomed in indefinite, which is due to each polygon covering a region of our screen.</p>
+<p>The Polygon Raster can be zoomed in indefinitely, which is due to each polygon covering a region of our screen.</p>
 <p>However, zooming in to our Point Rasters exposes how each point is still simply a pair of latitude and longitude coordinates, without any sense of area. After a certain point, there isn’t enough points to sample into a uniform looking raster image, and we are left with an approximation the individual points.</p>
 <p>Zooming in even further with the Polygon Raster, we can start to see each individual cell, even at such a high resolution.</p>
 <p><img alt="Polygon Raster" src="../../_images/polygon_raster_regional_dyn_zoomed.png" /></p>
