@@ -385,6 +385,13 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <a class="reference internal nav-link" href="#vector-shape-geometries">
    Vector (Shape) Geometries
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shapely-example">
+     Shapely Example
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rasterization">
@@ -418,7 +425,11 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <p>Another example of Vector Geometries is encountered when adding features to a visualization, such as Contents or Borders. The geometries of these features are drawn onto our screen.</p>
 <p> </p>
 <a class="reference internal image-reference" href="../../_images/contients.jpg"><img alt="Continents" src="../../_images/contients.jpg" style="width: 600px;" /></a>
-<p>The following code snippets show how we can represent each of the main unstructured grid geometries.</p>
+<div class="section" id="shapely-example">
+<h3>Shapely Example<a class="headerlink" href="#shapely-example" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>One Python package which is used for representing and manipulating geometries is <a class="reference external" href="https://shapely.readthedocs.io/en/stable/manual.html">Shapely</a>.</p>
+<p>UXarray uses Shapely paired with SpatialPandas and other packages to represent unstructured grid elements (nodes, edges, faces) as geometries for visualization.</p>
+<p>The following code snippets are basic examples of how these elements can be represented as geometries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shapely</span> <span class="k">as</span> <span class="nn">sp</span>
@@ -426,6 +437,17 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 </div>
+<p>A node is represented as a pair of longitude and latitude coordinates</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sp</span><span class="o">.</span><span class="n">Point</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/e120dfbe3180ec0345469c8ced263bfd043a3403e3bb430e6fee5e98554c50aa.svg" src="../../_images/e120dfbe3180ec0345469c8ced263bfd043a3403e3bb430e6fee5e98554c50aa.svg" /></div>
+</div>
+<p>An edge is represented as a pair of nodes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sp</span><span class="o">.</span><span class="n">LineString</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">]])</span>
@@ -435,6 +457,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <div class="cell_output docutils container">
 <img alt="../../_images/d336d74b0f648898540478ff42c3a9a5220570c8396152668d5dcbcc2c2554f6.svg" src="../../_images/d336d74b0f648898540478ff42c3a9a5220570c8396152668d5dcbcc2c2554f6.svg" /></div>
 </div>
+<p>A face is represented as a counter-clockwise set of nodes, with the first and final nodes in the set being equivalent (form a closed face)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sp</span><span class="o">.</span><span class="n">Polygon</span><span class="p">([[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">40</span><span class="p">]])</span>
@@ -443,6 +466,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/c8cb2fb60dc227795c53f15c61d619c428c81882889a8bd722eac6e592bd0c5d.svg" src="../../_images/c8cb2fb60dc227795c53f15c61d619c428c81882889a8bd722eac6e592bd0c5d.svg" /></div>
+</div>
 </div>
 </div>
 <div class="section" id="rasterization">
