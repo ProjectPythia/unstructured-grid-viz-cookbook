@@ -402,8 +402,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#identifying-data-mapping-with-uxarray">
-   Identifying Data Mapping with UXarray
+  <a class="reference internal nav-link" href="#identifying-data-mappings-with-uxarray">
+   Identifying Data Mappings with UXarray
   </a>
  </li>
 </ul>
@@ -420,7 +420,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <div class="tex2jax_ignore mathjax_ignore section" id="data-mapping">
 <h1>Data Mapping<a class="headerlink" href="#data-mapping" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
-<p>When attempting to visualize a data variable that resides on an unstructured grid, it’s important to identify what element it is mapped to, since that will dictate what visualization to chose.</p>
+<p>When attempting to visualize a data variable that resides on an unstructured grid, it’s important to identify what element it is mapped to, since that will dictate what visualization to choose.</p>
+<p>This notebook provides a quick over of how data is commonly mapped to unstructured grid elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uxarray</span> <span class="k">as</span> <span class="nn">ux</span>
@@ -452,12 +453,12 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 <div class="section" id="edge-centered-data">
 <h2>Edge-Centered Data<a class="headerlink" href="#edge-centered-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Edge-Centered data is assigned to the edge that connects each pair of Nodes.</p>
+<p>Edge-Centered data is assigned to the edge that connects each pair of modes.</p>
 <p><img alt="Edges" src="../../_images/edges.jpg" /></p>
 </div>
-<div class="section" id="identifying-data-mapping-with-uxarray">
-<h2>Identifying Data Mapping with UXarray<a class="headerlink" href="#identifying-data-mapping-with-uxarray" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>We can identify what element a data variable is mapped to by looking at the dimensions of a <code class="docutils literal notranslate"><span class="pre">UxDataArray</span></code> or <code class="docutils literal notranslate"><span class="pre">UxDataset</span></code></p>
+<div class="section" id="identifying-data-mappings-with-uxarray">
+<h2>Identifying Data Mappings with UXarray<a class="headerlink" href="#identifying-data-mappings-with-uxarray" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>We can identify what element a data variable is mapped to by looking at the final dimensions of a <code class="docutils literal notranslate"><span class="pre">UxDataArray</span></code> or <code class="docutils literal notranslate"><span class="pre">UxDataset</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_dir</span> <span class="o">=</span> <span class="s2">&quot;../../meshfiles/&quot;</span>
@@ -481,6 +482,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 </div>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">bottomDepth</span></code> has a dimension of <code class="docutils literal notranslate"><span class="pre">n_face</span></code>, which means that it is mapped to faces.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_filename_geoflow</span> <span class="o">=</span> <span class="n">file_dir</span> <span class="o">+</span> <span class="s2">&quot;geoflow.grid.nc&quot;</span>
@@ -501,8 +503,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 </div>
 </div>
-<p>For “v1”, we can see that in addition to the “n_face” dimension, it also contains “time” and “meshLayers” dimensions.</p>
-<p>This can be preceived as “v1” residing on each node over some time and layer dimension.</p>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">v1</span></code> has a final dimension of <code class="docutils literal notranslate"><span class="pre">n_node</span></code>, which means that it is mapped to the corner nodes of each face. However, it also has additional dimensions, <code class="docutils literal notranslate"><span class="pre">time</span></code> and <code class="docutils literal notranslate"><span class="pre">meshLayers</span></code>. These additional dimensions describe the dimensionality of the data outside the unstructured grid, representing the temporal and vertical dimensions.</p>
 </div>
 </div>
 
