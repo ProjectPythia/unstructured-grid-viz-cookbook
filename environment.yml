@@ -27,10 +27,9 @@ dependencies:
   - scikit-learn
   - scipy
   - shapely
-  # - spatialpandas   # uncomment this and remove below pip install if from_exterior_coords() gets released
+  - spatialpandas   
   - uxarray
   - xarray
   - pip:
       - antimeridian
-      - git+https://github.com/holoviz/spatialpandas.git
       - sphinx-pythia-theme
