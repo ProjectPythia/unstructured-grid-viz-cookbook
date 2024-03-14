@@ -32,4 +32,4 @@ dependencies:
   - xarray
   - pip:
       - antimeridian
-      - sphinx-pythia-theme
+      - git+https://github.com/ProjectPythia/sphinx-pythia-theme.git@theme-update
