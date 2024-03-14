@@ -19,10 +19,9 @@ dependencies:
   - pathlib
   - pip
   - pre_commit
-  - pyarrow<13.0.0
+  - pyarrow
   - pytest
   - pytest-cov
-  - python>=3.9,<3.12
   - requests
   - scikit-learn
   - scipy
