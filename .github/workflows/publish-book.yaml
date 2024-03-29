@@ -9,11 +9,11 @@ on:
 
 jobs:
   build:
-    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@try_updated_theme
+    uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
       use_cached_environment: false
       environment_name: unstructured-grid-viz-cookbook-dev
 
   deploy:
     needs: build
-    uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@try_updated_theme
+    uses: ProjectPythia/cookbook-actions/.github/workflows/deploy-book.yaml@main
