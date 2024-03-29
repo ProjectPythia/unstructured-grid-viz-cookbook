@@ -75,7 +75,7 @@ sphinx:
         - name: Community
           url: https://projectpythia.org/index.html#join-us
       footer_logos:
-        NCAR: notebooks/images/logos/NSF-NCAR_Lockup-UCAR-Dark_102523.png
+        NCAR: notebooks/images/logos/NSF-NCAR_Lockup-UCAR-Dark_102523.svg
         Unidata: notebooks/images/logos/Unidata_logo_horizontal_1200x300.svg
         UAlbany: notebooks/images/logos/UAlbany-A2-logo-purple-gold.svg
       footer_start:
