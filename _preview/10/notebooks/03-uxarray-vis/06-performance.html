@@ -518,10 +518,12 @@
 </table>
 <p>For subsequent runs (i.e. we have already run one plotting instance, which computes and caches the necessary data structures), performance for both Polygon methods is essentially identical.</p>
 <p>There is no caching currently implemented for Point Rasters, so the performance for each run is consistent with the initial run.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The timings above benchmark the data processing time (i.e. total time needed to transform an unstructured grid into a format that is able to be rendered). Actual visualization times will vary depending on choices in parameters.</p>
-<p>A detailed benchmark of total visualization times (i.e. data processing and rendering to screen) will be added to this notebook in the future.</p>
+<div class="admonition alert alert-warning">
+<p class="admonition-title">Important!</p>
+<p>The timings above benchmark the data processing time (i.e. total time needed to transform an unstructured grid into a format that is able to be
+rendered). Actual visualization times will vary depending on choices in parameters.
+<br><br>
+A detailed benchmark of total visualization times (i.e. data processing and rendering to screen) will be added to this notebook in the future.</p>
 </div>
 </section>
 </section>

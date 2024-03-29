@@ -417,7 +417,7 @@
 <hr class="docutils" />
 <p>We will introduce functionality from two visualization libraries and how they are being utilized by UXarray for unstructured grids visualization purposes.</p>
 <p>Before diving deep into these, looking into the current snapshot of the UXarray visualization design through a simple Unified Modelling Language (UML)-like diagram could be helpful to better understand UXarray’s relation with such libraries.</p>
-<div class="admonition alert alert-warning">
+<div class="admonition alert alert-info">
 <p class="admonition-title">Note:</p>
 <p>The following design diagram is actually provided in the <a href="../03-uxarray-vis/01-plot-api.ipynb">Plotting
 API</a> section along with key takeaways about it. We highly recommend to check them out as well.</p>
@@ -435,10 +435,9 @@ API</a> section along with key takeaways about it. We highly recommend to check 
 <li><p>Unlike Matplotlib, they support using the connectivity information that comes from the unstructured grids</p></li>
 <li><p>They are designed to be scalable for even the largest datasets that’d be generated as result of kilometer-scale analyses</p></li>
 </ol>
-<div class="admonition important">
-<p class="admonition-title">Note</p>
-<p>Important!
-UXarray takes care of the vital tasks such as recognizing unstructured grids from various formats (such as UGRID,
+<div class="admonition alert alert-warning">
+<p class="admonition-title">Important!</p>
+<p>UXarray takes care of the vital tasks such as recognizing unstructured grids from various formats (such as UGRID,
 MPAS, Scrip, Exodus, etc.) and representing them in a unified UGRID-like format, providing the data structures and
 functionality necessary for convenient preprocessing of the grid, and wrapping up HoloViz packages’ functionality to
 enable unstructured grids-specialized, high-level visualization functions.</p>
@@ -447,8 +446,8 @@ enable unstructured grids-specialized, high-level visualization functions.</p>
 <section id="holoviews">
 <h3>HoloViews<a class="headerlink" href="#holoviews" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p><a class="reference external" href="https://holoviews.org/about.html">Holoviews</a> houses several elements (e.g. <code class="docutils literal notranslate"><span class="pre">Path()</span></code>, <code class="docutils literal notranslate"><span class="pre">Points()</span></code>) that we wrap up in the UXarray plotting accessors to enable visualization of grid geometries such as nodes and edges. Similarly, other elements of this package (e.g. <code class="docutils literal notranslate"><span class="pre">Polygons()</span></code>) are used by UXarray for various polygon vector visulization purposes.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
+<div class="admonition alert alert-info">
+<p class="admonition-title">Note:</p>
 <p>UXarray allows both Matplotlib and Bokeh backends to be chosen in visualization functions as they are provided by Holoviews (in addition to Plotly).</p>
 </div>
 </section>
@@ -479,9 +478,10 @@ comes to visualizing unstructured grids, Matplotlib’s:</p>
 <section id="collections">
 <h3>Collections<a class="headerlink" href="#collections" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
 <p>Detailed information about Matplotlib’s Collections API can be found <a class="reference external" href="https://matplotlib.org/stable/api/collections_api.html">here</a>. In Uxarray, conversions to <code class="docutils literal notranslate"><span class="pre">LineCollection</span></code> and <code class="docutils literal notranslate"><span class="pre">PolyCollection</span></code> are provided for visualizing Grid Geometries and data variables, respectively.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>While these conversion functions have already been released, we have observed some issues with the resulting Matplotlib plots after the exceution of these functions, and the bug-fixing of that is WIP. Hence, we don’t have an officially released documentation/example about these functions yet.</p>
+<div class="admonition alert alert-warning">
+<p class="admonition-title">Warning!</p>
+<p>While these conversion functions have already been released, we have observed some issues with the resulting Matplotlib plots after the exceution of
+these functions, and the bug-fixing of that is WIP. Hence, we don’t have an officially released documentation/example about these functions yet.</p>
 </div>
 </section>
 <section id="cartopy">
