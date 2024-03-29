@@ -15,21 +15,21 @@ dependencies:
   - netcdf4
   - numba
   - numpy
-  - pandas<2.1.0
+  - pandas
   - pathlib
   - pip
   - pre_commit
-  - pyarrow<13.0.0
+  - pyarrow
   - pytest
   - pytest-cov
-  - python>=3.9,<3.12
   - requests
   - scikit-learn
   - scipy
   - shapely
-  - spatialpandas   
+  - spatialpandas
+  - sphinx-pythia-theme
   - uxarray
   - xarray
   - pip:
       - antimeridian
-      - sphinx-pythia-theme
+      - git+https://github.com/UXARRAY/uxarray.git@main #until UXarray's March or April release
