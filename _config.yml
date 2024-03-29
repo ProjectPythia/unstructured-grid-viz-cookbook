@@ -42,7 +42,8 @@ sphinx:
       use_repository_button: true
       use_edit_page_button: true
       use_fullscreen_button: true
-      google_analytics_id: G-T52X8HNYE8
+      analytics:
+        google_analytics_id: G-T52X8HNYE8
       github_url: https://github.com/ProjectPythia
       twitter_url: https://twitter.com/project_pythia
       icon_links:
@@ -60,6 +61,8 @@ sphinx:
         link: https://projectpythia.org
       navbar_start:
         - navbar-logo
+      navbar_end:
+        - navbar-icon-links
       navbar_links:
         - name: Home
           url: https://projectpythia.org
