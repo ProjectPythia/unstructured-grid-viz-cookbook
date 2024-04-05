@@ -28,7 +28,6 @@ dependencies:
   - shapely
   - spatialpandas
   - sphinx-pythia-theme
-  - uxarray
   - xarray
   - pip:
       - antimeridian
