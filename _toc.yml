@@ -18,7 +18,7 @@ parts:
   - caption: UXarray Visualization
     chapters:
       - file: notebooks/03-uxarray-vis/01-plot-api
-      - file: notebooks/002-xarray-to-uxarray
+      - file: notebooks/03-uxarray-vis/002-xarray-to-uxarray
       - file: notebooks/03-uxarray-vis/02-grid-topology
       - file: notebooks/03-uxarray-vis/03-polygons
       - file: notebooks/03-uxarray-vis/04-points
