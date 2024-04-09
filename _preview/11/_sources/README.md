@@ -1,7 +1,6 @@
 <p align="center">
   <img style="float: right;" src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="225" />
   <img style="float: right;" src="https://raw.githubusercontent.com/ProjectPythia/unstructured-grid-viz-cookbook/main/notebooks/images/logos/SEATSLogoTransparent.png" width="250" />
-  <img style="float: right;" src="https://geocat-comp.readthedocs.io/en/latest/_static/GeoCAT_nsf.svg" width="275" />
 </p>
 
 # Unstructured Grid Visualization Cookbook
@@ -14,10 +13,11 @@ This Cookbook is a comprehensive showcase of workflows & techniques for visualiz
 
 ## Motivation
 
-High-level, scalable visualizations of native unstructured grids is a much-needed ability in the Scientific Python Ecosystem. To achieve this, the process needs to:
+The ability to natively visualize unstructured grids is a much-needed ability within the Scientific Python Ecosystem,
+which poses multiple challenges and needs to:
 
-- Not regrid the unstructured grids into structured grids
-- Use provided information such as connectivity variables that come with the grid
+- Not regrid the source unstructured grid to structure
+- Take advantage of grid information, such as connectivity variables
 - Limit the amount of pre-processing needed to prepare the data for Python visualization tools
 
 UXarray enables such visualization methods that operate directly on unstructured grid data,
