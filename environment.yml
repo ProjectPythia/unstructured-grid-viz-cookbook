@@ -10,7 +10,6 @@ dependencies:
   - hvplot
   - jupyter-book
   - jupyterlab
-  - jupyter_server
   - matplotlib-base
   - netcdf4
   - numba
@@ -28,7 +27,7 @@ dependencies:
   - shapely
   - spatialpandas
   - sphinx-pythia-theme
+  - uxarray
   - xarray
   - pip:
       - antimeridian
-      - git+https://github.com/UXARRAY/uxarray.git@main #until UXarray's March or April release
