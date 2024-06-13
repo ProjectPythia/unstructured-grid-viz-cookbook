@@ -2,7 +2,7 @@
 
 name: MyST GitHub Pages Deploy
 on:
-  workflow:
+  workflow_dispatch:
   push:
     # Runs on pushes targeting the default branch
     branches: [main]
