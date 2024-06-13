@@ -32,4 +32,4 @@ project:
       - file: notebooks/03-uxarray-vis/06-performance.ipynb
   jupyter: 
     binder:
-      repo: projectpythia-mystmd/advanced-viz-cookbook
+      repo: projectpythia-mystmd/unstructured-grid-viz-cookbook
