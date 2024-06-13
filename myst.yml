@@ -30,3 +30,6 @@ project:
       - file: notebooks/03-uxarray-vis/04-points.ipynb
       - file: notebooks/03-uxarray-vis/07-animations.ipynb
       - file: notebooks/03-uxarray-vis/06-performance.ipynb
+  jupyter: 
+    binder:
+      repo: projectpythia-mystmd/advanced-viz-cookbook
