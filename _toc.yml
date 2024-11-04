@@ -7,27 +7,25 @@ parts:
 
   - caption: Foundations
     chapters:
-      - file: notebooks/01-foundations/intro-to-unstructured-grids
-      - file: notebooks/01-foundations/plotting
+      - file: notebooks/01-foundations/unstructured-grids
+      - file: notebooks/01-foundations/plotting-libs
       - file: notebooks/01-foundations/rendering-techniques
-
 
   - caption: Introduction to UXarray
     chapters:
-      - file: notebooks/02-intro-to-uxarray/grids
+      - file: notebooks/02-intro-to-uxarray/grid
       - file: notebooks/02-intro-to-uxarray/uxds-uxda
-
 
   - caption: Plotting with UXarray
     chapters:
       - file: notebooks/03-plotting-with-uxarray/grid-viz
 
-
   - caption: Climate Model Output Visualization Examples
     chapters:
-      - file: notebooks/o4-climate-model-examples/e3sm
+      - file: notebooks/04-climate-model-examples/e3sm
 
-  - caption: Visualization Package Compatibility
+  - caption: Compatibility with Visualization Packages
     chapters:
-      - file: notebooks/01-intro/01-unstructured-grid-overview
-
+      - file: notebooks/05-viz-packages/matplotlib
+      - file: notebooks/05-viz-packages/datashader
+      - file: notebooks/05-viz-packages/lonboard
