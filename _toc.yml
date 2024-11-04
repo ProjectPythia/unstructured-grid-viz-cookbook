@@ -4,23 +4,30 @@ parts:
   - caption: Preamble
     chapters:
       - file: notebooks/how-to-cite
-  - caption: Introduction to UXarray & Unstructured Grids
+
+  - caption: Foundations
+    chapters:
+      - file: notebooks/01-foundations/intro-to-unstructured-grids
+      - file: notebooks/01-foundations/plotting
+      - file: notebooks/01-foundations/rendering-techniques
+
+
+  - caption: Introduction to UXarray
+    chapters:
+      - file: notebooks/02-intro-to-uxarray/grids
+      - file: notebooks/02-intro-to-uxarray/uxds-uxda
+
+
+  - caption: Plotting with UXarray
+    chapters:
+      - file: notebooks/03-plotting-with-uxarray/grid-viz
+
+
+  - caption: Climate Model Output Visualization Examples
+    chapters:
+      - file: notebooks/o4-climate-model-examples/e3sm
+
+  - caption: Visualization Package Compatibility
     chapters:
       - file: notebooks/01-intro/01-unstructured-grid-overview
-      - file: notebooks/01-intro/02-data-structures
-      - file: notebooks/01-intro/03-data-mapping
 
-  - caption: Methods & Libraries for Unstructured Grid Visualization
-    chapters:
-      - file: notebooks/02-methods/01-plotting-libraries
-      - file: notebooks/02-methods/02-rendering-techniques
-
-  - caption: UXarray Visualization
-    chapters:
-      - file: notebooks/03-uxarray-vis/01-plot-api
-      - file: notebooks/03-uxarray-vis/002-xarray-to-uxarray
-      - file: notebooks/03-uxarray-vis/02-grid-topology
-      - file: notebooks/03-uxarray-vis/03-polygons
-      - file: notebooks/03-uxarray-vis/04-points
-      - file: notebooks/03-uxarray-vis/07-animations
-      - file: notebooks/03-uxarray-vis/06-performance
