@@ -19,6 +19,7 @@ parts:
   - caption: Plotting with UXarray
     chapters:
       - file: notebooks/03-plotting-with-uxarray/grid-viz
+      - file: notebooks/03-plotting-with-uxarray/data-viz
 
   - caption: Climate Model Output Visualization Examples
     chapters:
