@@ -15,11 +15,14 @@ parts:
     chapters:
       - file: notebooks/02-intro-to-uxarray/grid
       - file: notebooks/02-intro-to-uxarray/uxds-uxda
+      - file: notebooks/02-intro-to-uxarray/selection
 
   - caption: Plotting with UXarray
     chapters:
       - file: notebooks/03-plotting-with-uxarray/grid-viz
       - file: notebooks/03-plotting-with-uxarray/data-viz
+      - file: notebooks/03-plotting-with-uxarray/geo
+      - file: notebooks/03-plotting-with-uxarray/customization.ipynb
 
   - caption: Climate Model Output Visualization Examples
     chapters:
