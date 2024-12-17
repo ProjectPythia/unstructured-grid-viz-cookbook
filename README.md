@@ -9,25 +9,28 @@
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/unstructured-grid-viz-cookbook.git/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10403389.svg)](https://doi.org/10.5281/zenodo.10403389)
 
-This Cookbook is a comprehensive showcase of workflows & techniques for visualizing Unstructured Grids using [UXarray](https://uxarray.readthedocs.io/).
+This Cookbook is a comprehensive showcase of workflows & techniques for visualizing Unstructured Grids using [UXarray](https://uxarray.readthedocs.io/),  
+also providing foundational information on unstructured grids.
 
 ## Motivation
 
-The ability to natively visualize unstructured grids is a much-needed ability within the Scientific Python Ecosystem,
+The ability to natively visualize unstructured grids is much needed within the Scientific Python Ecosystem,
 which poses multiple challenges and needs to:
 
-- Not regrid the source unstructured grid to structure
+- Not regrid the source unstructured grid to structured grid
 - Take advantage of grid information, such as connectivity variables
 - Limit the amount of pre-processing needed to prepare the data for Python visualization tools
 
-UXarray enables such visualization methods that operate directly on unstructured grid data,
-providing Xarray-styled functionality to better read in
-and use unstructured grid datasets that follow standard conventions.
-UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus,
-and is extendable for other formats.
+UXarray enables such visualization methods that operate directly on unstructured grid data, providing 
+Xarray-styled functionality to better read in and use unstructured grid datasets that follow standard 
+conventions.
 
-This cookbook covers an introduction to unstructured grids and UXarray,
-provides an overview of the visualization methods and libraries, and showcases several UXarray visualization functions.
+UXarray supports a variety of unstructured grid formats and file types including UGRID, MPAS, ICON, CAM-SE, 
+SCRIP, Exodus, ESMF, GEOS, and FESOM2, and is extensible for other formats.
+
+This cookbook covers an introduction to unstructured grids and UXarray from a visualization standpoint, 
+providing foundational information about unstructured grids, visualization methods and libraries, and 
+introducing UXarray, and showcasing several UXarray visualization functions and workflows.
 
 ## Authors
 
@@ -47,19 +50,32 @@ provides an overview of the visualization methods and libraries, and showcases s
 
 ## Structure
 
-This cookbook is split up into a few chapters that provide a detailed overview of how to use UXarray to work with and visualize unstructured grid datasets:
+This cookbook is split up into several chapters to communicate the content efffectively with different 
+levels of readers:
 
-**1. Introduction to UXarray & Unstructured Grids**
+**1. Foundations**
 
-Here we cover what unstructured grids are and how they are different than structured grids as well as whay UXarray could play a significant role in unstructured grid visualization.
+Here, we cover overview of the foundational topics necessary to understand the content in this cookbook, 
+e.g. what unstructured grids are and how they are different than structured grids, what plotting libraries 
+and visualization techniques exist that can be helpful for unstructured grid visualization, and we briefly 
+mention how UXarray is related to these.
 
-**2. Methods & Libraries for Unstructured Grid Visualization**
+**2. Introduction to UXarray**
 
-In this chapter, we briefly introduce plotting libraries and their specific technologies as well as rendering techniques that could be used for unstructured grid plotting and are used as part of UXarray.
+In this chapter, we provide an overview of UXarray: An Xarray-extension for unstructured grid-formatted 
+climate and global weather data analysis and visualization.
 
-**3. UXarray Visualization**
+**3. Plotting with UXarray**
 
-Several visualization cases and examples that can be realized using UXarray are provided in this chapter; grid topology plots, polygons, points, to name a few. Also in this section, the usage of UXarray plotting API and a discussion of visualization at scale are also provided.
+We provide an overview of the UXarray plotting API along with several visualization functionality, and cases 
+and examples that can be realized using such UXarray functionality; Grid visualization, Data visualization, 
+Geographic projections and features, to name a few. Also in this section, customization and interactivaity 
+with UXarray plotting and considerations with high-resolution plotting are also provided.
+
+**4. Visualization Workflows**
+
+In this last chapter, we offer to the interested readers a set of focused workflows that can be realized 
+with UXarray; MPAS analysis across resolutions, e3SM radiative feedback analysis, to name a few
 
 ## Running the Notebooks
 
