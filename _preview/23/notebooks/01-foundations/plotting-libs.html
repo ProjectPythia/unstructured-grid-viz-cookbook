@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6b4ca61d" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -79,11 +79,11 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Rendering Techniques" href="rendering-techniques.html" />
-    <link rel="prev" title="Unstructured Grids" href="unstructured-grids.html" />
+    <link rel="prev" title="Unstructured Grids Overview" href="unstructured-grids.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="16 December 2024"/>
+    <meta name="docbuild:last-update" content="17 December 2024"/>
   </head>
   
   
@@ -373,7 +373,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundations</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="unstructured-grids.html">Unstructured Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unstructured-grids.html">Unstructured Grids Overview</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Plotting Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rendering-techniques.html">Rendering Techniques</a></li>
 </ul>
@@ -407,9 +407,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
         </div>
@@ -431,16 +436,17 @@
   <p><a class="reference internal" href="https://raw.githubusercontent.com/UXARRAY/uxarray/main/docs/_static/images/logos/uxarray_logo_h_dark.svg"><img alt="UXarray logo" class="align-right" src="https://raw.githubusercontent.com/UXARRAY/uxarray/main/docs/_static/images/logos/uxarray_logo_h_dark.svg" style="width: 30%;" /></a></p>
 <section class="tex2jax_ignore mathjax_ignore" id="plotting-libraries">
 <h1>Plotting Libraries<a class="headerlink" href="#plotting-libraries" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
-<section id="in-this-tutorial-youll-learn">
-<h2>In this tutorial, you’ll learn:<a class="headerlink" href="#in-this-tutorial-youll-learn" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<section id="in-this-section-youll-learn">
+<h2>In this section, you’ll learn:<a class="headerlink" href="#in-this-section-youll-learn" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>TODO:</p></li>
+<li><p>What general purpose visualization packages are available in the Scientific Python Ecosystem</p></li>
+<li><p>How functionality of these packages can be useful for unstructured grids visualization</p></li>
 </ul>
 </section>
 <section id="related-documentation">
 <h2>Related Documentation<a class="headerlink" href="#related-documentation" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://uxarray.readthedocs.io/en/latest/user-guide/data-structures.html">Links to Relevent Documentation</a></p></li>
+<li><p>No UXarray documentation is referenced here since this section covers the content from a general point of view.</p></li>
 </ul>
 </section>
 <section id="prerequisites">
@@ -453,17 +459,67 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/10min.html">Link to Pre-Req</a></p></td>
+<tr class="row-even"><td><p>Python</p></td>
 <td><p>Necessary</p></td>
-<td><p></p></td>
+<td><p>This notebook does not contain any Python code, but understanding those libraries comprehensively would require Python programming</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <ul class="simple">
-<li><p><strong>Time to learn</strong>: x minutes</p></li>
+<li><p><strong>Time to learn</strong>: 10 minutes</p></li>
 </ul>
 <hr class="docutils" />
+<p>In this section, we will introduce two visualization libraries/technologies and their features and functionality that can be useful for unstructured grids visualization before diving deep into plotting unstructured grids with UXarray in the next chapter.</p>
+</section>
+<section id="holoviz">
+<h2>HoloViz<a class="headerlink" href="#holoviz" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<p><a class="reference external" href="https://holoviz.org/">HoloViz</a> is a stack of tools (such as Holoviews, Datashader, Geoviews, SpatialPandas, hvPlot etc.) that provide high-level functionality to visualize even the very large datasets efficiently in Python. HoloViz packages are well-suited for unstructured grid visualization because:</p>
+<ol class="arabic simple">
+<li><p>They provide rendering functionality for both vector geometries and rasterization, which will be detailed in the <a class="reference internal" href="rendering-techniques.html"><span class="doc std std-doc">next section</span></a>. Such functionality is much needed for unstructured grid topology and data visualization purposes.</p></li>
+<li><p>Unlike Matplotlib, they support using the connectivity information that comes from the unstructured grids</p></li>
+<li><p>They are designed to be scalable for even the largest datasets that’d be generated as result of kilometer-scale analyses</p></li>
+</ol>
+<p>Let us look at the particular HoloViz packages that can be useful for scalable visualization of unstructured grids.</p>
+<section id="holoviews">
+<h3>HoloViews<a class="headerlink" href="#holoviews" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
+<p><a class="reference external" href="https://holoviews.org/about.html">Holoviews</a> houses several elements (e.g. <code class="docutils literal notranslate"><span class="pre">Path()</span></code>, <code class="docutils literal notranslate"><span class="pre">Points()</span></code>) that enables visualization of grid geometries such as nodes and edges. Similarly, other elements of this package (e.g. <code class="docutils literal notranslate"><span class="pre">Polygons()</span></code>) can be used for various polygon vector visulization purposes.</p>
+</section>
+<section id="datashader">
+<h3>Datashader<a class="headerlink" href="#datashader" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
+<p><a class="reference external" href="https://datashader.org/about.html">Datashader</a> is the graphics pipeline system of the HoloViz tool stack for creating meaningful representations of large datasets quickly and flexibly. Datashader’s rasterization methods, transfer functions, and other shading operators can be utilized for rasterized polygon plotting.</p>
+</section>
+<section id="geoviews">
+<h3>GeoViews<a class="headerlink" href="#geoviews" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
+<p><a class="reference external" href="https://geoviews.org/index.html">GeoViews</a> provides features and functionality to visualize geographical, meteorological, and oceanographic datasets and features.</p>
+</section>
+<section id="spatialpandas">
+<h3>Spatialpandas<a class="headerlink" href="#spatialpandas" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
+<p>Spatialpandas is a package that provides Pandas extension arrays for spatial/geometric operations. This package has an element called <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code>, which can be used directly by packages from the HoloViz stack such as hvPlot, Datashader, Holoviews, and Geoviews. Conversions from unstructured grids to <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> can allow to perform visualizations directly in HoloViz packages.</p>
+</section>
+</section>
+<section id="matplotlib">
+<h2>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<p>Matplotlib is the workhorse of Python visualization needs, for both general and geoscientific purposes. However, when it
+comes to visualizing unstructured grids, Matplotlib’s:</p>
+<ol class="arabic simple">
+<li><p>Functionality is limited such that there is no way to use the connectivity information that comes with the unstructured grid</p></li>
+<li><p>Scalability especially for kilometer-scale (e.g. individual storm-resolving) resolutions is limited.</p></li>
+</ol>
+<p>Matplotlib can still serve as a visualization backend for unstriuctured grid visualization, especially for the end-user who is familiar with Matplotlib and would like to create publication-quality outputs.</p>
+<p>Moreover, just like conversion to <code class="docutils literal notranslate"><span class="pre">Spatialpandas.GeoDataFrame</span></code>, conversions to Matplotlib data structures such as <code class="docutils literal notranslate"><span class="pre">Collections</span></code> can be utilized for unstructrued grid plotting directly with the Matplotlib interface.</p>
+<section id="collections">
+<h3>Collections<a class="headerlink" href="#collections" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
+<p>Detailed information about Matplotlib’s Collections API can be found <a class="reference external" href="https://matplotlib.org/stable/api/collections_api.html">here</a>. Conversions to <code class="docutils literal notranslate"><span class="pre">LineCollection</span></code> and <code class="docutils literal notranslate"><span class="pre">PolyCollection</span></code> can help visualize Grid Geometries and data variables, respectively.</p>
+</section>
+<section id="cartopy">
+<h3>Cartopy<a class="headerlink" href="#cartopy" title="Link to this heading"><i class="fas fa-link"></i></a></h3>
+<p>Cartopy is originally a Python library for cartographic visualizations with Matplotlib; however, they provide a number of features such as <code class="docutils literal notranslate"><span class="pre">crs</span></code>, i.e. Coordinate Reference Systems (a.k.a. projections), that are significant for cartographic visualizations.</p>
+</section>
+</section>
+<section id="what-is-next">
+<h2>What is next?<a class="headerlink" href="#what-is-next" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<p>The next section will provide an overview of the rendering techniques that can be used for visualizing unstructrued grids.</p>
 </section>
 </section>
 
@@ -503,7 +559,7 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unstructured Grids</p>
+        <p class="prev-next-title">Unstructured Grids Overview</p>
       </div>
     </a>
     <a class="right-next"
@@ -532,9 +588,22 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-tutorial-youll-learn">In this tutorial, you’ll learn:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-section-youll-learn">In this section, you’ll learn:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-documentation">Related Documentation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#holoviz">HoloViz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#holoviews">HoloViews</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datashader">Datashader</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geoviews">GeoViews</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatialpandas">Spatialpandas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collections">Collections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cartopy">Cartopy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-next">What is next?</a></li>
 </ul>
   </nav></div>
 
@@ -769,7 +838,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 16 December 2024.
+  Last updated on 17 December 2024.
   <br/>
 </p>
   </div>
@@ -786,8 +855,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
      
@@ -823,7 +892,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 16 December 2024.
+          Last updated on 17 December 2024.
         </p>
       </div>
     </div>

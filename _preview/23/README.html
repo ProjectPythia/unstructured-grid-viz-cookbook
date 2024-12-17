@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6b4ca61d" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -82,7 +82,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="16 December 2024"/>
+    <meta name="docbuild:last-update" content="17 December 2024"/>
   </head>
   
   
@@ -374,7 +374,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/01-foundations/unstructured-grids.html">Unstructured Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/01-foundations/unstructured-grids.html">Unstructured Grids Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/01-foundations/plotting-libs.html">Plotting Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/01-foundations/rendering-techniques.html">Rendering Techniques</a></li>
 </ul>
@@ -408,9 +408,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
         </div>
@@ -438,23 +443,25 @@
 <p><a class="reference external" href="https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg" /></a>
 <a class="reference external" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/unstructured-grid-viz-cookbook.git/main?labpath=notebooks"><img alt="Binder" src="https://binder.projectpythia.org/badge_logo.svg" /></a>
 <a class="reference external" href="https://doi.org/10.5281/zenodo.10403389"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.10403389.svg" /></a></p>
-<p>This Cookbook is a comprehensive showcase of workflows &amp; techniques for visualizing Unstructured Grids using <a class="reference external" href="https://uxarray.readthedocs.io/">UXarray</a>.</p>
+<p>This Cookbook is a comprehensive showcase of workflows &amp; techniques for visualizing Unstructured Grids using <a class="reference external" href="https://uxarray.readthedocs.io/">UXarray</a>,<br />
+also providing foundational information on unstructured grids.</p>
 <section id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
-<p>The ability to natively visualize unstructured grids is a much-needed ability within the Scientific Python Ecosystem,
+<p>The ability to natively visualize unstructured grids is much needed within the Scientific Python Ecosystem,
 which poses multiple challenges and needs to:</p>
 <ul class="simple">
-<li><p>Not regrid the source unstructured grid to structure</p></li>
+<li><p>Not regrid the source unstructured grid to structured grid</p></li>
 <li><p>Take advantage of grid information, such as connectivity variables</p></li>
 <li><p>Limit the amount of pre-processing needed to prepare the data for Python visualization tools</p></li>
 </ul>
-<p>UXarray enables such visualization methods that operate directly on unstructured grid data,
-providing Xarray-styled functionality to better read in
-and use unstructured grid datasets that follow standard conventions.
-UXarray supports a variety of unstructured grid formats including UGRID, MPAS, SCRIP, and Exodus,
-and is extendable for other formats.</p>
-<p>This cookbook covers an introduction to unstructured grids and UXarray,
-provides an overview of the visualization methods and libraries, and showcases several UXarray visualization functions.</p>
+<p>UXarray enables such visualization methods that operate directly on unstructured grid data, providing
+Xarray-styled functionality to better read in and use unstructured grid datasets that follow standard
+conventions.</p>
+<p>UXarray supports a variety of unstructured grid formats and file types including UGRID, MPAS, ICON, CAM-SE,
+SCRIP, Exodus, ESMF, GEOS, and FESOM2, and is extensible for other formats.</p>
+<p>This cookbook covers an introduction to unstructured grids and UXarray from a visualization standpoint,
+providing foundational information about unstructured grids, visualization methods and libraries, and
+introducing UXarray, and showcasing several UXarray visualization functions and workflows.</p>
 </section>
 <section id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
@@ -471,13 +478,24 @@ provides an overview of the visualization methods and libraries, and showcases s
 </section>
 <section id="structure">
 <h2>Structure<a class="headerlink" href="#structure" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
-<p>This cookbook is split up into a few chapters that provide a detailed overview of how to use UXarray to work with and visualize unstructured grid datasets:</p>
-<p><strong>1. Introduction to UXarray &amp; Unstructured Grids</strong></p>
-<p>Here we cover what unstructured grids are and how they are different than structured grids as well as whay UXarray could play a significant role in unstructured grid visualization.</p>
-<p><strong>2. Methods &amp; Libraries for Unstructured Grid Visualization</strong></p>
-<p>In this chapter, we briefly introduce plotting libraries and their specific technologies as well as rendering techniques that could be used for unstructured grid plotting and are used as part of UXarray.</p>
-<p><strong>3. UXarray Visualization</strong></p>
-<p>Several visualization cases and examples that can be realized using UXarray are provided in this chapter; grid topology plots, polygons, points, to name a few. Also in this section, the usage of UXarray plotting API and a discussion of visualization at scale are also provided.</p>
+<p>This cookbook is split up into several chapters to communicate the content efffectively with different
+levels of readers:</p>
+<p><strong>1. Foundations</strong></p>
+<p>Here, we cover overview of the foundational topics necessary to understand the content in this cookbook,
+e.g. what unstructured grids are and how they are different than structured grids, what plotting libraries
+and visualization techniques exist that can be helpful for unstructured grid visualization, and we briefly
+mention how UXarray is related to these.</p>
+<p><strong>2. Introduction to UXarray</strong></p>
+<p>In this chapter, we provide an overview of UXarray: An Xarray-extension for unstructured grid-formatted
+climate and global weather data analysis and visualization.</p>
+<p><strong>3. Plotting with UXarray</strong></p>
+<p>We provide an overview of the UXarray plotting API along with several visualization functionality, and cases
+and examples that can be realized using such UXarray functionality; Grid visualization, Data visualization,
+Geographic projections and features, to name a few. Also in this section, customization and interactivaity
+with UXarray plotting and considerations with high-resolution plotting are also provided.</p>
+<p><strong>4. Visualization Workflows</strong></p>
+<p>In this last chapter, we offer to the interested readers a set of focused workflows that can be realized
+with UXarray; MPAS analysis across resolutions, e3SM radiative feedback analysis, to name a few</p>
 </section>
 <section id="running-the-notebooks">
 <h2>Running the Notebooks<a class="headerlink" href="#running-the-notebooks" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
@@ -812,7 +830,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 16 December 2024.
+  Last updated on 17 December 2024.
   <br/>
 </p>
   </div>
@@ -829,8 +847,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
      
@@ -866,7 +884,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 16 December 2024.
+          Last updated on 17 December 2024.
         </p>
       </div>
     </div>
