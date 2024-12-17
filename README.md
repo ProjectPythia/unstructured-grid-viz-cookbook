@@ -10,7 +10,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10403389.svg)](https://doi.org/10.5281/zenodo.10403389)
 
 This Cookbook is a comprehensive showcase of workflows & techniques for visualizing Unstructured Grids using [UXarray](https://uxarray.readthedocs.io/),  
-foundational information on unstructrued grids also provided.
+also providing foundational information on unstructured grids.
 
 ## Motivation
 
