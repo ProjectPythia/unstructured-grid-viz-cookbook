@@ -24,9 +24,12 @@ parts:
       - file: notebooks/03-plotting-with-uxarray/geo
       - file: notebooks/03-plotting-with-uxarray/customization.ipynb
 
-  - caption: Climate Model Output Visualization Examples
+  - caption: Visualization Recipies
     chapters:
-      - file: notebooks/04-climate-model-examples/e3sm
+      - file: notebooks/04-recipies/mpas-ocean
+      - file: notebooks/04-recipies/mpas-atmo
+      - file: notebooks/04-recipies/mpas-regional
+      - file: notebooks/04-recipies/e3sm
 
   - caption: Compatibility with Visualization Packages
     chapters:
