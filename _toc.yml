@@ -13,6 +13,7 @@ parts:
 
   - caption: Introduction to UXarray
     chapters:
+      - file: notebooks/02-intro-to-uxarray/overview
       - file: notebooks/02-intro-to-uxarray/grid
       - file: notebooks/02-intro-to-uxarray/uxds-uxda
       - file: notebooks/02-intro-to-uxarray/selection
