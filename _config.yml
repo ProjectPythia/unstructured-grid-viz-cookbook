@@ -5,12 +5,14 @@ title: Unstructured Grids Visualization Cookbook
 description: Comprehensive showcase of workflows and techniques for visualizing Unstructured Grids using UXarray
 author: the <a href="https://projectpythia.org/">Project Pythia</a> Community
 logo: notebooks/images/logos/pythia_logo-white-rtext.svg
-copyright: "2024"
+copyright: "2025"
 
 execute:
   # To execute notebooks via a Binder instead, replace 'cache' with 'binder'
   execute_notebooks: cache
   timeout: 600
+  exclude_patterns:
+    - "notebooks/04-recipies/mpas-atmo.ipynb"
   allow_errors: False # cells with expected failures must set the `raises-exception` cell tag
 
 # Add a few extensions to help with parsing content
