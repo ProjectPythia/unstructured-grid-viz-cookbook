@@ -13,7 +13,6 @@ execute:
   timeout: 600
   exclude_patterns:
     - "notebooks/03-plotting-with-uxarray/high-res.ipynb"
-    - "notebooks/04-recipies/mpas-atmo.ipynb"
   allow_errors: False # cells with expected failures must set the `raises-exception` cell tag
 
 # Add a few extensions to help with parsing content
