@@ -23,8 +23,9 @@ parts:
       - file: notebooks/03-plotting-with-uxarray/grid-viz
       - file: notebooks/03-plotting-with-uxarray/data-viz
       - file: notebooks/03-plotting-with-uxarray/geo
-      - file: notebooks/03-plotting-with-uxarray/customization.ipynb
-      - file: notebooks/03-plotting-with-uxarray/high-res.ipynb
+      - file: notebooks/03-plotting-with-uxarray/compare-xarray
+      - file: notebooks/03-plotting-with-uxarray/customization
+      - file: notebooks/03-plotting-with-uxarray/high-res
 
   - caption: Visualization Recipies
     chapters:
