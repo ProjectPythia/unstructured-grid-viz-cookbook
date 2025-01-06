@@ -50,3 +50,4 @@ repos:
         exclude: foundations/quickstart.ipynb
       - id: nbqa-isort
         additional_dependencies: [isort]
+        exclude: notebooks/03-plotting-with-uxarray/high-res.ipynb
