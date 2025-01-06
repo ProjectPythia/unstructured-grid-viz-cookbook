@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MPAS Ocean Model Output &#8212; Unstructured Grids Visualization Cookbook</title>
+    <title>MPAS Ocean &#8212; Unstructured Grids Visualization Cookbook</title>
   
   
   
@@ -78,12 +78,12 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="MPAS Atmosphere Model" href="mpas-atmo.html" />
-    <link rel="prev" title="Customization &amp; Interactivity" href="../03-plotting-with-uxarray/customization.html" />
+    <link rel="next" title="MPAS Atmosphere" href="mpas-atmo.html" />
+    <link rel="prev" title="Visualization High-Resolution Grids" href="../03-plotting-with-uxarray/high-res.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="5 January 2025"/>
+    <meta name="docbuild:last-update" content="6 January 2025"/>
   </head>
   
   
@@ -390,11 +390,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../03-plotting-with-uxarray/data-viz.html">Data Visualization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03-plotting-with-uxarray/geo.html">Geographic Projections &amp; Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03-plotting-with-uxarray/customization.html">Customization &amp; Interactivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03-plotting-with-uxarray/high-res.html">Visualization High-Resolution Grids</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualization Recipies</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">MPAS Ocean Model Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mpas-atmo.html">MPAS Atmosphere Model</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">MPAS Ocean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mpas-atmo.html">MPAS Atmosphere</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mpas-regional.html">Interactive Regional MPAS Reflectivity &amp; Precipitation Dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="e3sm.html">E3SM Radiative Feedback Analysis</a></li>
 </ul>
@@ -438,20 +439,14 @@
                   <article class="bd-article">
                     
   <p><a class="reference internal" href="https://raw.githubusercontent.com/UXARRAY/uxarray/main/docs/_static/images/logos/uxarray_logo_h_dark.svg"><img alt="UXarray logo" class="align-right" src="https://raw.githubusercontent.com/UXARRAY/uxarray/main/docs/_static/images/logos/uxarray_logo_h_dark.svg" style="width: 30%;" /></a></p>
-<section class="tex2jax_ignore mathjax_ignore" id="mpas-ocean-model-output">
-<h1>MPAS Ocean Model Output<a class="headerlink" href="#mpas-ocean-model-output" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="mpas-ocean">
+<h1>MPAS Ocean<a class="headerlink" href="#mpas-ocean" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
 <section id="in-this-recipie-youll-visualize">
 <h2>In this recipie, you’ll visualize:<a class="headerlink" href="#in-this-recipie-youll-visualize" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
-<li><p>120km MPAS Ocean model output</p></li>
+<li><p>120km MPAS ocean model output</p></li>
 <li><p>Global ocean bottom depth</p></li>
 <li><p>Regional bottom depth of the Gulf of Mexico</p></li>
-</ul>
-</section>
-<section id="required-cookbook-sections">
-<h2>Required Cookbook Sections<a class="headerlink" href="#required-cookbook-sections" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
-<ul class="simple">
-<li><p>TODO</p></li>
 </ul>
 <hr class="docutils" />
 <div class="cell docutils container">
@@ -961,12 +956,12 @@ if (window.Jupyter !== undefined) {
   } catch(err) {
   }
 }
-</script><div class="output text_html"><div id='bf1e551e-e112-4a8b-996a-bf83347f4ba2'>
-  <div id="c7d538f6-1f70-4fb1-a475-c7d54688a43e" data-root-id="bf1e551e-e112-4a8b-996a-bf83347f4ba2" style="display: contents;"></div>
+</script><div class="output text_html"><div id='6838575d-5380-4765-9134-53240cd4269e'>
+  <div id="af9ebc3c-8b18-4a47-acb6-91aa58165fd3" data-root-id="6838575d-5380-4765-9134-53240cd4269e" style="display: contents;"></div>
 </div>
 <script type="application/javascript">(function(root) {
-  var docs_json = {"c99c0a8e-910d-4bdf-adb4-a314c93eedab":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.browser.BrowserInfo","id":"bf1e551e-e112-4a8b-996a-bf83347f4ba2"},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"5b651792-099c-43e5-b447-69f26a748fab","attributes":{"plot_id":"bf1e551e-e112-4a8b-996a-bf83347f4ba2","comm_id":"2eaedcaf75c04bd3a03c294b29ffa225","client_comm_id":"0f1e35d0ed9d4f5a84a62ef5aa6c3f65"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"gap","kind":"Any","default":""},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_rendered","kind":"Any","default":false},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"TemplateEditor1","properties":[{"name":"layout","kind":"Any","default":[]}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"ReactiveESM1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"JSComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"ReactComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"AnyWidgetComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"request_value1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"_synced","kind":"Any","default":null},{"name":"_request_sync","kind":"Any","default":0}]}]}};
-  var render_items = [{"docid":"c99c0a8e-910d-4bdf-adb4-a314c93eedab","roots":{"bf1e551e-e112-4a8b-996a-bf83347f4ba2":"c7d538f6-1f70-4fb1-a475-c7d54688a43e"},"root_ids":["bf1e551e-e112-4a8b-996a-bf83347f4ba2"]}];
+  var docs_json = {"b4f82d02-7ac2-4570-9826-f591f3ba0c9b":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.browser.BrowserInfo","id":"6838575d-5380-4765-9134-53240cd4269e"},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"961d50b0-a78c-47f5-85ff-57a5070088c8","attributes":{"plot_id":"6838575d-5380-4765-9134-53240cd4269e","comm_id":"69bc69af16f14e069fa0dda815302dd6","client_comm_id":"e395fecd3ad348dd8e8b8f385980ae79"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"gap","kind":"Any","default":""},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_rendered","kind":"Any","default":false},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"TemplateEditor1","properties":[{"name":"layout","kind":"Any","default":[]}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"ReactiveESM1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"JSComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"ReactComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"AnyWidgetComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"request_value1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"_synced","kind":"Any","default":null},{"name":"_request_sync","kind":"Any","default":0}]}]}};
+  var render_items = [{"docid":"b4f82d02-7ac2-4570-9826-f591f3ba0c9b","roots":{"6838575d-5380-4765-9134-53240cd4269e":"af9ebc3c-8b18-4a47-acb6-91aa58165fd3"},"root_ids":["6838575d-5380-4765-9134-53240cd4269e"]}];
   var docs = Object.values(docs_json)
   if (!docs) {
     return
@@ -1038,9 +1033,20 @@ if (window.Jupyter !== undefined) {
 <span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;../../meshfiles/oQU120.data.nc&quot;</span>
 
 <span class="n">uxds</span> <span class="o">=</span> <span class="n">ux</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">grid_path</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
-
-<span class="n">bottom_depth</span> <span class="o">=</span> <span class="n">uxds</span><span class="p">[</span><span class="s2">&quot;bottomDepth&quot;</span><span class="p">]</span>
-<span class="n">bottom_depth_gulf</span> <span class="o">=</span> <span class="n">bottom_depth</span><span class="o">.</span><span class="n">subset</span><span class="o">.</span><span class="n">bounding_circle</span><span class="p">((</span><span class="o">-</span><span class="mf">90.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">),</span> <span class="n">r</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bottom_depth</span> <span class="o">=</span> <span class="n">uxds</span><span class="p">[</span><span class="s2">&quot;bottomDepth&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bottom_depth_gulf</span> <span class="o">=</span> <span class="n">bottom_depth</span><span class="o">.</span><span class="n">subset</span><span class="o">.</span><span class="n">bounding_circle</span><span class="p">((</span><span class="o">-</span><span class="mf">90.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">),</span> <span class="n">r</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1559,12 +1565,12 @@ if (window.Jupyter !== undefined) {
   } catch(err) {
   }
 }
-</script><div class="output text_html"><div id='11f8c0b1-0a05-43c1-91db-93d217c5d893'>
-  <div id="f934e1b8-2d31-4658-9ee8-abbf12334ae8" data-root-id="11f8c0b1-0a05-43c1-91db-93d217c5d893" style="display: contents;"></div>
+</script><div class="output text_html"><div id='4ac9d6ee-34f4-4336-9527-991a3ca8544d'>
+  <div id="cb5a0488-1080-4d29-b616-55dc20b9d050" data-root-id="4ac9d6ee-34f4-4336-9527-991a3ca8544d" style="display: contents;"></div>
 </div>
 <script type="application/javascript">(function(root) {
-  var docs_json = {"c379c267-8521-442b-93d3-2254e50f78dc":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.browser.BrowserInfo","id":"11f8c0b1-0a05-43c1-91db-93d217c5d893"},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"689c0221-d48f-4ecb-9ac5-f4b256545ffc","attributes":{"plot_id":"11f8c0b1-0a05-43c1-91db-93d217c5d893","comm_id":"7a0c90b70ce741589f99c5f05ac39d2b","client_comm_id":"c9bf6a636fb041628c89a3b1f3d421cf"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"gap","kind":"Any","default":""},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_rendered","kind":"Any","default":false},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"TemplateEditor1","properties":[{"name":"layout","kind":"Any","default":[]}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"ReactiveESM1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"JSComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"ReactComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"AnyWidgetComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"request_value1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"_synced","kind":"Any","default":null},{"name":"_request_sync","kind":"Any","default":0}]}]}};
-  var render_items = [{"docid":"c379c267-8521-442b-93d3-2254e50f78dc","roots":{"11f8c0b1-0a05-43c1-91db-93d217c5d893":"f934e1b8-2d31-4658-9ee8-abbf12334ae8"},"root_ids":["11f8c0b1-0a05-43c1-91db-93d217c5d893"]}];
+  var docs_json = {"bf7e06ff-42f4-4cff-881e-e490ec0a71a0":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.browser.BrowserInfo","id":"4ac9d6ee-34f4-4336-9527-991a3ca8544d"},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"d1329dae-a041-4092-af56-25afc7e6d19c","attributes":{"plot_id":"4ac9d6ee-34f4-4336-9527-991a3ca8544d","comm_id":"edab8e42958248a9b12d40aadd0ce461","client_comm_id":"af9528f25e75493a9bc68de9824c324b"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"gap","kind":"Any","default":""},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_rendered","kind":"Any","default":false},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"TemplateEditor1","properties":[{"name":"layout","kind":"Any","default":[]}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"ReactiveESM1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"JSComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"ReactComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"AnyWidgetComponent1","properties":[{"name":"esm_constants","kind":"Any","default":{"type":"map"}}]},{"type":"model","name":"request_value1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"_synced","kind":"Any","default":null},{"name":"_request_sync","kind":"Any","default":0}]}]}};
+  var render_items = [{"docid":"bf7e06ff-42f4-4cff-881e-e490ec0a71a0","roots":{"4ac9d6ee-34f4-4336-9527-991a3ca8544d":"cb5a0488-1080-4d29-b616-55dc20b9d050"},"root_ids":["4ac9d6ee-34f4-4336-9527-991a3ca8544d"]}];
   var docs = Object.values(docs_json)
   if (!docs) {
     return
@@ -1813,12 +1819,12 @@ U9k9N2vl5+cH0en0TRiGWX18fC65vnh+LxqNBq2oqFhgMpmi7XY7arVaj+zdu/fxn/l/4bSZl5fH
                     
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../03-plotting-with-uxarray/customization.html"
+       href="../03-plotting-with-uxarray/high-res.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Customization &amp; Interactivity</p>
+        <p class="prev-next-title">Visualization High-Resolution Grids</p>
       </div>
     </a>
     <a class="right-next"
@@ -1826,7 +1832,7 @@ U9k9N2vl5+cH0en0TRiGWX18fC65vnh+LxqNBq2oqFhgMpmi7XY7arVaj+zdu/fxn/l/4bSZl5fH
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">MPAS Atmosphere Model</p>
+        <p class="prev-next-title">MPAS Atmosphere</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1848,7 +1854,6 @@ U9k9N2vl5+cH0en0TRiGWX18fC65vnh+LxqNBq2oqFhgMpmi7XY7arVaj+zdu/fxn/l/4bSZl5fH
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-recipie-youll-visualize">In this recipie, you’ll visualize:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-cookbook-sections">Required Cookbook Sections</a></li>
 </ul>
   </nav></div>
 
@@ -2083,7 +2088,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 5 January 2025.
+  Last updated on 6 January 2025.
   <br/>
 </p>
   </div>
@@ -2137,7 +2142,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 5 January 2025.
+          Last updated on 6 January 2025.
         </p>
       </div>
     </div>
