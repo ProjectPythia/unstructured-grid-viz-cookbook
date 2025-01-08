@@ -31,11 +31,10 @@ parts:
     chapters:
       - file: notebooks/04-recipies/mpas-ocean
       - file: notebooks/04-recipies/mpas-atmo
-      - file: notebooks/04-recipies/mpas-regional
+      #      - file: notebooks/04-recipies/mpas-regional
       - file: notebooks/04-recipies/e3sm
-
-  - caption: Compatibility with Visualization Packages
-    chapters:
-      - file: notebooks/05-viz-packages/matplotlib
-      - file: notebooks/05-viz-packages/datashader
-      - file: notebooks/05-viz-packages/lonboard
+#  - caption: Compatibility with Visualization Packages
+#    chapters:
+#      - file: notebooks/05-viz-packages/matplotlib
+#      - file: notebooks/05-viz-packages/datashader
+#      - file: notebooks/05-viz-packages/lonboard
