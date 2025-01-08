@@ -11,8 +11,6 @@ execute:
   # To execute notebooks via a Binder instead, replace 'cache' with 'binder'
   execute_notebooks: cache
   timeout: 600
-  exclude_patterns:
-    - "notebooks/03-plotting-with-uxarray/high-res.ipynb"
   allow_errors: False # cells with expected failures must set the `raises-exception` cell tag
 
 # Add a few extensions to help with parsing content
