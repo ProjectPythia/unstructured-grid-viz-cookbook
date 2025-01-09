@@ -25,7 +25,7 @@ parts:
       - file: notebooks/03-plotting-with-uxarray/geo
       - file: notebooks/03-plotting-with-uxarray/customization
       - file: notebooks/03-plotting-with-uxarray/high-res
-  #      - file: notebooks/03-plotting-with-uxarray/compare-xarray
+      - file: notebooks/03-plotting-with-uxarray/compare-xarray
 
   - caption: Visualization Recipes
     chapters:
