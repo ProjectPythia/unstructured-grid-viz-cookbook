@@ -29,8 +29,8 @@ parts:
 
   - caption: Visualization Recipes
     chapters:
-      - file: notebooks/04-recipes/mpas-ocean
       - file: notebooks/04-recipes/mpas-atmo
+      - file: notebooks/04-recipes/mpas-ocean
       #      - file: notebooks/04-recipes/mpas-regional
       - file: notebooks/04-recipes/e3sm
 #  - caption: Compatibility with Visualization Packages
