@@ -72,10 +72,10 @@ and examples that can be realized using such UXarray functionality; Grid visuali
 Geographic projections and features, to name a few. Also in this section, customization and interactivaity
 with UXarray plotting and considerations with high-resolution plotting are also provided.
 
-**4. Visualization Workflows**
+**4. Visualization Recipies**
 
 In this last chapter, we offer to the interested readers a set of focused workflows that can be realized
-with UXarray; MPAS analysis across resolutions, e3SM radiative feedback analysis, to name a few
+with UXarray, including visualizations of MPAS and E3SM model output.
 
 ## Running the Notebooks
 
