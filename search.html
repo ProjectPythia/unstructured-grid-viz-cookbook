@@ -14,31 +14,34 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6b4ca61d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=d0efeab3" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -78,7 +81,8 @@
     <link rel="search" title="Search" href="#" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="17 October 2024"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="9 January 2025"/>
   </head>
   
   
@@ -117,7 +121,7 @@
     
     
     <img src="_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Unstructured Grids Visualization Cookbook - Home"/>
-    <script>document.write(`<img src="_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Unstructured Grids Visualization Cookbook - Home"/>`);</script>
+    <img src="_static/pythia_logo-white-rtext.svg" class="logo__image only-dark pst-js-only" alt="Unstructured Grids Visualization Cookbook - Home"/>
   
   
 </a></div>
@@ -342,7 +346,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -365,26 +368,33 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/how-to-cite.html">How to Cite This Cookbook</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to UXarray &amp; Unstructured Grids</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/01-intro/01-unstructured-grid-overview.html">Unstructured Grids Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/01-intro/02-data-structures.html">Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/01-intro/03-data-mapping.html">Data Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/01-foundations/unstructured-grids.html">Unstructured Grids Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/01-foundations/plotting-libs.html">Plotting Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/01-foundations/rendering-techniques.html">Rendering Techniques</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods &amp; Libraries for Unstructured Grid Visualization</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to UXarray</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/02-methods/01-plotting-libraries.html">Plotting Libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/02-methods/02-rendering-techniques.html">Rendering Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/02-intro-to-uxarray/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/02-intro-to-uxarray/grid.html">UXarray Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/02-intro-to-uxarray/uxds-uxda.html">UXarray Dataset &amp; DataArray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/02-intro-to-uxarray/selection.html">Spatial Selection Operators</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">UXarray Visualization</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plotting with UXarray</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/03-uxarray-vis/01-plot-api.html">Plotting API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/03-uxarray-vis/002-xarray-to-uxarray.html">Comparison to Xarray</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/03-uxarray-vis/02-grid-topology.html">Grid Topology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/03-uxarray-vis/03-polygons.html">Polygons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/03-uxarray-vis/04-points.html">Points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/03-uxarray-vis/07-animations.html">Interactive &amp; Animated Plots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/03-uxarray-vis/06-performance.html">Visualization at Scale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/03-plotting-with-uxarray/grid-viz.html">Grid Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/03-plotting-with-uxarray/data-viz.html">Data Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/03-plotting-with-uxarray/geo.html">Geographic Projections &amp; Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/03-plotting-with-uxarray/customization.html">Customization &amp; Interactivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/03-plotting-with-uxarray/high-res.html">Visualizing High-Resolution Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/03-plotting-with-uxarray/compare-xarray.html">Comparison to Xarray</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualization Recipes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/04-recipes/mpas-atmo.html">MPAS Atmosphere</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/04-recipes/mpas-ocean.html">MPAS Ocean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/04-recipes/e3sm.html">E3SM Atmosphere</a></li>
 </ul>
 
     </div>
@@ -393,9 +403,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
         </div>
@@ -425,7 +440,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -549,24 +563,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -593,7 +599,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2025.
       <br/>
     
   </p>
@@ -602,7 +608,7 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 17 October 2024.
+  Last updated on 9 January 2025.
   <br/>
 </p>
   </div>
@@ -619,8 +625,8 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
      
@@ -652,43 +658,43 @@ By the <a href="https://projectpythia.org/">Project Pythia</a> Community
     <div class="container-xl">
       <div class="d-flex justify-content-center">
         <p class="py-1 m-0">
-            &copy;&nbsp;2024.
+            &copy;&nbsp;2025.
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 17 October 2024.
+          Last updated on 9 January 2025.
         </p>
       </div>
     </div>
   </div></div>
       
         <div class="footer-item"><div class="container-fluid footer-extra">
-    <div class="container">
-      <center>
-        Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
-        in Pythia Cookbooks is licensed under
-        <a href="https://opensource.org/license/apache-2-0">Apache 2.0</a>. All
-        other non-code content is licensed under
-        <a href="https://creativecommons.org/licenses/by/4.0/">
-          Creative Commons BY 4.0 (CC BY 4.0)</a
-        >.
-      </center>
-      <br /><br />
-      <div class="row">
-        <p class="m-0">
-          <img
-            src="_static/footer-logo-nsf.png"
-            style="float: left; width: 60px; height: 60px; margin-right: 1rem"
-          />
-          This material is based upon work supported by the National Science
-          Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
-          and conclusions or recommendations expressed in this material are those
-          of the author(s) and do not necessarily reflect the views of the
-          National Science Foundation.
-        </p>
-      </div>
+  <div class="container">
+    <center>
+      Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
+      in Pythia Cookbooks is licensed under
+      <a href="https://opensource.org/license/apache-2-0">Apache 2.0</a>. All
+      other non-code content is licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/">
+        Creative Commons BY 4.0 (CC BY 4.0)</a
+      >.
+    </center>
+    <br /><br />
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
     </div>
-  </div></div>
+  </div>
+</div></div>
       
       </div>
     </div>
