@@ -47,6 +47,5 @@ repos:
         additional_dependencies: [black]
       - id: nbqa-pyupgrade
         additional_dependencies: [pyupgrade]
-        exclude: foundations/quickstart.ipynb
       - id: nbqa-isort
         additional_dependencies: [isort]
