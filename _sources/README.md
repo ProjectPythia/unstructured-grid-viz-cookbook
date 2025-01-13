@@ -42,6 +42,8 @@ introducing UXarray, and showcasing several UXarray visualization functions and 
 
 [Ian Franda (University of Wisconsin-Madison)](https://github.com/ifranda)
 
+[Rachel Tam (University of Illinois Urbana-Champaign)](https://github.com/rytam2)
+
 ### Contributors
 
 <a href="https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/graphs/contributors">
