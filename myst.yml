@@ -1,9 +1,9 @@
 version: 1
 extends:
-  - https://raw.githubusercontent.com/projectpythia-mystmd/pythia-config/main/pythia.yml
+  - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
 project:
   title: Unstructured Grids Visualization Cookbook
-  github: https://github.com/projectpythia-mystmd/unstructured-grid-viz-cookbook
+  github: https://github.com/projectpythia/unstructured-grid-viz-cookbook
   authors:
     - name: The Project Pythia Community
   copyright: '2024'
@@ -32,4 +32,4 @@ project:
       - file: notebooks/03-uxarray-vis/06-performance.ipynb
   jupyter: 
     binder:
-      repo: projectpythia-mystmd/unstructured-grid-viz-cookbook
+      repo: projectpythia/unstructured-grid-viz-cookbook
