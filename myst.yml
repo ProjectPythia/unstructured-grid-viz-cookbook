@@ -1,0 +1,35 @@
+version: 1
+extends:
+  - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
+project:
+  title: Unstructured Grids Visualization Cookbook
+  github: https://github.com/projectpythia/unstructured-grid-viz-cookbook
+  authors:
+    - name: The Project Pythia Community
+  copyright: '2024'
+  toc:
+    - file: README.md
+    - title: Preamble
+      children:
+        - file: notebooks/how-to-cite.md
+    - title: Introduction to UXarray & Unstructured Grids
+      children:
+        - file: notebooks/01-intro/01-unstructured-grid-overview.ipynb
+        - file: notebooks/01-intro/02-data-structures.ipynb
+        - file: notebooks/01-intro/03-data-mapping.ipynb
+    - title: Methods & Libraries for Unstructured Grid Visualization
+      children:
+        - file: notebooks/02-methods/01-plotting-libraries.ipynb
+        - file: notebooks/02-methods/02-rendering-techniques.ipynb
+    - title: UXarray Visualization
+      children:
+      - file: notebooks/03-uxarray-vis/01-plot-api.ipynb
+      - file: notebooks/03-uxarray-vis/002-xarray-to-uxarray.ipynb
+      - file: notebooks/03-uxarray-vis/02-grid-topology.ipynb
+      - file: notebooks/03-uxarray-vis/03-polygons.ipynb
+      - file: notebooks/03-uxarray-vis/04-points.ipynb
+      - file: notebooks/03-uxarray-vis/07-animations.ipynb
+      - file: notebooks/03-uxarray-vis/06-performance.ipynb
+  jupyter: 
+    binder:
+      repo: projectpythia/unstructured-grid-viz-cookbook

@@ -1,9 +1,9 @@
+# Unstructured Grid Visualization Cookbook
+
 <p align="center">
   <img style="float: right;" src="https://raijin.ucar.edu/_static/images/logos/ProjectRaijin_Logo.png" width="225" />
   <img style="float: right;" src="https://raw.githubusercontent.com/ProjectPythia/unstructured-grid-viz-cookbook/main/notebooks/images/logos/SEATSLogoTransparent.png" width="250" />
 </p>
-
-# Unstructured Grid Visualization Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/unstructured-grid-viz-cookbook.git/main?labpath=notebooks)
