@@ -4,23 +4,37 @@ parts:
   - caption: Preamble
     chapters:
       - file: notebooks/how-to-cite
-  - caption: Introduction to UXarray & Unstructured Grids
-    chapters:
-      - file: notebooks/01-intro/01-unstructured-grid-overview
-      - file: notebooks/01-intro/02-data-structures
-      - file: notebooks/01-intro/03-data-mapping
 
-  - caption: Methods & Libraries for Unstructured Grid Visualization
+  - caption: Foundations
     chapters:
-      - file: notebooks/02-methods/01-plotting-libraries
-      - file: notebooks/02-methods/02-rendering-techniques
+      - file: notebooks/01-foundations/unstructured-grids
+      - file: notebooks/01-foundations/plotting-libs
+      - file: notebooks/01-foundations/rendering-techniques
 
-  - caption: UXarray Visualization
+  - caption: Introduction to UXarray
     chapters:
-      - file: notebooks/03-uxarray-vis/01-plot-api
-      - file: notebooks/03-uxarray-vis/002-xarray-to-uxarray
-      - file: notebooks/03-uxarray-vis/02-grid-topology
-      - file: notebooks/03-uxarray-vis/03-polygons
-      - file: notebooks/03-uxarray-vis/04-points
-      - file: notebooks/03-uxarray-vis/07-animations
-      - file: notebooks/03-uxarray-vis/06-performance
+      - file: notebooks/02-intro-to-uxarray/overview
+      - file: notebooks/02-intro-to-uxarray/grid
+      - file: notebooks/02-intro-to-uxarray/uxds-uxda
+      - file: notebooks/02-intro-to-uxarray/selection
+
+  - caption: Plotting with UXarray
+    chapters:
+      - file: notebooks/03-plotting-with-uxarray/grid-viz
+      - file: notebooks/03-plotting-with-uxarray/data-viz
+      - file: notebooks/03-plotting-with-uxarray/geo
+      - file: notebooks/03-plotting-with-uxarray/customization
+      - file: notebooks/03-plotting-with-uxarray/high-res
+      - file: notebooks/03-plotting-with-uxarray/compare-xarray
+
+  - caption: Visualization Recipes
+    chapters:
+      - file: notebooks/04-recipes/mpas-atmo
+      - file: notebooks/04-recipes/mpas-ocean
+      #      - file: notebooks/04-recipes/mpas-regional
+      - file: notebooks/04-recipes/e3sm
+#  - caption: Compatibility with Visualization Packages
+#    chapters:
+#      - file: notebooks/05-viz-packages/matplotlib
+#      - file: notebooks/05-viz-packages/datashader
+#      - file: notebooks/05-viz-packages/lonboard
