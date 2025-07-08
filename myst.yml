@@ -14,7 +14,7 @@ project:
         - file: notebooks/how-to-cite.md
     - title: Foundations
       children:
-        - file: file: notebooks/01-foundations/unstructured-grids.ipynb
+        - file: notebooks/01-foundations/unstructured-grids.ipynb
         - file: notebooks/01-foundations/plotting-libs.ipynb
         - file: notebooks/01-foundations/rendering-techniques.ipynb
     - title: Introduction to UXarray
