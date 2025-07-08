@@ -1,0 +1,1469 @@
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.UxDataArray &#x27;bottomDepth&#x27; (n_face: 1791)&gt; Size: 14kB
+[1791 values with dtype=float64]
+Dimensions without coordinates: n_face</pre><div class='xr-wrap' style='display:none'><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.UxDataArray &#x27;bottomDepth&#x27; (n_face: 1791)&gt; Size: 14kB
+[1791 values with dtype=float64]
+Dimensions without coordinates: n_face</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>uxarray.UxDataArray</div><div class='xr-array-name'>'bottomDepth'</div><ul class='xr-dim-list'><li><span>n_face</span>: 1791</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-100f8fbe-7760-4b73-a6fe-70f868b4a2cc' class='xr-array-in' type='checkbox' checked><label for='section-100f8fbe-7760-4b73-a6fe-70f868b4a2cc' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[1791 values with dtype=float64]</pre></div></div></li><li class='xr-section-item'><input id='section-421d397e-0af8-4184-b1d4-605efd0fa31b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-421d397e-0af8-4184-b1d4-605efd0fa31b' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-d990adc6-c980-4a7b-9e02-768d57afd45e' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-d990adc6-c980-4a7b-9e02-768d57afd45e' class='xr-section-summary'  title='Expand/collapse section'>Indexes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-708c763e-bc5e-4f24-91eb-cd8e53a7607c' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-708c763e-bc5e-4f24-91eb-cd8e53a7607c' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div><details><summary>Show Grid Information</summary><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;uxarray.Grid&gt;
+Original Grid Type: MPAS
+Grid Dimensions:
+  * n_node: 3947
+  * n_edge: 5754
+  * n_face: 1791
+  * n_max_face_nodes: 6
+  * n_max_face_edges: 6
+  * n_max_face_faces: 6
+  * n_max_node_faces: 3
+  * two: 2
+Grid Coordinates (Spherical):
+  * node_lon: (3947,)
+  * node_lat: (3947,)
+  * edge_lon: (5754,)
+  * edge_lat: (5754,)
+  * face_lon: (1791,)
+  * face_lat: (1791,)
+Grid Coordinates (Cartesian):
+  * node_x: (3947,)
+  * node_y: (3947,)
+  * node_z: (3947,)
+  * edge_x: (5754,)
+  * edge_y: (5754,)
+  * edge_z: (5754,)
+  * face_x: (1791,)
+  * face_y: (1791,)
+  * face_z: (1791,)
+Grid Connectivity Variables:
+  * face_face_connectivity: (1791, 6)
+  * face_node_connectivity: (1791, 6)
+  * edge_face_connectivity: (5754, 2)
+  * face_edge_connectivity: (1791, 6)
+  * edge_node_connectivity: (5754, 2)
+  * node_face_connectivity: (3947, 3)
+Grid Descriptor Variables:
+  * face_areas: (1791,)
+  * edge_face_distances: (5754,)
+  * edge_node_distances: (5754,)
+  * boundary_node_indices: (333,)
+</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>uxarray.UxDataArray.uxgrid</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-655dea54-a4dd-4285-a178-7cd1ae9313e0' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-655dea54-a4dd-4285-a178-7cd1ae9313e0' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span>n_node</span>: 3947</li><li><span>n_face</span>: 1791</li><li><span>n_edge</span>: 5754</li><li><span>n_max_face_nodes</span>: 6</li><li><span>n_max_node_faces</span>: 3</li><li><span>two</span>: 2</li><li><span>n_max_face_edges</span>: 6</li><li><span>n_max_face_faces</span>: 6</li><li><span>n_boundary_nodes</span>: 333</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-546864fb-48ed-4c63-abaf-3cb37c8b7600' class='xr-section-summary-in' type='checkbox'  ><label for='section-546864fb-48ed-4c63-abaf-3cb37c8b7600' class='xr-section-summary' >Spherical Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>node_lon</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-175.0 -172.5 ... -103.0 -175.0</div><input id='attrs-161232f1-27ed-4483-88e0-f33e2f9eef06' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-161232f1-27ed-4483-88e0-f33e2f9eef06' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7f995b07-814e-41f1-b8f7-559ba64cea74' class='xr-var-data-in' type='checkbox'><label for='data-7f995b07-814e-41f1-b8f7-559ba64cea74' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-174.95294523, -172.5318284 , -173.42204784, ...,  113.04705503,
+       -102.95294492, -174.9529447 ], shape=(3947,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>node_lat</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>24.27 25.84 28.41 ... -52.62 -52.62</div><input id='attrs-25d2f98d-7fa6-4ef2-8896-3c7e226cde5b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-25d2f98d-7fa6-4ef2-8896-3c7e226cde5b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-93751d5c-a771-4b99-9bad-c21247fd3c5b' class='xr-var-data-in' type='checkbox'><label for='data-93751d5c-a771-4b99-9bad-c21247fd3c5b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long name :</span></dt><dd>Latitude of the corner nodes of each face</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([ 24.27387793,  25.83662184,  28.41042985, ..., -10.81231712,
+       -52.62263157, -52.62263191], shape=(3947,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_lon</span></div><div class='xr-var-dims'>(n_edge)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-176.8 -173.1 ... -120.8 -113.0</div><input id='attrs-8a16404c-c8ad-48b4-a301-ae875c495545' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-8a16404c-c8ad-48b4-a301-ae875c495545' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-97bbd4bc-63e9-4761-bffc-9ca0e2a5a954' class='xr-var-data-in' type='checkbox'><label for='data-97bbd4bc-63e9-4761-bffc-9ca0e2a5a954' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-176.77621884, -173.12967054, -102.95294493, ..., -161.10860309,
+       -120.7574067 , -113.02625979], shape=(5754,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_lat</span></div><div class='xr-var-dims'>(n_edge)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-53.24 -53.24 ... -11.07 -6.11</div><input id='attrs-e67e8524-4ad7-49db-9bc3-d30a64a2d620' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e67e8524-4ad7-49db-9bc3-d30a64a2d620' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6537d24c-78a8-405a-a9c1-34c5f71afeb0' class='xr-var-data-in' type='checkbox'><label for='data-6537d24c-78a8-405a-a9c1-34c5f71afeb0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long name :</span></dt><dd>Latitude of the center of each edge</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([-53.23874449, -53.23874448, -51.3627372 , ..., -50.6652819 ,
+       -11.06951516,  -6.11034278], shape=(5754,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_lon</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-175.0 116.8 ... -175.0 -178.4</div><input id='attrs-c18324c3-79ae-4688-9947-8b8f0baca2b1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c18324c3-79ae-4688-9947-8b8f0baca2b1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b2b2c033-5576-43cb-aebc-34d09e538043' class='xr-var-data-in' type='checkbox'><label for='data-b2b2c033-5576-43cb-aebc-34d09e538043' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-174.95294524,  116.76453044,    5.04705476, ..., -171.46260489,
+       -174.95294467, -178.44328452], shape=(1791,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_lat</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>26.57 90.0 -26.57 ... -55.14 -51.31</div><input id='attrs-829aa874-ff4c-4eab-ada4-9e8c79a7fd65' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-829aa874-ff4c-4eab-ada4-9e8c79a7fd65' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a806df59-0e8f-4cd6-b396-642c30bfacc2' class='xr-var-data-in' type='checkbox'><label for='data-a806df59-0e8f-4cd6-b396-642c30bfacc2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long name :</span></dt><dd>Latitude of the center of each face</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([ 26.56505115,  90.        , -26.56505115, ..., -51.3108445 ,
+       -55.1412034 , -51.31084451], shape=(1791,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-885909f8-2122-42c0-abe3-fd949d283fd5' class='xr-section-summary-in' type='checkbox'  ><label for='section-885909f8-2122-42c0-abe3-fd949d283fd5' class='xr-section-summary' >Cartesian Coordinates: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>node_x</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f5d3d8bb-4040-4e38-b9b3-82c641169c11' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f5d3d8bb-4040-4e38-b9b3-82c641169c11' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0e4a75bb-58e2-44f2-80ca-df9f796e6ce3' class='xr-var-data-in' type='checkbox'><label for='data-0e4a75bb-58e2-44f2-80ca-df9f796e6ce3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>x-coordinates of vertices</dd><dt><span>standard_name :</span></dt><dd>x</dd><dt><span>long name :</span></dt><dd>Cartesian x location of the corner nodes of each face</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[3947 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>node_y</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9da3ce65-407b-41ea-8d52-67f4b24e9fa5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9da3ce65-407b-41ea-8d52-67f4b24e9fa5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-eb1c5685-3a87-4feb-b9cf-8c13685b91f2' class='xr-var-data-in' type='checkbox'><label for='data-eb1c5685-3a87-4feb-b9cf-8c13685b91f2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>y-coordinates of vertices</dd><dt><span>standard_name :</span></dt><dd>y</dd><dt><span>long name :</span></dt><dd>Cartesian y location of the corner nodes of each face</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[3947 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>node_z</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-bd0dd0c2-0f6b-4920-9b1c-e157e15627ef' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-bd0dd0c2-0f6b-4920-9b1c-e157e15627ef' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cd0609cb-7e91-41ac-bf8a-0156063d2797' class='xr-var-data-in' type='checkbox'><label for='data-cd0609cb-7e91-41ac-bf8a-0156063d2797' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>z-coordinates of vertices</dd><dt><span>standard_name :</span></dt><dd>z</dd><dt><span>long name :</span></dt><dd>Cartesian z location of the corner nodes of each face</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[3947 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_x</span></div><div class='xr-var-dims'>(n_edge)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c9f4c3e1-a34a-4737-9a07-b7cd5400449e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c9f4c3e1-a34a-4737-9a07-b7cd5400449e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-01be029d-0adc-40d6-a01e-d6498b51da15' class='xr-var-data-in' type='checkbox'><label for='data-01be029d-0adc-40d6-a01e-d6498b51da15' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>x-coordinates of edge centres</dd><dt><span>standard_name :</span></dt><dd>x</dd><dt><span>long name :</span></dt><dd>Cartesian x location of the center of each edge</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[5754 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_y</span></div><div class='xr-var-dims'>(n_edge)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a0920bb2-ef29-4a42-9ad3-f662eb92999c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a0920bb2-ef29-4a42-9ad3-f662eb92999c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-21e36310-ee4e-4884-8255-b8fdf928ae71' class='xr-var-data-in' type='checkbox'><label for='data-21e36310-ee4e-4884-8255-b8fdf928ae71' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>y-coordinates of edge centres</dd><dt><span>standard_name :</span></dt><dd>y</dd><dt><span>long name :</span></dt><dd>Cartesian y location of the center of each edge</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[5754 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_z</span></div><div class='xr-var-dims'>(n_edge)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-62c12844-d017-4247-a9b5-ededc43455ea' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-62c12844-d017-4247-a9b5-ededc43455ea' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bf89b180-c054-4111-abd0-b12a8d49c029' class='xr-var-data-in' type='checkbox'><label for='data-bf89b180-c054-4111-abd0-b12a8d49c029' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>z-coordinates of edge centres</dd><dt><span>standard_name :</span></dt><dd>z</dd><dt><span>long name :</span></dt><dd>Cartesian z location of the center of each edge</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[5754 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_x</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c994ca5c-c27e-4446-a22d-c81938ed0575' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c994ca5c-c27e-4446-a22d-c81938ed0575' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-33005f4d-3317-4c09-8ffd-52454e05730a' class='xr-var-data-in' type='checkbox'><label for='data-33005f4d-3317-4c09-8ffd-52454e05730a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>x-coordinates of cell centres</dd><dt><span>standard_name :</span></dt><dd>x</dd><dt><span>long name :</span></dt><dd>Cartesian x location of the center of each face</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[1791 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_y</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2973f7d8-0d9b-47dc-a4fe-0f1a53ba4fdd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2973f7d8-0d9b-47dc-a4fe-0f1a53ba4fdd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c51f6224-439a-4c03-9297-b6009d6ccd4c' class='xr-var-data-in' type='checkbox'><label for='data-c51f6224-439a-4c03-9297-b6009d6ccd4c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>y-coordinates of cell centres</dd><dt><span>standard_name :</span></dt><dd>y</dd><dt><span>long name :</span></dt><dd>Cartesian y location of the center of each face</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[1791 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_z</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2a53d3aa-6add-445a-94a5-60042a8f1ea4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2a53d3aa-6add-445a-94a5-60042a8f1ea4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fecfdbe3-4ab5-4510-b23c-4b6e49f6ef86' class='xr-var-data-in' type='checkbox'><label for='data-fecfdbe3-4ab5-4510-b23c-4b6e49f6ef86' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>z-coordinates of cell centres</dd><dt><span>standard_name :</span></dt><dd>z</dd><dt><span>long name :</span></dt><dd>Cartesian z location of the center of each face</dd><dt><span>units :</span></dt><dd>meters</dd></dl></div><div class='xr-var-data'><pre>[1791 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-85337b32-7538-486b-a60c-0ed65331627c' class='xr-section-summary-in' type='checkbox'  ><label for='section-85337b32-7538-486b-a60c-0ed65331627c' class='xr-section-summary' >Connectivity: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>face_face_connectivity</span></div><div class='xr-var-dims'>(n_face, n_max_face_faces)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>445 446 447 448 ... 1100 1105 442</div><input id='attrs-99f683ce-1274-481c-a0ce-1904a626473e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-99f683ce-1274-481c-a0ce-1904a626473e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7ca2062c-ca74-44ac-a4a2-43382af4e97f' class='xr-var-data-in' type='checkbox'><label for='data-7ca2062c-ca74-44ac-a4a2-43382af4e97f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>face_face_connectivity</dd><dt><span>long name :</span></dt><dd>Faces that neighbor each face.</dd><dt><span>start_index :</span></dt><dd>0</dd><dt><span>_FillValue :</span></dt><dd>-9223372036854775808</dd></dl></div><div class='xr-var-data'><pre>array([[                 445,                  446,                  447,
+                         448,                  444, -9223372036854775808],
+       [                 451,                  452,                  453,
+                         449,                  450, -9223372036854775808],
+       [                 454,                  455,                  456,
+                         457,                  458, -9223372036854775808],
+       ...,
+       [                1789,                  441,                 1106,
+                        1111,                  443,                 1790],
+       [                1790,                  442,                 1098,
+                        1097,                  441,                 1788],
+       [                1789,                 1788,                  443,
+                        1100,                 1105,                  442]],
+      shape=(1791, 6))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_node_connectivity</span></div><div class='xr-var-dims'>(n_face, n_max_face_nodes)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>2 3 4 0 1 ... 2959 3689 2951 2950</div><input id='attrs-56090fea-48ac-425a-8ebe-c01c3809770f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-56090fea-48ac-425a-8ebe-c01c3809770f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5371fc45-de72-479d-9d43-ed508df73198' class='xr-var-data-in' type='checkbox'><label for='data-5371fc45-de72-479d-9d43-ed508df73198' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>face_node_connectivity</dd><dt><span>long name :</span></dt><dd>Maps every face to its corner nodes.</dd><dt><span>start_index :</span></dt><dd>0</dd><dt><span>_FillValue :</span></dt><dd>-9223372036854775808</dd></dl></div><div class='xr-var-data'><pre>array([[                   2,                    3,                    4,
+                           0,                    1, -9223372036854775808],
+       [                   6,                    7,                    8,
+                           9,                    5, -9223372036854775808],
+       [                  14,                   10,                   11,
+                          12,                   13, -9223372036854775808],
+       ...,
+       [                2943,                 2948,                 3695,
+                        2955,                 2960,                 3946],
+       [                2950,                 2949,                 3686,
+                        2944,                 2943,                 3946],
+       [                3946,                 2960,                 2959,
+                        3689,                 2951,                 2950]],
+      shape=(1791, 6))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_face_connectivity</span></div><div class='xr-var-dims'>(n_edge, two)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1789 1790 1788 ... 1318 1319 1320</div><input id='attrs-662caada-b799-4114-a78a-d45461ddc384' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-662caada-b799-4114-a78a-d45461ddc384' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d6ff5445-7223-41dc-9b1d-6204956af399' class='xr-var-data-in' type='checkbox'><label for='data-d6ff5445-7223-41dc-9b1d-6204956af399' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>edge_face_connectivity</dd><dt><span>long name :</span></dt><dd>Faces that neighbor each edge</dd><dt><span>start_index :</span></dt><dd>0</dd><dt><span>_FillValue :</span></dt><dd>-9223372036854775808</dd></dl></div><div class='xr-var-data'><pre>array([[1789, 1790],
+       [1788, 1789],
+       [1786, 1787],
+       ...,
+       [1106, 1107],
+       [1315, 1318],
+       [1319, 1320]], shape=(5754, 2))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_edge_connectivity</span></div><div class='xr-var-dims'>(n_face, n_max_face_edges)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1798 2207 2233 ... 2972 767 3766</div><input id='attrs-6fda6d51-a58a-4fd4-ad55-39cdfd511bbd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6fda6d51-a58a-4fd4-ad55-39cdfd511bbd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f8c8429e-f944-43b0-b9bf-1225640e003a' class='xr-var-data-in' type='checkbox'><label for='data-f8c8429e-f944-43b0-b9bf-1225640e003a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>face_edge_connectivity</dd><dt><span>long name :</span></dt><dd>Maps every face to its edges.</dd><dt><span>start_index :</span></dt><dd>0</dd><dt><span>_FillValue :</span></dt><dd>-9223372036854775808</dd></dl></div><div class='xr-var-data'><pre>array([[                1798,                 2207,                 2233,
+                        2756,                 2023, -9223372036854775808],
+       [                 518,                 2743,                 1647,
+                        2192,                 2883, -9223372036854775808],
+       [                2136,                 3140,                 2297,
+                        2910,                 2148, -9223372036854775808],
+       ...,
+       [                   1,                 3764,                 5572,
+                        5580,                 3774,                  864],
+       [                   0,                  451,                 5552,
+                        5549,                 3787,                    1],
+       [                   0,                  864,                 3520,
+                        2972,                  767,                 3766]],
+      shape=(1791, 6))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_node_connectivity</span></div><div class='xr-var-dims'>(n_edge, two)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>3946 2950 3946 ... 3773 3774 1183</div><input id='attrs-462d02dc-c849-4bf3-b940-d6c63ed92f31' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-462d02dc-c849-4bf3-b940-d6c63ed92f31' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-94ba584c-fb7b-4aa8-88aa-2a9c164a3fd6' class='xr-var-data-in' type='checkbox'><label for='data-94ba584c-fb7b-4aa8-88aa-2a9c164a3fd6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>edge_node_connectivity</dd><dt><span>long name :</span></dt><dd>Maps every edge to the two nodes that it connects.</dd><dt><span>start_index :</span></dt><dd>0</dd></dl></div><div class='xr-var-data'><pre>array([[3946, 2950],
+       [3946, 2943],
+       [3945, 2931],
+       ...,
+       [3694,  733],
+       [2520, 3773],
+       [3774, 1183]], shape=(5754, 2))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>node_face_connectivity</span></div><div class='xr-var-dims'>(n_node, n_max_node_faces)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 448 444 445 ... 1789 1788 1790</div><input id='attrs-7f703386-c02d-4d99-b093-af5a363323b4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7f703386-c02d-4d99-b093-af5a363323b4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d85b383c-f7dc-452f-a992-1c1ce10bc06c' class='xr-var-data-in' type='checkbox'><label for='data-d85b383c-f7dc-452f-a992-1c1ce10bc06c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>node_face_connectivity</dd><dt><span>long name :</span></dt><dd>Faces that neighbor each node</dd><dt><span>start_index :</span></dt><dd>0</dd><dt><span>_FillValue :</span></dt><dd>-9223372036854775808</dd></dl></div><div class='xr-var-data'><pre>array([[                   0,                  448,                  444],
+       [                 445,                    0,                  444],
+       [                 445,                  446,                    0],
+       ...,
+       [                1784,                 1783, -9223372036854775808],
+       [                1786,                 1785,                 1787],
+       [                1789,                 1788,                 1790]],
+      shape=(3947, 3))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-f5ad76ec-7e29-4155-b5d5-10b67e07229d' class='xr-section-summary-in' type='checkbox'  ><label for='section-f5ad76ec-7e29-4155-b5d5-10b67e07229d' class='xr-section-summary' >Descriptors: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>face_areas</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-4aa67916-082c-4451-8aa9-911f199d8dba' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4aa67916-082c-4451-8aa9-911f199d8dba' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c46370d6-4c65-4d77-b443-7f83df656dab' class='xr-var-data-in' type='checkbox'><label for='data-c46370d6-4c65-4d77-b443-7f83df656dab' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Area of each face.</dd><dt><span>cf_role :</span></dt><dd>face_areas</dd></dl></div><div class='xr-var-data'><pre>[1791 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_face_distances</span></div><div class='xr-var-dims'>(n_edge)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.07613 0.07613 ... 0.07655 0.07805</div><input id='attrs-e430ce89-5f4d-48cf-b877-a14616222f27' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e430ce89-5f4d-48cf-b877-a14616222f27' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7ea01c96-a2a3-4b19-82db-c5c55d4bd040' class='xr-var-data-in' type='checkbox'><label for='data-7ea01c96-a2a3-4b19-82db-c5c55d4bd040' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>edge_face_distances</dd><dt><span>long_name :</span></dt><dd>Distances between the face centers that saddle each edge</dd></dl></div><div class='xr-var-data'><pre>array([0.07613026, 0.07613026, 0.07613026, ..., 0.07616384, 0.07655427,
+       0.07804884], shape=(5754,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>edge_node_distances</span></div><div class='xr-var-dims'>(n_edge)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.04478 0.04478 ... 0.04309 0.04112</div><input id='attrs-94d0d438-1f54-430b-8121-05c93d6cb97e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-94d0d438-1f54-430b-8121-05c93d6cb97e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-465e28e1-3b29-4437-888d-5b0a2006d98c' class='xr-var-data-in' type='checkbox'><label for='data-465e28e1-3b29-4437-888d-5b0a2006d98c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>edge_node_distances</dd><dt><span>long_name :</span></dt><dd>Distances between the nodes that make up each edge.</dd></dl></div><div class='xr-var-data'><pre>array([0.04477918, 0.04477918, 0.04477918, ..., 0.04450839, 0.04308701,
+       0.041119  ], shape=(5754,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>boundary_node_indices</span></div><div class='xr-var-dims'>(n_boundary_nodes)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>-1 0 1 2 3 ... 327 328 329 330 331</div><input id='attrs-2c97668a-4d55-4a5f-8991-1b3952f05188' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-2c97668a-4d55-4a5f-8991-1b3952f05188' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5a75548b-2491-4821-8493-f161ed63afed' class='xr-var-data-in' type='checkbox'><label for='data-5a75548b-2491-4821-8493-f161ed63afed' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([ -1,   0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,
+        12,  13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,
+        25,  26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,
+        38,  39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,
+        51,  52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,
+        64,  65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,
+        77,  78,  79,  80,  81,  82,  83,  84,  85,  86,  87,  88,  89,
+        90,  91,  92,  93,  94,  95,  96,  97,  98,  99, 100, 101, 102,
+       103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115,
+       116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128,
+       129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141,
+       142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154,
+       155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167,
+       168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
+       181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193,
+       194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206,
+       207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219,
+       220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232,
+       233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245,
+       246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258,
+       259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271,
+       272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284,
+       285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297,
+       298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
+       311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323,
+       324, 325, 326, 327, 328, 329, 330, 331])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-32d43377-f101-4e4f-9dcc-5e3cbe9e181a' class='xr-section-summary-in' type='checkbox'  ><label for='section-32d43377-f101-4e4f-9dcc-5e3cbe9e181a' class='xr-section-summary' >Attributes: <span>(10)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>on_a_sphere :</span></dt><dd>YES</dd><dt><span>sphere_radius :</span></dt><dd>6371229.0</dd><dt><span>is_periodic :</span></dt><dd>NO</dd><dt><span>parent_id :</span></dt><dd>kufh9o2jwx
+lsd2k42w1r
+a4x6sqhkwb</dd><dt><span>history :</span></dt><dd>Tue Oct 10 16:52:25 2023: ./convert.py
+MpasMeshConverter.x ocean.QU.480km.151209.nc ocean.QU.480km.20231010.nc
+mpirun -n 2 ./ocean_model</dd><dt><span>mesh_spec :</span></dt><dd>1.0</dd><dt><span>Conventions :</span></dt><dd>MPAS</dd><dt><span>source :</span></dt><dd>MpasMeshConverter.x</dd><dt><span>file_id :</span></dt><dd>85scxk6tmk</dd><dt><span>source_grid_spec :</span></dt><dd>MPAS</dd></dl></div></li></ul></div></div></details></div></div>
