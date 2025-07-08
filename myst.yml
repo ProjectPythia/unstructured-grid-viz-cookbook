@@ -6,30 +6,42 @@ project:
   github: https://github.com/projectpythia/unstructured-grid-viz-cookbook
   authors:
     - name: The Project Pythia Community
-  copyright: '2024'
+  copyright: '2025'
   toc:
     - file: README.md
     - title: Preamble
       children:
         - file: notebooks/how-to-cite.md
-    - title: Introduction to UXarray & Unstructured Grids
+    - title: Foundations
       children:
-        - file: notebooks/01-intro/01-unstructured-grid-overview.ipynb
-        - file: notebooks/01-intro/02-data-structures.ipynb
-        - file: notebooks/01-intro/03-data-mapping.ipynb
-    - title: Methods & Libraries for Unstructured Grid Visualization
+        - file: notebooks/01-foundations/unstructured-grids.ipynb
+        - file: notebooks/01-foundations/plotting-libs.ipynb
+        - file: notebooks/01-foundations/rendering-techniques.ipynb
+    - title: Introduction to UXarray
       children:
-        - file: notebooks/02-methods/01-plotting-libraries.ipynb
-        - file: notebooks/02-methods/02-rendering-techniques.ipynb
-    - title: UXarray Visualization
+        - file: notebooks/02-intro-to-uxarray/overview.ipynb
+        - file: notebooks/02-intro-to-uxarray/grid.ipynb
+        - file: notebooks/02-intro-to-uxarray/uxds-uxda.ipynb
+        - file: notebooks/02-intro-to-uxarray/selection.ipynb
+    - title: Plotting with UXarray
       children:
-      - file: notebooks/03-uxarray-vis/01-plot-api.ipynb
-      - file: notebooks/03-uxarray-vis/002-xarray-to-uxarray.ipynb
-      - file: notebooks/03-uxarray-vis/02-grid-topology.ipynb
-      - file: notebooks/03-uxarray-vis/03-polygons.ipynb
-      - file: notebooks/03-uxarray-vis/04-points.ipynb
-      - file: notebooks/03-uxarray-vis/07-animations.ipynb
-      - file: notebooks/03-uxarray-vis/06-performance.ipynb
+      - file: notebooks/03-plotting-with-uxarray/grid-viz.ipynb
+      - file: notebooks/03-plotting-with-uxarray/data-viz.ipynb
+      - file: notebooks/03-plotting-with-uxarray/geo.ipynb
+      - file: notebooks/03-plotting-with-uxarray/customization.ipynb
+      - file: notebooks/03-plotting-with-uxarray/high-res.ipynb
+      - file: notebooks/03-plotting-with-uxarray/compare-xarray.ipynb
+    - title: Visualization Recipes
+      children:
+      - file: notebooks/04-recipes/mpas-atmo.ipynb
+      - file: notebooks/04-recipes/mpas-ocean.ipynb
+      # - file: notebooks/04-recipes/mpas-regional.ipynb
+      - file: notebooks/04-recipes/e3sm.ipynb
+    # - title: Compatibility with Visualization Packages
+    #   children:
+    #   - file: notebooks/05-viz-packages/matplotlib.ipynb
+    #   - file: notebooks/05-viz-packages/datashader.ipynb
+    #   - file: notebooks/05-viz-packages/lonboard.ipynb
   jupyter: 
     binder:
       repo: projectpythia/unstructured-grid-viz-cookbook
