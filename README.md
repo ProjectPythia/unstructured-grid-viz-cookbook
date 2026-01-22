@@ -1,6 +1,6 @@
 # Unstructured Grid Visualization Cookbook
 
-<img src="https://github.com/UXARRAY/uxarray/blob/main/docs/_static/images/logos/uxarray_logo_h_dark.png?raw=true" alt="NCAR logo" width="700"/>
+<img src="https://github.com/UXARRAY/uxarray/blob/main/docs/_static/images/logos/uxarray_logo_h_dark.png?raw=true" alt="UXarray logo" width="700"/>
 
 [![nightly-build](https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/unstructured-grid-viz-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/unstructured-grid-viz-cookbook/main?labpath=notebooks)
