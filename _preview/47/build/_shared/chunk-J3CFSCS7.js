@@ -1,1 +1,0 @@
-import{b as t}from"/unstructured-grid-viz-cookbook/_preview/47/build/_shared/chunk-7DW7L33J.js";var s=class{constructor(i){this.init=i,this.records=this.init()}static{t(this,"ImperativeState")}reset(){this.records=this.init()}};export{s as a};
