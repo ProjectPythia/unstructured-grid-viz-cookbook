@@ -540,28 +540,12 @@ dl.xr-attrs {
   filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
   stroke-width: 0.8px;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.UxDataArray &#x27;netCRE&#x27; (time: 72, n_face: 21600)&gt; Size: 6MB
-array([[-39.712097 , -45.644974 , -38.43799  , ..., -38.153557 ,
-        -43.598495 , -43.62937  ],
-       [-15.870178 , -30.100342 , -15.910431 , ..., -66.92249  ,
-        -70.2747   , -66.1367   ],
-       [-30.136475 , -35.519897 , -27.116653 , ..., -81.46538  ,
-        -86.82567  , -80.68329  ],
-       ...,
-       [-58.69229  , -55.907745 , -51.149475 , ..., -11.7018585,
-        -12.667725 , -16.571793 ],
-       [-47.1651   , -51.61812  , -44.30211  , ..., -21.058723 ,
-        -27.49356  , -25.086594 ],
-       [-66.613266 , -75.112946 , -59.10942  , ..., -37.066566 ,
-        -35.46958  , -35.030113 ]], shape=(72, 21600), dtype=float32)
-Coordinates:
-  * time     (time) object 576B 0001-02-01 00:00:00 ... 0007-01-01 00:00:00
-Dimensions without coordinates: n_face
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.UxDataArray &#x27;vorticity_200hPa&#x27; (Time: 1, n_face: 1310720)&gt; Size: 5MB
+[1310720 values with dtype=float32]
+Dimensions without coordinates: Time, n_face
 Attributes:
-    Sampling_Sequence:  rad_lwsw
-    units:              W/m2
-    cell_methods:       time: mean
-    standard_name:      toa_outgoing_longwave_flux_assuming_clear_sky</pre><div class='xr-wrap' style='display:none'><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+    units:      s^{-1}
+    long_name:  Relative vorticity vertically interpolated to 200 hPa</pre><div class='xr-wrap' style='display:none'><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
 <defs>
 <symbol id="icon-database" viewBox="0 0 32 32">
 <path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
@@ -1103,136 +1087,12 @@ dl.xr-attrs {
   filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
   stroke-width: 0.8px;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.UxDataArray &#x27;netCRE&#x27; (time: 72, n_face: 21600)&gt; Size: 6MB
-array([[-39.712097 , -45.644974 , -38.43799  , ..., -38.153557 ,
-        -43.598495 , -43.62937  ],
-       [-15.870178 , -30.100342 , -15.910431 , ..., -66.92249  ,
-        -70.2747   , -66.1367   ],
-       [-30.136475 , -35.519897 , -27.116653 , ..., -81.46538  ,
-        -86.82567  , -80.68329  ],
-       ...,
-       [-58.69229  , -55.907745 , -51.149475 , ..., -11.7018585,
-        -12.667725 , -16.571793 ],
-       [-47.1651   , -51.61812  , -44.30211  , ..., -21.058723 ,
-        -27.49356  , -25.086594 ],
-       [-66.613266 , -75.112946 , -59.10942  , ..., -37.066566 ,
-        -35.46958  , -35.030113 ]], shape=(72, 21600), dtype=float32)
-Coordinates:
-  * time     (time) object 576B 0001-02-01 00:00:00 ... 0007-01-01 00:00:00
-Dimensions without coordinates: n_face
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.UxDataArray &#x27;vorticity_200hPa&#x27; (Time: 1, n_face: 1310720)&gt; Size: 5MB
+[1310720 values with dtype=float32]
+Dimensions without coordinates: Time, n_face
 Attributes:
-    Sampling_Sequence:  rad_lwsw
-    units:              W/m2
-    cell_methods:       time: mean
-    standard_name:      toa_outgoing_longwave_flux_assuming_clear_sky</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>uxarray.UxDataArray</div><div class='xr-array-name'>'netCRE'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 72</li><li><span>n_face</span>: 21600</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-0b66a6c5-5ab0-4e0e-8a15-4154c799b580' class='xr-array-in' type='checkbox' checked><label for='section-0b66a6c5-5ab0-4e0e-8a15-4154c799b580' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-39.71 -45.64 -38.44 -49.8 -45.06 ... -33.11 -37.07 -35.47 -35.03</span></div><div class='xr-array-data'><pre>array([[-39.712097 , -45.644974 , -38.43799  , ..., -38.153557 ,
-        -43.598495 , -43.62937  ],
-       [-15.870178 , -30.100342 , -15.910431 , ..., -66.92249  ,
-        -70.2747   , -66.1367   ],
-       [-30.136475 , -35.519897 , -27.116653 , ..., -81.46538  ,
-        -86.82567  , -80.68329  ],
-       ...,
-       [-58.69229  , -55.907745 , -51.149475 , ..., -11.7018585,
-        -12.667725 , -16.571793 ],
-       [-47.1651   , -51.61812  , -44.30211  , ..., -21.058723 ,
-        -27.49356  , -25.086594 ],
-       [-66.613266 , -75.112946 , -59.10942  , ..., -37.066566 ,
-        -35.46958  , -35.030113 ]], shape=(72, 21600), dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-e6a3b1d8-5188-4e58-8b8d-36e653d58414' class='xr-section-summary-in' type='checkbox' checked /><label for='section-e6a3b1d8-5188-4e58-8b8d-36e653d58414' class='xr-section-summary' title='Expand/collapse section'>Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>0001-02-01 00:00:00 ... 0007-01-...</div><input id='attrs-cf963770-5859-4739-b627-2e2a6ed80385' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-cf963770-5859-4739-b627-2e2a6ed80385' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dfd7c02d-bf20-4567-9704-bb7eaf4320cf' class='xr-var-data-in' type='checkbox'><label for='data-dfd7c02d-bf20-4567-9704-bb7eaf4320cf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>time</dd><dt><span>bounds :</span></dt><dd>time_bnds</dd></dl></div><div class='xr-var-data'><pre>array([cftime.DatetimeNoLeap(1, 2, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 3, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 4, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 5, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 6, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 7, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 8, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 9, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 10, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 11, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(1, 12, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 1, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 2, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 3, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 4, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 5, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 6, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 7, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 8, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 9, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 10, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 11, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(2, 12, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 1, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 2, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 3, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 4, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 5, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 6, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 7, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 8, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 9, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 10, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 11, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(3, 12, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 1, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 2, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 3, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 4, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 5, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 6, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 7, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 8, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 9, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 10, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 11, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(4, 12, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 1, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 2, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 3, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 4, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 5, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 6, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 7, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 8, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 9, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 10, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 11, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(5, 12, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 1, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 2, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 3, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 4, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 5, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 6, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 7, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 8, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 9, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 10, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 11, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(6, 12, 1, 0, 0, 0, 0, has_year_zero=True),
-       cftime.DatetimeNoLeap(7, 1, 1, 0, 0, 0, 0, has_year_zero=True)],
-      dtype=object)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-84ef33de-d5ce-4721-80c7-1bab2c1658c3' class='xr-section-summary-in' type='checkbox' /><label for='section-84ef33de-d5ce-4721-80c7-1bab2c1658c3' class='xr-section-summary' title='Expand/collapse section'>Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-b7590840-539c-476d-88ec-97ffd83da4ac' class='xr-index-data-in' type='checkbox'/><label for='index-b7590840-539c-476d-88ec-97ffd83da4ac' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(CFTimeIndex([0001-02-01 00:00:00, 0001-03-01 00:00:00, 0001-04-01 00:00:00,
-             0001-05-01 00:00:00, 0001-06-01 00:00:00, 0001-07-01 00:00:00,
-             0001-08-01 00:00:00, 0001-09-01 00:00:00, 0001-10-01 00:00:00,
-             0001-11-01 00:00:00, 0001-12-01 00:00:00, 0002-01-01 00:00:00,
-             0002-02-01 00:00:00, 0002-03-01 00:00:00, 0002-04-01 00:00:00,
-             0002-05-01 00:00:00, 0002-06-01 00:00:00, 0002-07-01 00:00:00,
-             0002-08-01 00:00:00, 0002-09-01 00:00:00, 0002-10-01 00:00:00,
-             0002-11-01 00:00:00, 0002-12-01 00:00:00, 0003-01-01 00:00:00,
-             0003-02-01 00:00:00, 0003-03-01 00:00:00, 0003-04-01 00:00:00,
-             0003-05-01 00:00:00, 0003-06-01 00:00:00, 0003-07-01 00:00:00,
-             0003-08-01 00:00:00, 0003-09-01 00:00:00, 0003-10-01 00:00:00,
-             0003-11-01 00:00:00, 0003-12-01 00:00:00, 0004-01-01 00:00:00,
-             0004-02-01 00:00:00, 0004-03-01 00:00:00, 0004-04-01 00:00:00,
-             0004-05-01 00:00:00, 0004-06-01 00:00:00, 0004-07-01 00:00:00,
-             0004-08-01 00:00:00, 0004-09-01 00:00:00, 0004-10-01 00:00:00,
-             0004-11-01 00:00:00, 0004-12-01 00:00:00, 0005-01-01 00:00:00,
-             0005-02-01 00:00:00, 0005-03-01 00:00:00, 0005-04-01 00:00:00,
-             0005-05-01 00:00:00, 0005-06-01 00:00:00, 0005-07-01 00:00:00,
-             0005-08-01 00:00:00, 0005-09-01 00:00:00, 0005-10-01 00:00:00,
-             0005-11-01 00:00:00, 0005-12-01 00:00:00, 0006-01-01 00:00:00,
-             0006-02-01 00:00:00, 0006-03-01 00:00:00, 0006-04-01 00:00:00,
-             0006-05-01 00:00:00, 0006-06-01 00:00:00, 0006-07-01 00:00:00,
-             0006-08-01 00:00:00, 0006-09-01 00:00:00, 0006-10-01 00:00:00,
-             0006-11-01 00:00:00, 0006-12-01 00:00:00, 0007-01-01 00:00:00],
-            dtype=&#x27;object&#x27;, length=72, calendar=&#x27;noleap&#x27;, freq=&#x27;MS&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-360af08e-0b36-4f5b-b60d-7aba936065d8' class='xr-section-summary-in' type='checkbox' checked /><label for='section-360af08e-0b36-4f5b-b60d-7aba936065d8' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Sampling_Sequence :</span></dt><dd>rad_lwsw</dd><dt><span>units :</span></dt><dd>W/m2</dd><dt><span>cell_methods :</span></dt><dd>time: mean</dd><dt><span>standard_name :</span></dt><dd>toa_outgoing_longwave_flux_assuming_clear_sky</dd></dl></div></li></ul></div></div><details><summary>Show Grid Information</summary><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+    units:      s^{-1}
+    long_name:  Relative vorticity vertically interpolated to 200 hPa</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>uxarray.UxDataArray</div><div class='xr-array-name'>'vorticity_200hPa'</div><ul class='xr-dim-list'><li><span>Time</span>: 1</li><li><span>n_face</span>: 1310720</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-0837b748-c4aa-43a5-8ea1-f56174408ed5' class='xr-array-in' type='checkbox' checked><label for='section-0837b748-c4aa-43a5-8ea1-f56174408ed5' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[1310720 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-7b9d8f17-da3b-419e-977e-22174b6f6613' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-7b9d8f17-da3b-419e-977e-22174b6f6613' class='xr-section-summary'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-af9182de-6874-48ca-8bfc-f34913cc9422' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-af9182de-6874-48ca-8bfc-f34913cc9422' class='xr-section-summary'>Indexes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-754f2d6a-c5e9-4b7e-aa8a-04f2346c8f8d' class='xr-section-summary-in' type='checkbox' checked /><label for='section-754f2d6a-c5e9-4b7e-aa8a-04f2346c8f8d' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>s^{-1}</dd><dt><span>long_name :</span></dt><dd>Relative vorticity vertically interpolated to 200 hPa</dd></dl></div></li></ul></div></div><details><summary>Show Grid Information</summary><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
 <defs>
 <symbol id="icon-database" viewBox="0 0 32 32">
 <path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
@@ -1775,26 +1635,50 @@ dl.xr-attrs {
   stroke-width: 0.8px;
 }
 </style><pre class='xr-text-repr-fallback'>&lt;uxarray.Grid&gt;
-Original Grid Type: Scrip
+Original Grid Type: MPAS
 Grid Dimensions:
-  * n_node: 21727
-  * n_face: 21600
-  * n_max_face_nodes: 4
+  * n_node: 655362
+  * n_face: 1310720
+  * n_max_face_nodes: 3
+  * n_max_node_faces: 10
 Grid Coordinates (Spherical):
-  * node_lon: (21727,)
-  * node_lat: (21727,)
-  * face_lon: (21600,)
-  * face_lat: (21600,)
+  * node_lon: (655362,)
+  * node_lat: (655362,)
+  * face_lon: (1310720,)
+  * face_lat: (1310720,)
 Grid Coordinates (Cartesian):
 Grid Connectivity Variables:
-  * face_node_connectivity: (21600, 4)
+  * face_node_connectivity: (1310720, 3)
+  * node_face_connectivity: (655362, 10)
 Grid Descriptor Variables:
-</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>uxarray.UxDataArray.uxgrid</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-1c546ded-4274-4bca-802e-18dff89cf56b' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-1c546ded-4274-4bca-802e-18dff89cf56b' class='xr-section-summary'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span>n_node</span>: 21727</li><li><span>n_face</span>: 21600</li><li><span>n_max_face_nodes</span>: 4</li></ul></div></li><li class='xr-section-item'><input id='section-e67cc0f3-4247-45c0-a158-894102610e20' class='xr-section-summary-in' type='checkbox' /><label for='section-e67cc0f3-4247-45c0-a158-894102610e20' class='xr-section-summary' title='Expand/collapse section'>Spherical Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>node_lon</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-54f19fb1-1321-43d1-a7aa-b9ec93c91685' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-54f19fb1-1321-43d1-a7aa-b9ec93c91685' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4036a494-6f58-456a-8309-bcbe3b770b2b' class='xr-var-data-in' type='checkbox'><label for='data-4036a494-6f58-456a-8309-bcbe3b770b2b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long name :</span></dt><dd>Longitude of the corner nodes of each face</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([0., 0., 0., ..., 0., 0., 0.], shape=(21727,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>node_lat</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-88.5 -87.0 -85.5 ... 87.0 88.5</div><input id='attrs-6a0b4ee6-169a-4697-9c1d-0a9caeeed31a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6a0b4ee6-169a-4697-9c1d-0a9caeeed31a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4b3bea5f-f39d-4dee-a7a5-e6541a962741' class='xr-var-data-in' type='checkbox'><label for='data-4b3bea5f-f39d-4dee-a7a5-e6541a962741' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long name :</span></dt><dd>Latitude of the corner nodes of each face</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([-88.5, -87. , -85.5, ...,  85.5,  87. ,  88.5], shape=(21727,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_lon</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-44.26 -42.76 ... 136.5 135.0</div><input id='attrs-6b6a4cea-4490-4b48-a534-242ed1f7f973' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6b6a4cea-4490-4b48-a534-242ed1f7f973' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7cf6f2ff-976a-4d9a-8517-c05360b8cd38' class='xr-var-data-in' type='checkbox'><label for='data-7cf6f2ff-976a-4d9a-8517-c05360b8cd38' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long name :</span></dt><dd>Longitude of the center of each face</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([-44.25928396, -42.75932668, -44.25864811, ..., 133.49916029,
-       136.50083971, 135.        ], shape=(21600,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_lat</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-34.91 -35.58 ... 36.66 35.97</div><input id='attrs-038c0dca-441c-44c2-874a-0f0493d54a36' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-038c0dca-441c-44c2-874a-0f0493d54a36' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a60a01b2-5f95-4de1-b8bb-ed40aedae69d' class='xr-var-data-in' type='checkbox'><label for='data-a60a01b2-5f95-4de1-b8bb-ed40aedae69d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long name :</span></dt><dd>Latitude of the center of each face</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([-34.91143916, -35.58196515, -33.51497835, ...,  36.66411307,
-        36.66411307,  35.96577012], shape=(21600,))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-25110e13-2ecc-4101-8d94-93fbdc2fcfa0' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-25110e13-2ecc-4101-8d94-93fbdc2fcfa0' class='xr-section-summary'>Cartesian Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-2e4de9cd-9987-41e9-8207-4dd7ce8b1054' class='xr-section-summary-in' type='checkbox' /><label for='section-2e4de9cd-9987-41e9-8207-4dd7ce8b1054' class='xr-section-summary' title='Expand/collapse section'>Connectivity: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>face_node_connectivity</span></div><div class='xr-var-dims'>(n_face, n_max_face_nodes)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>18937 19027 19029 ... 8191 8224</div><input id='attrs-a34c68ac-1a80-4042-8e98-f4d5f3d4d274' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a34c68ac-1a80-4042-8e98-f4d5f3d4d274' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-866a7d43-7401-4405-b851-847eebc71fcb' class='xr-var-data-in' type='checkbox'><label for='data-866a7d43-7401-4405-b851-847eebc71fcb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>face_node_connectivity</dd><dt><span>long name :</span></dt><dd>Maps every face to its corner nodes.</dd><dt><span>start_index :</span></dt><dd>0</dd><dt><span>_FillValue :</span></dt><dd>-9223372036854775808</dd></dl></div><div class='xr-var-data'><pre>array([[18937, 19027, 19029, 18938],
-       [19027, 19126, 19127, 19029],
-       [18938, 19029, 19031, 18939],
+</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>uxarray.UxDataArray.uxgrid</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-2832d8ed-690b-40a7-a69d-f32ff0518f3c' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-2832d8ed-690b-40a7-a69d-f32ff0518f3c' class='xr-section-summary'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span>n_node</span>: 655362</li><li><span>n_face</span>: 1310720</li><li><span>n_max_face_nodes</span>: 3</li><li><span>n_max_node_faces</span>: 10</li></ul></div></li><li class='xr-section-item'><input id='section-287379b3-dc1d-40cf-b64e-f7d80c72adb3' class='xr-section-summary-in' type='checkbox' /><label for='section-287379b3-dc1d-40cf-b64e-f7d80c72adb3' class='xr-section-summary' title='Expand/collapse section'>Spherical Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>node_lon</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-175.0 -103.0 ... -175.2 -174.7</div><input id='attrs-a5143d1e-4fc7-4654-927b-4eb745228adc' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a5143d1e-4fc7-4654-927b-4eb745228adc' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4910d82e-ac5b-4d11-b565-35d5d9a76990' class='xr-var-data-in' type='checkbox'><label for='data-4910d82e-ac5b-4d11-b565-35d5d9a76990' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long name :</span></dt><dd>Longitude of the corner nodes of each face</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([-174.95294, -102.95294,  115.01709, ..., -174.95294, -175.1781 ,
+       -174.72781], shape=(655362,), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>node_lat</span></div><div class='xr-var-dims'>(n_node)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>26.57 26.57 90.0 ... -52.54 -52.54</div><input id='attrs-4f5bb89b-4d9a-4ffa-bdd2-47bf3314c93d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4f5bb89b-4d9a-4ffa-bdd2-47bf3314c93d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-59e87dda-4d73-433e-8555-0bedf6a4e837' class='xr-var-data-in' type='checkbox'><label for='data-59e87dda-4d73-433e-8555-0bedf6a4e837' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long name :</span></dt><dd>Latitude of the corner nodes of each face</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([ 26.56505 ,  26.56505 ,  90.      , ..., -52.780727, -52.54337 ,
+       -52.54337 ], shape=(655362,), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_lon</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-175.0 -174.8 ... -103.0 -175.0</div><input id='attrs-e5beb015-3737-4b00-88df-8f9a88b1d8e3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e5beb015-3737-4b00-88df-8f9a88b1d8e3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a5106872-673f-4cbe-9611-78f6b8e76c7f' class='xr-var-data-in' type='checkbox'><label for='data-a5106872-673f-4cbe-9611-78f6b8e76c7f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long name :</span></dt><dd>Longitude of the center of each face</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([-174.95293, -174.81796, -174.86943, ...,  113.04705, -102.95294,
+       -174.95293], shape=(1310720,), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>face_lat</span></div><div class='xr-var-dims'>(n_face)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>26.44 26.53 26.67 ... -52.62 -52.62</div><input id='attrs-a9b7a5a3-1789-46fb-8a51-18066556400b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a9b7a5a3-1789-46fb-8a51-18066556400b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5acc5491-143f-44dd-a124-1f632ec756d5' class='xr-var-data-in' type='checkbox'><label for='data-5acc5491-143f-44dd-a124-1f632ec756d5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long name :</span></dt><dd>Latitude of the center of each face</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([ 26.438072,  26.52575 ,  26.667755, ..., -10.812317, -52.62263 ,
+       -52.62263 ], shape=(1310720,), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-242167dc-0bbb-4268-b964-80b76802068b' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-242167dc-0bbb-4268-b964-80b76802068b' class='xr-section-summary'>Cartesian Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-b6336bf9-7e86-46fd-822f-43849acac3d8' class='xr-section-summary-in' type='checkbox' /><label for='section-b6336bf9-7e86-46fd-822f-43849acac3d8' class='xr-section-summary' title='Expand/collapse section'>Connectivity: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>face_node_connectivity</span></div><div class='xr-var-dims'>(n_face, n_max_face_nodes)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 163843 163844 ... 655360 655361</div><input id='attrs-985874d3-5954-4126-a3d6-6ed9029c3ef8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-985874d3-5954-4126-a3d6-6ed9029c3ef8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b252cf16-903f-4efc-9bab-f95cd81f4740' class='xr-var-data-in' type='checkbox'><label for='data-b252cf16-903f-4efc-9bab-f95cd81f4740' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>face_node_connectivity</dd><dt><span>long name :</span></dt><dd>Maps every face to its corner nodes.</dd><dt><span>start_index :</span></dt><dd>0</dd><dt><span>_FillValue :</span></dt><dd>-9223372036854775808</dd></dl></div><div class='xr-var-data'><pre>array([[     0, 163843, 163844],
+       [     0, 163844, 163845],
+       [     0, 163845, 163846],
        ...,
-       [ 8038,  8002,  8101,  8192],
-       [ 8287,  8192,  8224,  8382],
-       [ 8192,  8101,  8191,  8224]], shape=(21600, 4))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-62b2e7ea-ff04-498a-a649-4f70c0e76c30' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-62b2e7ea-ff04-498a-a649-4f70c0e76c30' class='xr-section-summary'>Descriptors: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-d2a24501-d632-41cd-bdac-65a78077ed2e' class='xr-section-summary-in' type='checkbox' /><label for='section-d2a24501-d632-41cd-bdac-65a78077ed2e' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>source_grid_spec :</span></dt><dd>Scrip</dd></dl></div></li></ul></div></div></details></div></div>
+       [655353, 655354, 655355],
+       [655356, 655357, 655358],
+       [655359, 655360, 655361]], shape=(1310720, 3))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>node_face_connectivity</span></div><div class='xr-var-dims'>(n_node, n_max_node_faces)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 ... -9223372036854775808</div><input id='attrs-5976d9f6-4527-45a1-b1d3-e5eaa376d17e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5976d9f6-4527-45a1-b1d3-e5eaa376d17e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c9bb6f24-69f1-48be-b342-e7dc2ea0d137' class='xr-var-data-in' type='checkbox'><label for='data-c9bb6f24-69f1-48be-b342-e7dc2ea0d137' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>cf_role :</span></dt><dd>node_face_connectivity</dd><dt><span>long name :</span></dt><dd>Faces that neighbor each node</dd><dt><span>start_index :</span></dt><dd>0</dd><dt><span>_FillValue :</span></dt><dd>-9223372036854775808</dd></dl></div><div class='xr-var-data'><pre>array([[                   0,                    1,                    2,
+        ..., -9223372036854775808, -9223372036854775808,
+        -9223372036854775808],
+       [                   5,                    6,                    7,
+        ..., -9223372036854775808, -9223372036854775808,
+        -9223372036854775808],
+       [                  10,                   11,                   12,
+        ..., -9223372036854775808, -9223372036854775808,
+        -9223372036854775808],
+       ...,
+       [              983022,              1228798,               983034,
+        ..., -9223372036854775808, -9223372036854775808,
+        -9223372036854775808],
+       [             1310719,               983028,               983033,
+        ..., -9223372036854775808, -9223372036854775808,
+        -9223372036854775808],
+       [             1310719,               983039,               983038,
+        ..., -9223372036854775808, -9223372036854775808,
+        -9223372036854775808]], shape=(655362, 10))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ef6ed809-4c98-4061-ae97-4e6cdf1672f2' class='xr-section-summary-in' type='checkbox' disabled /><label for='section-ef6ed809-4c98-4061-ae97-4e6cdf1672f2' class='xr-section-summary'>Descriptors: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-12113a48-3653-476d-b5c9-0f0845f7e9a4' class='xr-section-summary-in' type='checkbox' /><label for='section-12113a48-3653-476d-b5c9-0f0845f7e9a4' class='xr-section-summary' title='Expand/collapse section'>Attributes: <span>(55)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>model_name :</span></dt><dd>mpas</dd><dt><span>core_name :</span></dt><dd>init_atmosphere</dd><dt><span>source :</span></dt><dd>MPAS</dd><dt><span>Conventions :</span></dt><dd>MPAS</dd><dt><span>git_version :</span></dt><dd>v6.0-dirty</dd><dt><span>on_a_sphere :</span></dt><dd>YES</dd><dt><span>sphere_radius :</span></dt><dd>6.371229e+06</dd><dt><span>is_periodic :</span></dt><dd>NO</dd><dt><span>x_period :</span></dt><dd>0.0</dd><dt><span>y_period :</span></dt><dd>0.0</dd><dt><span>history :</span></dt><dd>Mon Aug 16 12:09:52 2021: ncks -v latVertex,lonVertex,latCell,lonCell,latEdge,lonEdge,cellsOnVertex,verticesOnCell,verticesOnEdge,edgesOnVertex,edgesOnCell,nEdgesOnCell,angleEdge x1.655362.init.nc foo.nc
+mpirun -n 18 ./init_atmosphere_model</dd><dt><span>parent_id :</span></dt><dd>0hhmjs26t0
+</dd><dt><span>mesh_spec :</span></dt><dd>0.0</dd><dt><span>config_init_case :</span></dt><dd>7</dd><dt><span>config_calendar_type :</span></dt><dd>gregorian</dd><dt><span>config_start_time :</span></dt><dd>2016-08-01_00:00:00</dd><dt><span>config_stop_time :</span></dt><dd>2016-09-10_00:00:00</dd><dt><span>config_theta_adv_order :</span></dt><dd>3</dd><dt><span>config_coef_3rd_order :</span></dt><dd>0.25</dd><dt><span>config_num_halos :</span></dt><dd>2</dd><dt><span>config_nvertlevels :</span></dt><dd>75</dd><dt><span>config_nsoillevels :</span></dt><dd>4</dd><dt><span>config_nfglevels :</span></dt><dd>38</dd><dt><span>config_nfgsoillevels :</span></dt><dd>4</dd><dt><span>config_months :</span></dt><dd>12</dd><dt><span>config_geog_data_path :</span></dt><dd>/glade/p/work/wrfhelp/WPS_GEOG/</dd><dt><span>config_met_prefix :</span></dt><dd>FILE</dd><dt><span>config_sfc_prefix :</span></dt><dd>SST</dd><dt><span>config_fg_interval :</span></dt><dd>86400</dd><dt><span>config_landuse_data :</span></dt><dd>USGS</dd><dt><span>config_topo_data :</span></dt><dd>GMTED2010</dd><dt><span>config_use_spechumd :</span></dt><dd>NO</dd><dt><span>config_ztop :</span></dt><dd>40000.0</dd><dt><span>config_nsmterrain :</span></dt><dd>1</dd><dt><span>config_smooth_surfaces :</span></dt><dd>YES</dd><dt><span>config_dzmin :</span></dt><dd>0.3</dd><dt><span>config_nsm :</span></dt><dd>30</dd><dt><span>config_tc_vertical_grid :</span></dt><dd>YES</dd><dt><span>config_extrap_airtemp :</span></dt><dd>linear</dd><dt><span>config_static_interp :</span></dt><dd>NO</dd><dt><span>config_native_gwd_static :</span></dt><dd>NO</dd><dt><span>config_gwd_cell_scaling :</span></dt><dd>1.0</dd><dt><span>config_vertical_grid :</span></dt><dd>YES</dd><dt><span>config_met_interp :</span></dt><dd>YES</dd><dt><span>config_input_sst :</span></dt><dd>NO</dd><dt><span>config_frac_seaice :</span></dt><dd>YES</dd><dt><span>config_pio_num_iotasks :</span></dt><dd>0</dd><dt><span>config_pio_stride :</span></dt><dd>1</dd><dt><span>config_block_decomp_file_prefix :</span></dt><dd>x1.655362.graph.info.part.</dd><dt><span>config_number_of_blocks :</span></dt><dd>0</dd><dt><span>config_explicit_proc_decomp :</span></dt><dd>NO</dd><dt><span>config_proc_decomp_file_prefix :</span></dt><dd>graph.info.part.</dd><dt><span>file_id :</span></dt><dd>ytj0fh0qmd</dd><dt><span>NCO :</span></dt><dd>netCDF Operators version 4.9.5 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco)</dd><dt><span>source_grid_spec :</span></dt><dd>MPAS</dd></dl></div></li></ul></div></div></details></div></div>
