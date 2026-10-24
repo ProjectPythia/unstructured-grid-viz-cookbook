@@ -59,12 +59,12 @@
 [32m    467[39m [38;5;28;01mif[39;00m embed:
 [32m    468[39m     [38;5;28;01mreturn[39;00m render_model(model, comm)
 
-[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/viewable.py:803[39m, in [36mViewable._render_model[39m[34m(self, doc, comm)[39m
-[32m    801[39m [38;5;28;01mif[39;00m comm [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[32m    802[39m     comm = state._comm_manager.get_server_comm()
-[32m--> [39m[32m803[39m model = [30;43mself[39;49m[30;43m.[39;49m[30;43mget_root[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m)[39;49m
-[32m    805[39m [38;5;28;01mif[39;00m [38;5;28mself[39m._design [38;5;129;01mand[39;00m [38;5;28mself[39m._design.theme.bokeh_theme:
-[32m    806[39m     doc.theme = [38;5;28mself[39m._design.theme.bokeh_theme
+[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/viewable.py:908[39m, in [36mViewable._render_model[39m[34m(self, doc, comm)[39m
+[32m    906[39m [38;5;28;01mif[39;00m comm [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[32m    907[39m     comm = state._comm_manager.get_server_comm()
+[32m--> [39m[32m908[39m model = [30;43mself[39;49m[30;43m.[39;49m[30;43mget_root[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m)[39;49m
+[32m    910[39m [38;5;28;01mif[39;00m [38;5;28mself[39m._design [38;5;129;01mand[39;00m [38;5;28mself[39m._design.theme.bokeh_theme:
+[32m    911[39m     doc.theme = [38;5;28mself[39m._design.theme.bokeh_theme
 
 [36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/layout/base.py:386[39m, in [36mPanel.get_root[39m[34m(self, doc, comm, preprocess)[39m
 [32m    382[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mget_root[39m(
@@ -75,12 +75,12 @@
 [32m    387[39m     [38;5;66;03m# ALERT: Find a better way to handle this[39;00m
 [32m    388[39m     [38;5;28;01mif[39;00m [38;5;28mhasattr[39m(root, [33m'[39m[33mstyles[39m[33m'[39m) [38;5;129;01mand[39;00m [33m'[39m[33moverflow-x[39m[33m'[39m [38;5;129;01min[39;00m root.styles:
 
-[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/viewable.py:733[39m, in [36mRenderable.get_root[39m[34m(self, doc, comm, preprocess)[39m
-[32m    731[39m wrapper = [38;5;28mself[39m._design._wrapper([38;5;28mself[39m)
-[32m    732[39m [38;5;28;01mif[39;00m wrapper [38;5;129;01mis[39;00m [38;5;28mself[39m:
-[32m--> [39m[32m733[39m     root = [30;43mself[39;49m[30;43m.[39;49m[30;43m_get_model[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m=[39;49m[30;43mcomm[39;49m[30;43m)[39;49m
-[32m    734[39m     [38;5;28;01mif[39;00m preprocess:
-[32m    735[39m         [38;5;28mself[39m._preprocess(root)
+[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/viewable.py:820[39m, in [36mRenderable.get_root[39m[34m(self, doc, comm, preprocess)[39m
+[32m    818[39m wrapper = [38;5;28mself[39m._design._wrapper([38;5;28mself[39m)
+[32m    819[39m [38;5;28;01mif[39;00m wrapper [38;5;129;01mis[39;00m [38;5;28mself[39m:
+[32m--> [39m[32m820[39m     root = [30;43mself[39;49m[30;43m.[39;49m[30;43m_get_model[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m=[39;49m[30;43mcomm[39;49m[30;43m)[39;49m
+[32m    821[39m     [38;5;28;01mif[39;00m preprocess:
+[32m    822[39m         [38;5;28mself[39m._preprocess(root)
 
 [36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/layout/base.py:370[39m, in [36mPanel._get_model[39m[34m(self, doc, root, parent, comm)[39m
 [32m    368[39m root = root [38;5;129;01mor[39;00m model
@@ -92,21 +92,28 @@
 [36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/layout/base.py:352[39m, in [36mPanel._get_objects[39m[34m(self, model, old_objects, doc, root, comm)[39m
 [32m    350[39m [38;5;28;01melse[39;00m:
 [32m    351[39m     [38;5;28;01mtry[39;00m:
-[32m--> [39m[32m352[39m         child = [30;43mpane[39;49m[30;43m.[39;49m[30;43m_get_model[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mroot[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mmodel[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m)[39;49m
+[32m--> [39m[32m352[39m         child = [30;43mpane[39;49m[30;43m.[39;49m[30;43m_acquire_model[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mroot[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mmodel[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m)[39;49m
 [32m    353[39m     [38;5;28;01mexcept[39;00m RerenderError [38;5;28;01mas[39;00m e:
 [32m    354[39m         [38;5;28;01mif[39;00m e.layout [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m e.layout [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m:
 
-[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/pane/holoviews.py:494[39m, in [36mHoloViews._get_model[39m[34m(self, doc, root, parent, comm)[39m
-[32m    492[39m     plot = [38;5;28mself[39m.object
-[32m    493[39m [38;5;28;01melse[39;00m:
-[32m--> [39m[32m494[39m     plot = [30;43mself[39;49m[30;43m.[39;49m[30;43m_render[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mroot[39;49m[30;43m)[39;49m
-[32m    496[39m plot.pane = [38;5;28mself[39m
-[32m    497[39m backend = plot.renderer.backend
+[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/viewable.py:686[39m, in [36mRenderable._acquire_model[39m[34m(self, doc, root, parent, comm)[39m
+[32m    684[39m     parents = [38;5;28mself[39m._model_parents.setdefault(ref, [owner])
+[32m    685[39m [38;5;28;01melse[39;00m:
+[32m--> [39m[32m686[39m     model = [30;43mself[39;49m[30;43m.[39;49m[30;43m_get_model[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mroot[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mparent[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m)[39;49m
+[32m    687[39m     parents = [38;5;28mself[39m._model_parents.setdefault(ref, [])
+[32m    688[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28many[39m(p [38;5;129;01mis[39;00m parent [38;5;28;01mfor[39;00m p [38;5;129;01min[39;00m parents):
 
-[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/pane/holoviews.py:588[39m, in [36mHoloViews._render[39m[34m(self, doc, comm, root)[39m
-[32m    585[39m     [38;5;28;01mif[39;00m comm:
-[32m    586[39m         kwargs[[33m'[39m[33mcomm[39m[33m'[39m] = comm
-[32m--> [39m[32m588[39m [38;5;28;01mreturn[39;00m [30;43mrenderer[39;49m[30;43m.[39;49m[30;43mget_plot[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mobject[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/pane/holoviews.py:497[39m, in [36mHoloViews._get_model[39m[34m(self, doc, root, parent, comm)[39m
+[32m    495[39m     plot = [38;5;28mself[39m.object
+[32m    496[39m [38;5;28;01melse[39;00m:
+[32m--> [39m[32m497[39m     plot = [30;43mself[39;49m[30;43m.[39;49m[30;43m_render[39;49m[30;43m([39;49m[30;43mdoc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcomm[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mroot[39;49m[30;43m)[39;49m
+[32m    499[39m plot.pane = [38;5;28mself[39m
+[32m    500[39m backend = plot.renderer.backend
+
+[36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/panel/pane/holoviews.py:591[39m, in [36mHoloViews._render[39m[34m(self, doc, comm, root)[39m
+[32m    588[39m     [38;5;28;01mif[39;00m comm:
+[32m    589[39m         kwargs[[33m'[39m[33mcomm[39m[33m'[39m] = comm
+[32m--> [39m[32m591[39m [38;5;28;01mreturn[39;00m [30;43mrenderer[39;49m[30;43m.[39;49m[30;43mget_plot[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mobject[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
 
 [36mFile [39m[32m~/micromamba/envs/unstructured-grid-viz-cookbook-dev/lib/python3.14/site-packages/holoviews/plotting/bokeh/renderer.py:77[39m, in [36mBokehRenderer.get_plot[39m[34m(self_or_cls, obj, doc, renderer, **kwargs)[39m
 [32m     70[39m [38;5;129m@bothmethod[39m
